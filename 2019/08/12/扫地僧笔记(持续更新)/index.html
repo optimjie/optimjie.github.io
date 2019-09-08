@@ -55,17 +55,17 @@
   };
 </script>
 
-  <meta name="description" content="P47二级指针做输出（在被调函数中分配内存）模型：主函数：1234567891011121314int main()&amp;#123;	char *p1 = NULL;	int len1 = 0;	char *p2 = NULL;	int len2 = 0;	getMem(&amp;amp;p1, &amp;amp;len1, &amp;amp;p2, &amp;amp;len2);	printf(&quot;p1=%s\np2=%s&quot;, p1">
+  <meta name="description" content="本文为我在看扫地僧视频时的一些笔记。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【持续更新】扫地僧笔记">
 <meta property="og:url" content="https://optimjie.github.io/2019/08/12/扫地僧笔记(持续更新)/index.html">
 <meta property="og:site_name" content="optimjie">
-<meta property="og:description" content="P47二级指针做输出（在被调函数中分配内存）模型：主函数：1234567891011121314int main()&amp;#123;	char *p1 = NULL;	int len1 = 0;	char *p2 = NULL;	int len2 = 0;	getMem(&amp;amp;p1, &amp;amp;len1, &amp;amp;p2, &amp;amp;len2);	printf(&quot;p1=%s\np2=%s&quot;, p1">
+<meta property="og:description" content="本文为我在看扫地僧视频时的一些笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-04T07:49:00.778Z">
+<meta property="og:updated_time" content="2019-09-08T02:10:53.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【持续更新】扫地僧笔记">
-<meta name="twitter:description" content="P47二级指针做输出（在被调函数中分配内存）模型：主函数：1234567891011121314int main()&amp;#123;	char *p1 = NULL;	int len1 = 0;	char *p2 = NULL;	int len2 = 0;	getMem(&amp;amp;p1, &amp;amp;len1, &amp;amp;p2, &amp;amp;len2);	printf(&quot;p1=%s\np2=%s&quot;, p1">
+<meta name="twitter:description" content="本文为我在看扫地僧视频时的一些笔记。">
   <link rel="canonical" href="https://optimjie.github.io/2019/08/12/扫地僧笔记(持续更新)/">
 
 
@@ -248,7 +248,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-04 15:49:00" itemprop="dateModified" datetime="2019-09-04T15:49:00+08:00">2019-09-04</time>
+                <time title="修改时间：2019-09-08 10:10:53" itemprop="dateModified" datetime="2019-09-08T10:10:53+08:00">2019-09-08</time>
               </span>
             
           
@@ -283,7 +283,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>2.9k</span>
+              <span>3k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -306,7 +306,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="P47二级指针做输出（在被调函数中分配内存）模型："><a href="#P47二级指针做输出（在被调函数中分配内存）模型：" class="headerlink" title="P47二级指针做输出（在被调函数中分配内存）模型："></a>P47二级指针做输出（在被调函数中分配内存）模型：</h4><h5 id="主函数："><a href="#主函数：" class="headerlink" title="主函数："></a>主函数：</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p1 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span> len1 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> *p2 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span> len2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	getMem(&amp;p1, &amp;len1, &amp;p2, &amp;len2);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"p1=%s\np2=%s"</span>, p1, p2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
+        <p>本文为我在看扫地僧视频时的一些笔记。</p>
+<a id="more"></a>
+
+<h4 id="P47二级指针做输出（在被调函数中分配内存）模型："><a href="#P47二级指针做输出（在被调函数中分配内存）模型：" class="headerlink" title="P47二级指针做输出（在被调函数中分配内存）模型："></a>P47二级指针做输出（在被调函数中分配内存）模型：</h4><h5 id="主函数："><a href="#主函数：" class="headerlink" title="主函数："></a>主函数：</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p1 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span> len1 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> *p2 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span> len2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	getMem(&amp;p1, &amp;len1, &amp;p2, &amp;len2);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"p1=%s\np2=%s"</span>, p1, p2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="getMem函数："><a href="#getMem函数：" class="headerlink" title="getMem函数："></a>getMem函数：</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMem</span><span class="params">(<span class="keyword">char</span> **myp1,<span class="keyword">int</span> *mylen1,<span class="keyword">char</span> **myp2,<span class="keyword">int</span> *mylen2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *temp1 = <span class="literal">NULL</span>;</span><br><span class="line">	temp1 = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="number">100</span>);</span><br><span class="line">	<span class="keyword">if</span> (temp1 == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">strcpy</span>(temp1, <span class="string">"abcdefg"</span>);</span><br><span class="line">    </span><br><span class="line">	*mylen1 = <span class="built_in">strlen</span>(temp1);</span><br><span class="line">	*myp1 = temp1;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> *temp2 = <span class="literal">NULL</span>;</span><br><span class="line">	temp2 = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="number">100</span>);</span><br><span class="line">	<span class="keyword">if</span> (temp2 == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">strcpy</span>(temp2, <span class="string">"1234567"</span>);</span><br><span class="line"></span><br><span class="line">	*mylen2 = <span class="built_in">strlen</span>(temp2);</span><br><span class="line">	*myp2 = temp2;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
