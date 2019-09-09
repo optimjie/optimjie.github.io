@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="本文为我在看扫地僧视频时的一些笔记。">
+  <meta name="description" content="​        撒达 分分合合回复">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【持续更新】扫地僧笔记">
-<meta property="og:url" content="https://optimjie.github.io/2019/08/12/扫地僧笔记(持续更新)/index.html">
+<meta property="og:title" content="二级指针做输入输出与引用做函数参数">
+<meta property="og:url" content="https://optimjie.github.io/2019/08/12/二级指针做输入输出与引用做函数参数/index.html">
 <meta property="og:site_name" content="optimjie">
-<meta property="og:description" content="本文为我在看扫地僧视频时的一些笔记。">
+<meta property="og:description" content="​        撒达 分分合合回复">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-08T02:10:53.069Z">
+<meta property="og:updated_time" content="2019-09-09T15:02:40.456Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【持续更新】扫地僧笔记">
-<meta name="twitter:description" content="本文为我在看扫地僧视频时的一些笔记。">
-  <link rel="canonical" href="https://optimjie.github.io/2019/08/12/扫地僧笔记(持续更新)/">
+<meta name="twitter:title" content="二级指针做输入输出与引用做函数参数">
+<meta name="twitter:description" content="​        撒达 分分合合回复">
+  <link rel="canonical" href="https://optimjie.github.io/2019/08/12/二级指针做输入输出与引用做函数参数/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>【持续更新】扫地僧笔记 | optimjie</title>
+  <title>二级指针做输入输出与引用做函数参数 | optimjie</title>
   
 
 
@@ -206,7 +206,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/2019/08/12/扫地僧笔记(持续更新)/">
+    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/2019/08/12/二级指针做输入输出与引用做函数参数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
@@ -220,7 +220,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">【持续更新】扫地僧笔记
+          <h1 class="post-title" itemprop="name headline">二级指针做输入输出与引用做函数参数
 
             
           </h1>
@@ -248,7 +248,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-08 10:10:53" itemprop="dateModified" datetime="2019-09-08T10:10:53+08:00">2019-09-08</time>
+                <time title="修改时间：2019-09-09 23:02:40" itemprop="dateModified" datetime="2019-09-09T23:02:40+08:00">2019-09-09</time>
               </span>
             
           
@@ -258,7 +258,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/传智播客扫地僧c-c-学习笔记/" itemprop="url" rel="index"><span itemprop="name">传智播客扫地僧c/c++学习笔记</span></a></span>
 
                 
                 
@@ -306,7 +306,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文为我在看扫地僧视频时的一些笔记。</p>
+        <p>​        撒达</p>
+<p>分分合合回复</p>
 <a id="more"></a>
 
 <h4 id="P47二级指针做输出（在被调函数中分配内存）模型："><a href="#P47二级指针做输出（在被调函数中分配内存）模型：" class="headerlink" title="P47二级指针做输出（在被调函数中分配内存）模型："></a>P47二级指针做输出（在被调函数中分配内存）模型：</h4><h5 id="主函数："><a href="#主函数：" class="headerlink" title="主函数："></a>主函数：</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p1 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span> len1 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> *p2 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span> len2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	getMem(&amp;p1, &amp;len1, &amp;p2, &amp;len2);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"p1=%s\np2=%s"</span>, p1, p2);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
