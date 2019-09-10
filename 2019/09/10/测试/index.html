@@ -63,7 +63,7 @@
 <meta property="og:description" content="本文将介绍二级指针做函数输出以及做函数输入的三种内存模型从内存四区的角度对程序执行的过程进行剖析，通过这中方式来加深对指针的理解。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://optimjie.github.io/.io//D:%5Csoftware%5CBlog%5CoptimjieBlog%5Csource_posts%5C%E6%B5%8B%E8%AF%95%5C%E5%81%9A%E8%BE%93%E5%87%BA.png">
-<meta property="og:updated_time" content="2019-09-10T00:25:16.615Z">
+<meta property="og:updated_time" content="2019-09-10T00:29:32.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二级指针做输入输出">
 <meta name="twitter:description" content="本文将介绍二级指针做函数输出以及做函数输入的三种内存模型从内存四区的角度对程序执行的过程进行剖析，通过这中方式来加深对指针的理解。">
@@ -239,7 +239,7 @@
                 
               
 
-              <time title="创建时间：2019-09-10 08:23:41 / 修改时间：08:25:16" itemprop="dateCreated datePublished" datetime="2019-09-10T08:23:41+08:00">2019-09-10</time>
+              <time title="创建时间：2019-09-10 08:23:41 / 修改时间：08:29:32" itemprop="dateCreated datePublished" datetime="2019-09-10T08:23:41+08:00">2019-09-10</time>
             </span>
           
             
@@ -308,7 +308,7 @@
 <h6 id="getMem函数："><a href="#getMem函数：" class="headerlink" title="getMem函数："></a>getMem函数：</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMem</span><span class="params">(<span class="keyword">char</span> **myp,<span class="keyword">int</span> *mylen)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *temp = <span class="literal">NULL</span>;</span><br><span class="line">	temp = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="number">100</span>);</span><br><span class="line">	<span class="keyword">if</span> (temp == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">strcpy</span>(temp, <span class="string">"abcdefg"</span>);    </span><br><span class="line">	*mylen = <span class="built_in">strlen</span>(temp);</span><br><span class="line">	*myp = temp;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h6 id="犯的错误："><a href="#犯的错误：" class="headerlink" title="犯的错误："></a>犯的错误：</h6><p><code>*myp = temp;</code> 最初写成了<code>*myp = *temp;</code> 而该表达式赋值两端根本不是一种数据类型。</p>
-<p><code>*myp = temp1;</code> 这句话与<code>*mylen = 某一数值</code> 本质上是一样的，都是*加上指针变量来改变主调用函数中的内容只不过，<code>myp</code>为二级指针因此赋值的右端应为一级指针。</p>
+<p><code>*myp = temp1;</code> 这句话与<code>*mylen = 某一数值</code> 本质上是一样的，都是<code>*</code>加上指针变量来改变主调用函数中的内容只不过，<code>myp</code>为二级指针因此赋值的右端应为一级指针。</p>
 <h6 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h6><p> <code>&quot;abcdefg&quot;</code>在常量区中，<code>strcpy(temp, &quot;abcdefg&quot;);</code> 这一句使得<code>temp</code>指向<code>&quot;abcdefg&quot;</code>，其值为字符<code>&#39;a&#39;</code>的地址。</p>
 <h6 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h6><p>想要在被调用函数中修改主调用函数中的值，必须使用指针，例如在getMem函数中，修改变量的值使用一级指针，修改一级指针需要用到二级指针。</p>
 <h6 id="FreeMem函数："><a href="#FreeMem函数：" class="headerlink" title="FreeMem函数："></a>FreeMem函数：</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FreeMem</span><span class="params">(<span class="keyword">char</span> **myp)</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	<span class="keyword">if</span> (myp == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">char</span> *tmp = <span class="literal">NULL</span>;</span><br><span class="line">	tmp = *myp;</span><br><span class="line">	<span class="built_in">free</span>(tmp);</span><br><span class="line">	tmp = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
