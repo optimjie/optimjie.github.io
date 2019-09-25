@@ -524,5 +524,31 @@
 
 
   
+    
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', function() {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'DfO1YtJmXCgD1sV6KmPrDjIP-gzGzoHsz',
+    appKey: 'JcgXsTtvwezQBuNQ2qjaQoeo',
+    placeholder: '留下邮箱，有回复时你将收到提醒，邮箱不会被公开。',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
 </body>
 </html>
