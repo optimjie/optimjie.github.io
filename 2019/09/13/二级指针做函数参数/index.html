@@ -63,7 +63,7 @@
 <meta property="og:description" content="本文将介绍二级指针做函数输出以及做函数输入的三种内存模型从内存四区的角度对程序执行的过程进行剖析，通过这中方式来加深对指针的理解。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://optimjie.github.io/2019/09/13/二级指针做函数参数/做输出.jpg">
-<meta property="og:updated_time" content="2019-10-02T12:02:57.382Z">
+<meta property="og:updated_time" content="2019-10-08T01:14:22.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二级指针做输入输出">
 <meta name="twitter:description" content="本文将介绍二级指针做函数输出以及做函数输入的三种内存模型从内存四区的角度对程序执行的过程进行剖析，通过这中方式来加深对指针的理解。">
@@ -250,7 +250,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-02 20:02:57" itemprop="dateModified" datetime="2019-10-02T20:02:57+08:00">2019-10-02</time>
+                <time title="修改时间：2019-10-08 09:14:22" itemprop="dateModified" datetime="2019-10-08T09:14:22+08:00">2019-10-08</time>
               </span>
             
           
@@ -303,7 +303,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>7.1k</span>
+              <span>7.5k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -313,7 +313,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>6 分钟</span>
+              <span>7 分钟</span>
             </span>
           
 
@@ -329,6 +329,8 @@
         <p>本文将介绍二级指针做函数输出以及做函数输入的三种内存模型从内存四区的角度对程序执行的过程进行剖析，通过这中方式来加深对指针的理解。</p>
 <a id="more"></a>
 
+<p>所有容器提供的都是值（value）语意，而非引用（reference）语意。<strong>容器执行插入元素的操作时，内部实施拷贝动作。</strong>所以STL容器内存储的元素必须<strong>能够被拷贝</strong>（必须提供拷贝构造函数）。</p>
+<p>开始的时候不理解这句话，然后自己敲代码就理解了。我们在往容器里存数据的时候，是进行拷贝动作，也就是说将外部变量的值拷贝给容器中的值。要进行拷贝就必须分配内存，没有分配内存的话往哪拷数据呢？？？？而基础数据类型的变量是不用担心这些问题的，因为当我们写下<code>int a</code>时编译器已经为<code>a</code>分配了内存，但是如果是指针变量就必须考虑深拷贝与浅拷贝的问题（其实这个地方第一次的时候我想的是，MyVector不是已经分配了内存了吗，为什么还要分配呢？其实在MyVector中是给类分配了内存说白了就是给类中的成员变量分配了内存，而成员变量若有指针的话，它只是为指针分配了内存，而我们所需要的是分配指针所指向的内存空间分配内存）。</p>
 <h5 id="二级指针做输出（在被调函数中分配内存）模型："><a href="#二级指针做输出（在被调函数中分配内存）模型：" class="headerlink" title="二级指针做输出（在被调函数中分配内存）模型："></a>二级指针做输出（在被调函数中分配内存）模型：</h5><h6 id="主函数："><a href="#主函数：" class="headerlink" title="主函数："></a>主函数：</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">	getMem(&amp;p, &amp;len);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"p=%s\n"</span>, p);</span><br><span class="line">    FreeMem(&amp;p);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h6 id="getMem函数："><a href="#getMem函数：" class="headerlink" title="getMem函数："></a>getMem函数：</h6><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMem</span><span class="params">(<span class="keyword">char</span> **myp,<span class="keyword">int</span> *mylen)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *temp = <span class="literal">NULL</span>;</span><br><span class="line">	temp = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="number">100</span>);</span><br><span class="line">	<span class="keyword">if</span> (temp == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">strcpy</span>(temp, <span class="string">"abcdefg"</span>);    </span><br><span class="line">	*mylen = <span class="built_in">strlen</span>(temp);</span><br><span class="line">	*myp = temp;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -472,7 +474,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -493,7 +495,9 @@
         
           
         
-        <span class="site-state-item-count">3</span>
+          
+        
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -541,12 +545,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">22k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
 </div>
 
         
