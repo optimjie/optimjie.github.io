@@ -2,84 +2,60 @@
 
 
 
-  
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/QQ图片20180108124805.png?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
 
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":true,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
 
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="有东西被加密了, 请输入密码查看.">
+  <meta name="description" content="有东西被加密了, 请输入密码查看.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第K个数">
 <meta property="og:url" content="https://optimjie.github.io/2019/11/07/第K个数/index.html">
@@ -90,40 +66,19 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第K个数">
 <meta name="twitter:description" content="有东西被加密了, 请输入密码查看.">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
   <link rel="canonical" href="https://optimjie.github.io/2019/11/07/第K个数/">
 
 
-
-
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
 
   <title>第K个数 | optimjie's blog</title>
   
@@ -135,22 +90,41 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+  <div class="site-meta">
 
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
@@ -159,13 +133,10 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -173,59 +144,62 @@
   </div>
 </div>
 
+
 <nav class="site-nav">
   
-
-  
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            Home
-          </a>
-        </li>
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            Archives
-          </a>
-        </li>
       
+    
 
-      
-    </ul>
-  
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
-  
+  </li>
+  </ul>
+
 </nav>
-
-
-
- </div>
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+            
+
+          <div id="content" class="content page-post-detail">
             
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -236,58 +210,47 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="optimjie's blog">
     </span>
-
-    
       <header class="post-header">
 
         
-        
-          <h1 class="post-title" itemprop="name headline">第K个数</h1>
+          <h1 class="post-title" itemprop="name headline">第K个数
+
+            
+          </h1>
         
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
+              <span class="post-meta-item-text">发表于</span>
+
               
-                <span class="post-meta-item-text">Posted on</span>
+                
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-07T19:18:05+08:00">
-                2019-11-07
-              </time>
-            
 
-            
-
-            
-          </span>
-
+              <time title="创建时间：2019-11-07 19:18:05 / 修改时间：22:57:00" itemprop="dateCreated datePublished" datetime="2019-11-07T19:18:05+08:00">2019-11-07</time>
+            </span>
           
-            <span class="post-category">
             
-              <span class="post-meta-divider">|</span>
+
             
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AcWing基础课/" itemprop="url" rel="index">
-                    <span itemprop="name">AcWing基础课</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
 
                 
                 
@@ -296,29 +259,61 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
             
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/07/第K个数/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/07/第K个数/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
           
-
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>738</span>
+            </span>
           
-          
-
-          
-
-          
-
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <div id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -330,76 +325,56 @@
   <script id="hbeData" type="hbeData" data-hmacdigest="3f6b92078a04d57dd27f35a90b0f1c31c4fc147f8a3a4806a60ff0f48153c223">ab9c19b369a0e465a98bdfa32e0da36b2c7add51c76154fd9104f08e6ceacd7eec28207ffc8dfddd8a43bdd18ab1a3c203acfa9e176c6c5235a399ac2bc8ee31625e49c6990bd2125c8e95495006f9e866deb53fd2847abbc8e86def89072b9325d4666de511a31372911bfd228fb89ac0c678950ebc4005eab1fe800a42dff8c2d7bcbeb75d825f89c651760391ababb6e478218ba1bf914541bb901e00f84f752392a6104287ddc6aff2b4abb4c4f08541f2e1d36fa96b8db8f4eb4849fd211cfa8d6b022c184e120bc0dc3431179b7b48c865bb56f6b87b0dec3aadd65ee72bef6c6b20a18fcc4130fbc4646e4828b8f00a6887a1915ce6f7ac687b8ac26aae44a7a6289e09d4caec563f0eec9da4e99ba65a44678c4e99dc7dbc856635e173b626ae43ebb380a9ce779b961bb019bac981a4ecd79363de4c5498a541e68e013fab5781ec0f29fafc6335969fa37c0a539060247e49a36532022ce57d67c181f4effeddf4759cf20017df4a3ea3332790a5e4121fdb5e6c5f7a0e7552e9ffba646ac30209bb85e7f1fa02b1a1532ca85df9eb189a79bea800f67a3612c5f1185db4ce3e6f2ea7d3ad88021b66b37139432c724d4e8e028f8538dd4712f6cad7ac89fba7b428e3238cffe917a945d4836aaa5d59aa5b3a771b8197bfef6332ad58b35aed1b14d66c173d189ecdfc6b5d6e220d0b083d379f480b1ba9be5f8c38272a6ab3039c0d3c98be4b725bd3a8ec3b9b7229925a11c011acd178b198740f9ef3dc793d882dcdfb4040d033e49d73b62c87f3285ab9d02285d6c73aff38c863bee1e9a3f98eb24c799f14ef387a3490fda5187553d5fe90b27d7778749bb4f4ce20d28187157a7bf7dee1a98f64a1d2b5a696a9be63d24bcaf4c64215e496c4272d3d1bafd4a131c1084ecceb8007b8a9357ad124676d0fd8a2a41a4f9a98b9d2812419a6d8679c7693a3e4348ff28064a7bc83c774b1d2cf22a2cb6f804056636c6d8154d64e15220b073cb8626a2f2113f6dc1115dc0404a2143c00264f30cd12951c459d2cc80c0a850245940d2dcb75d8dc8861e235c4d1f6c8469525acaba43a4c69163e4bfab0f586def0c2ba35f94e1d797f5015f4f4b2531abe318387a7491b4d68ca46e9b6c0679fd34338d6a814a9fd119470fb22510556568064f2c8667e1aefdaf9d445a09806ccca4bc9471dac548c5daef154450c8536fda7295a6e6d7064637ef6d0833f261a6dd227102505afcaf05f95b1e3c98bef9680316fd1887c4fe964c312cca95f5437dc88dc548b1d32281064f0ccad4c5d2ba5c71b1da0177a4e687223c248062de89b0c32289d7cd925dc2016e7e2ecd1287c382d689702e8ffa945f9fa56c9ee57de400c2a78424bdc006a359834ef1a0a2b7d35fdb9e6da49fe71c47a106ca947c1c5ebbd5d7405fb66f5a239faf81e5ac182c38985cbff1860025466d5584fb7f7440d6d1878e3531f2b3b544279a1b66013966e7963c25d1b2dadbbe2b843600f2df1a68ff552253068797f1aba8dcf46b82a6e9dfbf350d0f6f582e22b5da4eb81fc232f9010e91483dc8ee6371c4cd4dac7721a5c2c3f2caf0959b8b70e36cca2842014bd9208e80680d59628566c5a2f78e4cf39133be9396c573bf59ca9d2f8aac6e8cb7584d6c2266b6dd5dddf09beda7096484acd41fa7f31929ca5934caf44976e4f1fbca90285067337b54265fdc7a60c4605d05b4c3d3912494ce04b2e0ebe3ba9a1509ecc3715dce3e03177b1d951d826c2b011dc80da426f521845b503b0fea80a13423b70ecfb6868d5a5b2814d224122571c311456bca7f3c2bd806d14a4ebbde38f37197f8a2ed84a8f8e922f863fe4e95494a598733b96fcf586d6020798fb6658546d6d4ed82fd588d4f0733cad8d55fa72ad22d898446dd0d6f6907c7addc9cf7c173a60f320dbf6ade342d3ea0ed399c99949ec4071b76e37b7b96055d1b112d76c0ac74c6491cd18bdee97c4ada79c62d9c3bc5523f1cd5995f55526aa05d9b7d3950f56ed4f2ea21f3a924742ef036dd05590c3400766c3e45ea2edc95a1f792a5916baaa808c6f61808a1ed0e8c6a3ae2e29ecade47db5d724378b6f7c5bbb20b6be5926fe390b1bf8745c50c8cd98aef69a9a59b4edf6d6d4e60dfbbf7492024221e930fce2e7576fe89891dca4c38800ef38c300dc51079dd957d428ffc89d78ec75bb12198b9eeae51fb4856a99e289060b796cbb9d0f367f6e3c65755c7229d3d609afff2086151fe0cbd78edddccf5ce6d56ae222201bfed8411965ecbc291eeec3850690ada1f997483db2199843c6a222b602e470e11e75f858a80cf64003537c8d74e2979383483fe1d12817f3ef18084ac278bf9c7065f695f514b57a04d542c2e2244acd8f7f64f8059e789c74295a4ed844912e0a20f9c4f8f7e054cf8e0e6845ec97c68d1bf0887ea9f75a2cbf2140027b9a177678ebbf320cd70a7982c19c297db719dd53a057a004cd55ece303d0a8f7bba331758676d4bde2c94990384149dccaa843f57fe78fccf0dd521f96589ca34a86a9c78d0c244076e8fba3dcfa6d73ab54826ff6c072b10424122872ba6fc47b7df64d42011f34fb90fdee85a0cc7b56f4bd72892a65037aa203d24f971261c7745e7dd1801d1d7d32bb12c39b8685a476e25246610f5da722f77a477edf8d142fe3b02f182cb8680082108364b30841f83107b05af84f43c632c9b19ed9de6978445e91b067fa7a522d4c06db6b2e6308a42166c158a80865f84d7b4bfe3984e97549b192387f8c9df2bdcfdc0fa6636332fef1243ba2e37fe37204b7f45b3b263a4fcba161c8a29119f7cea3474c7f23c0d321d8fb114a4971109c79232c1bd8fc7a7e3e4ba94d68014163d9e6b33ddb2b70bba13d5ee6eb31b9badefdded7ff70a4eea74dff15502205f257eb04d77c8402bc59966594ae6414d3feafcacdc4db5d8ee7b722dda30c6c68f911594d68336befef162f559db9e435024be652abdf668c2a55b2c0135a94d8f849247f11ed2cbb2ad32bddc820d2634cd951d360b8430ff6e6b6502af5aa7d21afb72143fe691d2bcf2d1e9d54d0ec7c6d3346802adea418621b294442c5aa89b9b025a5d1f697920b8da2496bf3fa0eb588c7f1e4e5e241a06ed730be3fbd3463ccb7ccfd6e3d58c0b890976b002fe18b518755ca47e34c15120941f4695b9bef53a72f709ee5c87f2ef7d54b3ae1a9f4246784e083a37989491bf51bd01fc47b4bae78a47c936e90602ca940d7b76b544669b51efc848e1a4a856d96d8d83af4b6e72cf8b484bea9e4eeee74249bf4d5a92a6f895dfd72155387880440b5b10a801a06778c2a48415fe7b6d2f028180d06ed3ddf865d3d8a54fef191a08b8f0f53a024c6806e659bb3f09f78dd45168d3085439bbc55a7f9655d06881b9c3f2f1a204af14caebaa020e6c4344096a07ac2b0299a0f23f9942a240481a5b3c655a6b6e89a5f246f29555ac16edda022fb5ec6587754574f37dae75b20a06f4b5768752fe62084184682284f11b931e94773c0312bcd3b7d27802156cbafd9754a53e35e588a6eace36c1f024a981bdc73ca3bf90b52db6b8e94372545ad84238aa3c57b86bf74c433aa1f6169f870c9f3f1ff2d6637beadb3dd0e46edb6540d9af3b00c62f19b984a9ee2cb933fc33356ddd81c5916cb15d1a55a4ff01bf54bd0a7e336c2deb9aa74e50455681fdf44362bc76e55907fd5cd317f0bc843cab3a93f3a49c4e56f4c12ab3075cf345abb448e6818d7440dd4af503483fef813a4c056e84b234ba08c73c6329844c7d7b7c013252f750b99acc39f996cd740c4e9e2954be0818e10c2c8efc27e6235d82f386ddcc69d5380d6617a8e97954c91566a531e732cfbd46d937dbc3764f6012fe438006994e236e3375165ac950a6ce2d69d401ee3618fedce0234a7120dda0aea99971d3f6a05cbd3cd88ca8a794ec89e8cd3f4b957d98225fc8b41acde53cec457fc7b120173b24a0f453621402101ab118132f2d46970a7514f603fbb80f5a24b607f19a126407a327e88a62f5a968570dac94ccd876cbb4d444a9c5e4573dccb3f6101e617ca81738f768688b15420b8cd113bf0a2b0b74171aa7871a1bba24990f3ed38837bec3f007a9dcb721ea952fb71e213fa0f4c27bd8a93755f4975135f4c67580e67d5bfd845d75440192899f88fc152ba3c29ef96993e68f217b1c7c14b262fde0db80de9090a2ef91f95ce0e41a425b44c817de2b601b5d6a83349ecf52c655e2bdf4f48ad8d524feb78ecaec9d57e333eae2d4967b5b07048f19ae6ade6b804e05da3838457979657550c7b6fa194ccd7649449794afee4384bdf628f84b1c411f0e66a1dfd414951cf814531c33eedad565ca1e8ba041c4822aed2d3d6e747b8e75d79832f53b1496231bb35fdf720de50ed20e3698ca1416d1ee1d0e80d4e88082c2c520f44471f8a949ac8d9aadbed4d6d16e3c562b30b3a1c7e60991089b6f2ffd4be2f698f75a3c610408f62656223e2e41b932ae9b659f2d2b71e2339080cc2644c4bd7da724cd534081c88cb6295b8fb0f67ac2d0babe6502b23326cad327993f74babfe291b3186c601f28222c4b12597b533282817762fcf71488897c38ae88865c31ae53962d7a235359952fb7e65b4b75a5e94becb50897ea5ecf2118c9a74454fa727d5ac387aa44ac29c9169c3744f6f8066da362ae240d159e84da335afc44550274561e8c571ee25d45e07ad012c30e33747d23d4006e723b550e50fb65811ab5a7c44c34fe6503b3d773fff7793dad2fa29ed11d351f94500375bbfa36856c1a64137f467ebf5d5c51588a9204693844117dec0cedc95f741bfd5f14b6d53fed53479f355502f0ad01bd7e57e5d94732de858ed6aca58daa79d2cdc7179169c483873bf578b0944715a5548e3eff92b720bbe0c7b6141eefe5bbf62e4a926a6b0cb358f547769c2b282497e71598b75324eca028b38ac32b7d241d7f7d632f71f200c719adb72853f3074006e6ab7b85e4a272e381ffac5bc9f52e338345af6b824e88050b04fef579ad1deac5d729ad1945cd799c521a841e6d2fe07805e4de2fe0800c16e10be2fea6bfca860df416cc1bf3fb3e02da896776e989be7022284c882857cfeaea1c8c3b30ac6d752a6811f2b2f2fe657d1b27cbcc0b7fe11763dd512ed0b5a2c25b503d266ccb020f414c7def55341f4aa5aa063f2ae7721711dff776996d3e49500b71fa67747086027df66adda5809dc1e287e5651ab0f8c4f80a7ffe13ad98536dab558f9391e77cb0444ff91b5a6725b8e753fca3004a297f58fd02db75f591ef34509fe27abed18dcfbb5a0749ba1453de387fa947e810424c412757522e67e25c90fe4929a3c4d1452b0e21fbdb6842ff9ca3f29c75028579baab1c2b9ef2661f83ccae85071ac953306726d1736abdf3ad3656f84d361f08ee104814acf3f62a0fdc1ac4ce4543e4364e5c96d5ec8a6a091ba5aa6c0dc64f572e4dd6847a01ad3e3785c86d4f835437f619561cb782063fa05100b58243d71043132c79fce2b1567a1bb55624f946bb17d808841a8a72874bb9c2519e5931a82b20ec953815c8d23387504b678c4ecabb5ba9b17b16de3e6a6dae86461c19ee3fdb20843c2009a103b8a517ff64f8138d3130eb2e1370dc1f04cd62dc8593e626907d439421d1f2a8e69f2400d5dd6cae4f9ff1741c286afbe69bc2f1ad84bffd8fbf103312381fb2563d89d2a55abc41132777a69fe14963e49bdc72afbc8ddd032ae612c9495b3a713ee61566e7bdccf8db90fa910076db4237eb9472193d1f9ad24476ebd1bf38c93988eb149350e72ca9d8344ff729bdf6e491f4f161b2086b3e06a15642fcc7825743339ae10fe319878283923c93cf8130d85fd6a69613a30f7fb35a4ef6599b2516c13b7f9719c747b36de0f9b188dbd7d2393adda02c97adf180820c9a6a5c2d3158f7fdd408639f6772abb9b7dfa02b0d7d4e5b53b66808b36069828c30cdcd2be6f7678fe84bf78316a3d29d8682fd8b4ae18cf5e1838b743ceb6c1c1ac4f1e051279fa2e9b89aeed329e630226d31b54fac3997a2c2b68d21fffa6173107597fdffec5f9ec1ae8a275749663e53908db385251169fd5927b645069f2ddea7cb311623b311b2d19aafa1ba00297dc457e9db8867fca69bb176494b93d4a07283d320db563da9efacc1d8c9a529744ed388efaa44aca39adf1865441e425cf1836567fed98428cf76e545d0203e42869ee45684944e9427d9f05418c65f9cca4ebc9460d26e1239813e592f6b40060628c967262970950e4f4ffe3b6c85d1ac4d75c11984468e248109a739d54d8bfb9896559b470afb6b722968a026c134823d0be959dcb94bca2e654c0b73a1aa1772bdd507dc51dba63d66978c3eadd84df54d5c866555b28a5273624266623eafe5d2434c40c2dfb0948d002fa11334b116fcc3fe5ddf2863be00ac6f9e402cbe64fdc2ed7a3f1e9bced53525a58af43a46912473a5ad02a9efb4311981ce8c9c3216dc63eff3ee18993d438cee46a2aa3760bf70824cedbc66573265319a012f712139474fb8510d8e31887a52cda58ae94</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
-      
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
+        
       
 
-      
-      
-      
+      <footer class="post-footer">
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/10/28/快速排序/" rel="next" title="快速排序">
-                <i class="fa fa-chevron-left"></i> 快速排序
-              </a>
-            
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/28/快速排序/" rel="next" title="快速排序">
+                  <i class="fa fa-chevron-left"></i> 快速排序
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/11/08/归并排序/" rel="prev" title="归并排序">
+                  归并排序 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
           </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/08/归并排序/" rel="prev" title="归并排序">
-                归并排序 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+        
+      </footer>
+    
   </div>
   
   
   
   </article>
 
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
-
-
-          
-
+    
+    <div class="comments" id="comments"></div>
   
 
-
-
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -411,102 +386,110 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
+
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">optimjie</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">17</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
-            
-
-            
-
-          </nav>
-
+    <img class="site-author-image" itemprop="image"
+      src="/images/QQ图片20180108124805.png"
+      alt="optimjie">
+  <p class="site-author-name" itemprop="name">optimjie</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
           
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+  </nav>
 
-          
 
-          
-          
-
-          
-          
-
-          
 
         </div>
-      </section>
-
-      
-
-      
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">optimjie</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">32k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">29 分钟</span>
+</div>
 
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
 
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
 
 
 
@@ -517,156 +500,99 @@
         
       </div>
     </footer>
-
-    
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-        
       </div>
-    
 
     
 
   </div>
 
   
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/affix.js?v=7.3.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', function() {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'DfO1YtJmXCgD1sV6KmPrDjIP-gzGzoHsz',
+    appKey: 'JcgXsTtvwezQBuNQ2qjaQoeo',
+    placeholder: '留下邮箱，有回复时你将收到提醒，邮箱不会被公开。',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
 </script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
