@@ -115,6 +115,7 @@
   </style>
 </noscript>
 
+  <link rel="stylesheet" href="/dist/css/share.min.css">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -200,123 +201,90 @@
 
   <div id="posts" class="posts-expand">
     
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/2019/10/24/03-树2-List-Leaves/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
+    
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-          <h1 class="post-title" itemprop="name headline">03-树2 List Leaves
+<h1 class="post-title" itemprop="name headline">03-树2 List Leaves
 
-            
-          </h1>
-        
+</h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-24 17:06:15 / 修改时间：17:14:48" itemprop="dateCreated datePublished" datetime="2019-10-24T17:06:15+08:00">2019-10-24</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/浙大数据结构/" itemprop="url" rel="index"><span itemprop="name">浙大数据结构</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span class="post-meta-item" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
-            </span>
-          
-            
+<div class="post-meta">
   
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
+  <ul class="breadcrumb">
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/">2019</a></li>
+          
         
       
-      <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2019/10/24/03-树2-List-Leaves/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/10/24/03-树2-List-Leaves/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
+      
+      
+        
           
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>3.2k</span>
-            </span>
+            
           
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>3 分钟</span>
-            </span>
           
+            <li><a href="/2019/10/">10</a></li>
+          
+        
+      
+    
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/10/24/">24</a></li>
+          
+        
+      
+    
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/10/24/03-树2-List-Leaves/">03-树2-LIST-LEAVES</a></li>
+          
+        
+      
+    
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/10/24/03-树2-List-Leaves//"></a></li>
+          
+        
+      
+    
+  </ul>
 
-        </div>
-      </header>
+</div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
-        <p>这道题花费了我四个小时，但是很开心一次<code>AC</code>，记录一下。花这么长时间的主要原因是，在第一次想的时候在构造树的结点的时候，没有加入结点的下标，导致后面越做越麻烦，好在及时修改，只花了4个小时😁😁。</p>
+      
+      
+      <div class="post-body">
+        
+          <p>这道题花费了我四个小时，但是很开心一次<code>AC</code>，记录一下。花这么长时间的主要原因是，在第一次想的时候在构造树的结点的时候，没有加入结点的下标，导致后面越做越麻烦，好在及时修改，只花了4个小时😁😁。</p>
 <a id="more"></a>
 
 <h5 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h5><p>Given a tree, you are supposed to list all the leaves in the order of top down, and left to right.</p>
@@ -329,46 +297,79 @@
 <h5 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Null    -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 10</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> lchild;</span><br><span class="line">	<span class="keyword">int</span> rchild;</span><br><span class="line">	<span class="keyword">int</span> index;</span><br><span class="line">&#125;BiTNode;</span><br><span class="line"><span class="keyword">typedef</span> BiTNode QElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SqQueue</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	QElemType Data[MAXSIZE];</span><br><span class="line">	<span class="keyword">int</span> front;</span><br><span class="line">	<span class="keyword">int</span> rear;</span><br><span class="line">&#125;SqQueue;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">CreateBiTree</span><span class="params">(<span class="built_in">vector</span>&lt;BiTNode&gt; &amp;v, <span class="keyword">int</span> n, <span class="keyword">int</span> &amp;leaves)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(SqQueue &amp;Q)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddQueue</span><span class="params">(SqQueue &amp;Q, BiTNode e)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeleteQueue</span><span class="params">(SqQueue &amp;Q)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">QueueEmpty</span><span class="params">(SqQueue Q)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">QueueFull</span><span class="params">(SqQueue Q)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">int</span> root;</span><br><span class="line">	<span class="built_in">vector</span>&lt;BiTNode&gt; v;</span><br><span class="line">	<span class="keyword">int</span> leaves = <span class="number">0</span>;</span><br><span class="line">	root = CreateBiTree(v, n, leaves);</span><br><span class="line">	SqQueue Q;</span><br><span class="line">	InitQueue(Q);</span><br><span class="line">	AddQueue(Q, v[root]);</span><br><span class="line">	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!QueueEmpty(Q))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (Q.Data[Q.front].lchild == Null &amp;&amp; Q.Data[Q.front].rchild == Null)</span><br><span class="line">		&#123;</span><br><span class="line">			cnt++;</span><br><span class="line">			<span class="keyword">if</span> (cnt == leaves)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; Q.Data[Q.front].index;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; Q.Data[Q.front].index &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> t = Q.Data[Q.front].index;</span><br><span class="line">		DeleteQueue(Q);</span><br><span class="line">		<span class="keyword">if</span> (v[t].lchild != Null)</span><br><span class="line">			AddQueue(Q, v[v[t].lchild]);</span><br><span class="line">		<span class="keyword">if</span> (v[t].rchild != Null)</span><br><span class="line">			AddQueue(Q, v[v[t].rchild]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">CreateBiTree</span><span class="params">(<span class="built_in">vector</span>&lt;BiTNode&gt; &amp;v, <span class="keyword">int</span> n, <span class="keyword">int</span> &amp;leaves)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> l, r;</span><br><span class="line">	BiTNode tmp;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr(n, <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		tmp.index = i;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; l &gt;&gt; r;</span><br><span class="line">		<span class="keyword">if</span> (l == <span class="string">'-'</span>)</span><br><span class="line">			tmp.lchild = Null;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			tmp.lchild = l - <span class="string">'0'</span>;</span><br><span class="line">			arr[tmp.lchild] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (r == <span class="string">'-'</span>)</span><br><span class="line">			tmp.rchild = Null;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			tmp.rchild = r - <span class="string">'0'</span>;</span><br><span class="line">			arr[tmp.rchild] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (tmp.lchild == Null &amp;&amp; tmp.rchild == Null)</span><br><span class="line">			leaves++;</span><br><span class="line">		v.push_back(tmp);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (arr[i] != <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(SqQueue &amp;Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Q.front = <span class="number">0</span>;</span><br><span class="line">	Q.rear = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddQueue</span><span class="params">(SqQueue &amp;Q, BiTNode e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!QueueFull(Q))</span><br><span class="line">	&#123;</span><br><span class="line">		Q.Data[Q.rear] = e;</span><br><span class="line">		Q.rear = (Q.rear + <span class="number">1</span>) % MAXSIZE;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeleteQueue</span><span class="params">(SqQueue &amp;Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!QueueEmpty(Q))</span><br><span class="line">	&#123;</span><br><span class="line">		Q.front = (Q.front + <span class="number">1</span>) % MAXSIZE;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">QueueEmpty</span><span class="params">(SqQueue Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (Q.front == Q.rear)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">QueueFull</span><span class="params">(SqQueue Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> ((Q.front + MAXSIZE - Q.rear) % MAXSIZE == <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+        
+      </div>
+      
+      
+      
     </div>
-
     
-    
-    
+  <ul class="breadcrumb">
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/">2019</a></li>
+          
         
       
-
-      <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2019/10/23/树的同构/" rel="next" title="树的同构">
-                  <i class="fa fa-chevron-left"></i> 树的同构
-                </a>
-              
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/28/快速排序/" rel="prev" title="快速排序">
-                  快速排序 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
-      </footer>
     
-  </div>
-  
-  
-  
-  </article>
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/10/">10</a></li>
+          
+        
+      
+    
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/10/24/">24</a></li>
+          
+        
+      
+    
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/10/24/03-树2-List-Leaves/">03-树2-LIST-LEAVES</a></li>
+          
+        
+      
+    
+      
+      
+        
+          
+            
+          
+          
+            <li><a href="/2019/10/24/03-树2-List-Leaves//"></a></li>
+          
+        
+      
+    
+  </ul>
 
+    
+    
+    
   </div>
 
 
@@ -594,9 +595,10 @@
 
 
   
-  <script src="/js/scrollspy.js?v=7.3.0"></script>
+    <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
+  
 
     
 
@@ -624,5 +626,6 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', function() {
 }, window.Valine);
 </script>
 
+  <script src="/dist/js/social-share.min.js"></script>
 </body>
 </html>
