@@ -1703,7 +1703,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #de7a5d;
+  background: #ffe301;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2791,7 +2791,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background-image: url("/image/brown-paper-clips-1097930.jpg");
+  background-image: url("../image/brown-paper-clips-1097930.jpg");
 /*background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
