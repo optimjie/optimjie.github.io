@@ -115,7 +115,7 @@
   </style>
 </noscript>
 
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>3.9k</span>
+              <span>3.5k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -311,7 +311,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
           
 
@@ -327,160 +327,14 @@
         <p>Cpp中数组类的实现以及操作符的重载。。</p>
 <a id="more"></a>
 
-<h5 id="Array-h"><a href="#Array-h" class="headerlink" title="Array.h"></a>Array.h</h5><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">pragma</span> once</span>
-class Array
-<span class="token punctuation">{</span>
-public<span class="token punctuation">:</span>
-    <span class="token keyword">int</span> mLength<span class="token punctuation">;</span>
-    <span class="token keyword">int</span><span class="token operator">*</span> mSpace<span class="token punctuation">;</span>
+<h5 id="Array-h"><a href="#Array-h" class="headerlink" title="Array.h"></a>Array.h</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Array</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> mLength;</span><br><span class="line">	<span class="keyword">int</span>* mSpace;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Array(<span class="keyword">int</span> length);</span><br><span class="line">	Array(<span class="keyword">const</span> Array&amp; obj);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span>&amp; <span class="keyword">operator</span>[](<span class="keyword">int</span> i);</span><br><span class="line">	Array&amp; <span class="keyword">operator</span>=(Array &amp;obj);</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span>==(Array &amp;obj);</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span>!=(Array &amp;obj);</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">length</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setData</span><span class="params">(<span class="keyword">int</span> index, <span class="keyword">int</span> value)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getData</span><span class="params">(<span class="keyword">int</span> index)</span></span>;</span><br><span class="line"></span><br><span class="line">	~Array();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-public<span class="token punctuation">:</span>
-    <span class="token function">Array</span><span class="token punctuation">(</span><span class="token keyword">int</span> length<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">Array</span><span class="token punctuation">(</span><span class="token keyword">const</span> Array<span class="token operator">&amp;</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h5 id="main-c"><a href="#main-c" class="headerlink" title="main.c"></a>main.c</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//定义一个Array类型的啊对象并调用Array类的有参构造函数</span></span><br><span class="line">    <span class="function">Array <span class="title">a1</span><span class="params">(<span class="number">10</span>)</span></span>; </span><br><span class="line">    <span class="comment">//对数组的元素进行初始化</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a1.length(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//a1.setData(i, i); 						  //初步</span></span><br><span class="line">		a1[i] = i;          						  <span class="comment">//提升 []重载</span></span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//对数组的元素进行输出</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a1.length(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//printf("array %d: %d\n", i, a1.getData(i)); //初步</span></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; a1[i];                             </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; a1;       							      <span class="comment">// &lt;&lt;重载</span></span><br><span class="line">    <span class="comment">//用a1对象初始化a2对象，调用a2对象的拷贝构造函数</span></span><br><span class="line">    <span class="comment">//总结1</span></span><br><span class="line">	Array a2 = a1;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a2.length(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//printf("array %d: %d\n", i, a2.getData(i));</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; a1[i]; </span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="function">Array <span class="title">a3</span><span class="params">(<span class="number">5</span>)</span></span>;</span><br><span class="line">	a3 = a1;     <span class="comment">//c++编译器提供的等号操作符为浅拷贝需重载 = </span></span><br><span class="line">	<span class="comment">//总结2</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"a3:"</span> &lt;&lt; a3;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (a1 == a3)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"相等"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不相等"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (a1 != a3)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"不相等"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"相等"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    <span class="token keyword">int</span><span class="token operator">&amp;</span> operator<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Array<span class="token operator">&amp;</span> operator<span class="token operator">=</span><span class="token punctuation">(</span>Array <span class="token operator">&amp;</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    bool operator<span class="token operator">==</span><span class="token punctuation">(</span>Array <span class="token operator">&amp;</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    bool operator<span class="token operator">!=</span><span class="token punctuation">(</span>Array <span class="token operator">&amp;</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h5 id="重载-lt-lt-函数"><a href="#重载-lt-lt-函数" class="headerlink" title="重载&lt;&lt;函数"></a>重载&lt;&lt;函数</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream &amp;out, Array &amp;obj)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; obj.length(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//out &lt;&lt; obj.mSpace[i] &lt;&lt; " ";</span></span><br><span class="line">		out &lt;&lt; obj[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> out;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    <span class="token keyword">int</span> <span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">setData</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token keyword">int</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> <span class="token function">getData</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h5 id="成员函数实现"><a href="#成员函数实现" class="headerlink" title="成员函数实现"></a>成员函数实现</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">Array::Array(<span class="keyword">int</span> length)</span><br><span class="line">&#123;</span><br><span class="line">	mLength = length;</span><br><span class="line">	mSpace = <span class="keyword">new</span> <span class="keyword">int</span>[mLength];</span><br><span class="line">&#125;</span><br><span class="line">Array::Array(<span class="keyword">const</span> Array&amp; obj)</span><br><span class="line">&#123;</span><br><span class="line">	mLength = obj.mLength;</span><br><span class="line">	mSpace = <span class="keyword">new</span> <span class="keyword">int</span> [mLength];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mLength; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		mSpace[i] = obj.mSpace[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> Array::length()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> mLength;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">void</span> Array::setData(<span class="keyword">int</span> index, <span class="keyword">int</span> value)</span><br><span class="line">&#123;</span><br><span class="line">	mSpace[index] = value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> Array::getData(<span class="keyword">int</span> index)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> mSpace[index];</span><br><span class="line">&#125;</span><br><span class="line">Array::~Array()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">delete</span>[] mSpace;</span><br><span class="line">	mSpace = <span class="literal">NULL</span>;</span><br><span class="line">	mLength = <span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span>&amp; Array::<span class="keyword">operator</span>[](<span class="keyword">int</span> i)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>-&gt;mSpace[i];</span><br><span class="line">&#125;</span><br><span class="line">Array&amp; Array::<span class="keyword">operator</span>=(Array &amp;obj)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">delete</span>[] <span class="keyword">this</span>-&gt;mSpace;</span><br><span class="line">	<span class="keyword">this</span>-&gt;mLength = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">this</span>-&gt;mLength = obj.mLength;</span><br><span class="line">	<span class="keyword">this</span>-&gt;mSpace = <span class="keyword">new</span> <span class="keyword">int</span>[mLength];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mLength; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		mSpace[i] = obj[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">bool</span> Array::<span class="keyword">operator</span>==(Array &amp;obj)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;mLength != obj.mLength)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mLength; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (mSpace[i] != obj[i])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">bool</span> Array::<span class="keyword">operator</span>!=(Array &amp;obj)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">return</span> !(*<span class="keyword">this</span> == obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    <span class="token operator">~</span><span class="token function">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<h5 id="main-c"><a href="#main-c" class="headerlink" title="main.c"></a>main.c</h5><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//定义一个Array类型的啊对象并调用Array类的有参构造函数</span>
-    Array <span class="token function">a1</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token comment" spellcheck="true">//对数组的元素进行初始化</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> a1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//a1.setData(i, i);                           //初步</span>
-        a1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>                                    <span class="token comment" spellcheck="true">//提升 []重载</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">//对数组的元素进行输出</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> a1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//printf("array %d: %d\n", i, a1.getData(i)); //初步</span>
-        cout <span class="token operator">&lt;&lt;</span> a1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>                             
-    <span class="token punctuation">}</span>
-    cout <span class="token operator">&lt;&lt;</span> a1<span class="token punctuation">;</span>                                         <span class="token comment" spellcheck="true">// &lt;&lt;重载</span>
-    <span class="token comment" spellcheck="true">//用a1对象初始化a2对象，调用a2对象的拷贝构造函数</span>
-    <span class="token comment" spellcheck="true">//总结1</span>
-    Array a2 <span class="token operator">=</span> a1<span class="token punctuation">;</span>
-
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> a2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//printf("array %d: %d\n", i, a2.getData(i));</span>
-        cout <span class="token operator">&lt;&lt;</span> a1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> 
-    <span class="token punctuation">}</span>
-
-    Array <span class="token function">a3</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    a3 <span class="token operator">=</span> a1<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//c++编译器提供的等号操作符为浅拷贝需重载 = </span>
-    <span class="token comment" spellcheck="true">//总结2</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"a3:"</span> <span class="token operator">&lt;&lt;</span> a3<span class="token punctuation">;</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>a1 <span class="token operator">==</span> a3<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"相等"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">else</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"不相等"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>a1 <span class="token operator">!=</span> a3<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"不相等"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">else</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"相等"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h5 id="重载-lt-lt-函数"><a href="#重载-lt-lt-函数" class="headerlink" title="重载&lt;&lt;函数"></a>重载&lt;&lt;函数</h5><pre class=" language-c"><code class="language-c">ostream<span class="token operator">&amp;</span> operator<span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>ostream <span class="token operator">&amp;</span>out<span class="token punctuation">,</span> Array <span class="token operator">&amp;</span>obj<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> obj<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//out &lt;&lt; obj.mSpace[i] &lt;&lt; " ";</span>
-        out <span class="token operator">&lt;&lt;</span> obj<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> out<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h5 id="成员函数实现"><a href="#成员函数实现" class="headerlink" title="成员函数实现"></a>成员函数实现</h5><pre class=" language-c"><code class="language-c">Array<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">Array</span><span class="token punctuation">(</span><span class="token keyword">int</span> length<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    mLength <span class="token operator">=</span> length<span class="token punctuation">;</span>
-    mSpace <span class="token operator">=</span> new <span class="token keyword">int</span><span class="token punctuation">[</span>mLength<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-Array<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">Array</span><span class="token punctuation">(</span><span class="token keyword">const</span> Array<span class="token operator">&amp;</span> obj<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    mLength <span class="token operator">=</span> obj<span class="token punctuation">.</span>mLength<span class="token punctuation">;</span>
-    mSpace <span class="token operator">=</span> new <span class="token keyword">int</span> <span class="token punctuation">[</span>mLength<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> mLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        mSpace<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">.</span>mSpace<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">int</span> Array<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> mLength<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> Array<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token keyword">int</span> value<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    mSpace<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">int</span> Array<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> mSpace<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-Array<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">~</span><span class="token function">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    delete<span class="token punctuation">[</span><span class="token punctuation">]</span> mSpace<span class="token punctuation">;</span>
-    mSpace <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
-    mLength <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
-<span class="token keyword">int</span><span class="token operator">&amp;</span> Array<span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> this<span class="token operator">-></span>mSpace<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-Array<span class="token operator">&amp;</span> Array<span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token operator">=</span><span class="token punctuation">(</span>Array <span class="token operator">&amp;</span>obj<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    delete<span class="token punctuation">[</span><span class="token punctuation">]</span> this<span class="token operator">-></span>mSpace<span class="token punctuation">;</span>
-    this<span class="token operator">-></span>mLength <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-
-    this<span class="token operator">-></span>mLength <span class="token operator">=</span> obj<span class="token punctuation">.</span>mLength<span class="token punctuation">;</span>
-    this<span class="token operator">-></span>mSpace <span class="token operator">=</span> new <span class="token keyword">int</span><span class="token punctuation">[</span>mLength<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> mLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        mSpace<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token operator">*</span>this<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-bool Array<span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token operator">==</span><span class="token punctuation">(</span>Array <span class="token operator">&amp;</span>obj<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>this<span class="token operator">-></span>mLength <span class="token operator">!=</span> obj<span class="token punctuation">.</span>mLength<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> mLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>mSpace<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> obj<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-bool Array<span class="token punctuation">:</span><span class="token punctuation">:</span>operator<span class="token operator">!=</span><span class="token punctuation">(</span>Array <span class="token operator">&amp;</span>obj<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token operator">!</span><span class="token punctuation">(</span><span class="token operator">*</span>this <span class="token operator">==</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
 <h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><h6 id="拷贝构造函数的四种调用方法："><a href="#拷贝构造函数的四种调用方法：" class="headerlink" title="拷贝构造函数的四种调用方法："></a>拷贝构造函数的四种调用方法：</h6><p>1.<code>Array a1(a2);</code></p>
 <p>2.<code>Array a1 = a2;</code></p>
 <p>3.函数调用过程中，例如：<code>main</code>函数中调用<code>f</code>函数<code>f(a1);</code>，其中<code>a1</code>为<code>Array</code>类型的一个对象，<code>f</code>函数的声明为<code>void f(Array a);</code>这时函数的调用过程中会调用<code>a</code>对象的拷贝构造函数。</p>
@@ -651,12 +505,12 @@ bool Array<span class="token punctuation">:</span><span class="token punctuation
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">42k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">38 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
 </div>
 
         

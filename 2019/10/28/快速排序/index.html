@@ -55,17 +55,17 @@
   };
 </script>
 
-  <meta name="description" content="题目链接 快速排序的模板： #include using namespace std; const int N = 1e5; int q[N]; int n; void quick_sort(int q[], int l, int r) {     if(l &amp;gt;= r)         return;     int x = q[l + r &amp;gt;&amp;gt; 1];     int i = l - 1, j">
+  <meta name="description" content="题目链接 快速排序的模板： 123456789101112131415161718192021222324252627282930313233#include&amp;lt;iostream&amp;gt;using namespace std;const int N = 1e5;int q[N];int n;void quick_sort(int q[], int l, int r)&amp;#123;    if(l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速排序">
 <meta property="og:url" content="https://optimjie.github.io/2019/10/28/快速排序/index.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
-<meta property="og:description" content="题目链接 快速排序的模板： #include using namespace std; const int N = 1e5; int q[N]; int n; void quick_sort(int q[], int l, int r) {     if(l &amp;gt;= r)         return;     int x = q[l + r &amp;gt;&amp;gt; 1];     int i = l - 1, j">
+<meta property="og:description" content="题目链接 快速排序的模板： 123456789101112131415161718192021222324252627282930313233#include&amp;lt;iostream&amp;gt;using namespace std;const int N = 1e5;int q[N];int n;void quick_sort(int q[], int l, int r)&amp;#123;    if(l">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-11-23T07:35:14.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速排序">
-<meta name="twitter:description" content="题目链接 快速排序的模板： #include using namespace std; const int N = 1e5; int q[N]; int n; void quick_sort(int q[], int l, int r) {     if(l &amp;gt;= r)         return;     int x = q[l + r &amp;gt;&amp;gt; 1];     int i = l - 1, j">
+<meta name="twitter:description" content="题目链接 快速排序的模板： 123456789101112131415161718192021222324252627282930313233#include&amp;lt;iostream&amp;gt;using namespace std;const int N = 1e5;int q[N];int n;void quick_sort(int q[], int l, int r)&amp;#123;    if(l">
   <link rel="canonical" href="https://optimjie.github.io/2019/10/28/快速排序/">
 
 
@@ -115,7 +115,7 @@
   </style>
 </noscript>
 
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>686</span>
+              <span>660</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -326,40 +326,7 @@
       
         <p><a href="https://www.acwing.com/problem/content/787/" target="_blank" rel="noopener">题目链接</a></p>
 <p>快速排序的模板：</p>
-<pre class=" language-c++"><code class="language-c++">#include<iostream>
-using namespace std;
-const int N = 1e5;
-int q[N];
-int n;
-void quick_sort(int q[], int l, int r)
-{
-    if(l >= r)
-        return;
-    int x = q[l + r >> 1];
-    int i = l - 1, j = r + 1;
-    while(i < j)
-    {
-        while(q[++i] < x)
-            ;
-        while(q[--j] > x)
-            ;
-        if(i < j)
-            swap(q[i], q[j]);
-    }
-    quick_sort(q, l ,j);
-    quick_sort(q, j + 1, r);
-}
-int main()
-{
-    cin >> n;
-    for(int i = 0; i < n; i++)
-        scanf("%d", &q[i]);
-    quick_sort(q, 0, n - 1);
-    for(int i = 0; i < n; i++)
-        printf("%d ", q[i]);
-    return 0;
-}</code></pre>
-
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span>;</span><br><span class="line"><span class="keyword">int</span> q[N];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sort</span><span class="params">(<span class="keyword">int</span> q[], <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l &gt;= r)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(q[++i] &lt; x)</span><br><span class="line">            ;</span><br><span class="line">        <span class="keyword">while</span>(q[--j] &gt; x)</span><br><span class="line">            ;</span><br><span class="line">        <span class="keyword">if</span>(i &lt; j)</span><br><span class="line">            swap(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    quick_sort(q, l ,j);</span><br><span class="line">    quick_sort(q, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;q[i]);</span><br><span class="line">    quick_sort(q, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, q[i]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -496,12 +463,12 @@ int main()
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">42k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">38 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
 </div>
 
         

@@ -115,7 +115,7 @@
   </style>
 </noscript>
 
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -293,7 +293,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>2.7k</span>
+              <span>2.3k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -319,91 +319,8 @@
         <p>每次做课后布置的题就要做好久，这个题老师讲的时候用的是<code>C</code>语言，我想用<code>C++</code>中的<code>vector</code>做发现做的过程中遇到了许多的问题，老是出现程序宕掉的问题，但让我十分开心的是，改完以后居然一次就<code>AC</code>了别提有多激动了，不过这代码只是完成了功能，可读性做的很差，尤其是判断同构的函数，但是以后回过头来看还是很有意思的吧😂😂。</p>
 <a id="more"></a>
 
-<pre class=" language-c++"><code class="language-c++">#include<iostream>
-#include<vector>
-using namespace std;
-#define Null -1
-typedef char ElemType;
-struct TreeNode
-{
-    ElemType Data;
-    int lchild;
-    int rchild;
-};
-int TreeCreate(vector<TreeNode> &t, int n);
-bool isomorphic(vector<TreeNode> &t1, int t1Root, vector<TreeNode> &t2, int t2Root);
-int t1Root;
-int t2Root;
-int main()
-{
-    int n;
-    cin >> n;
-    vector<TreeNode> t1(n);
-    t1Root = TreeCreate(t1, n);
-    cin >> n;
-    vector<TreeNode> t2(n);
-    t2Root = TreeCreate(t2, n);
-    if (isomorphic(t1, t1Root, t2, t2Root))
-        cout << "Yes" << endl;
-    else
-        cout << "No" << endl;
-    return 0;
-}
-int TreeCreate(vector<TreeNode> &t, int n)
-{
-    int root = -1;
-    vector<int> arr(n, 1);
-    for (int i = 0; i < n; i++)
-    {
-        char cl, cr;
-        cin >> t[i].Data >> cl >> cr;
-        if (cl == '-')
-            t[i].lchild = Null;
-        else
-        {
-            t[i].lchild = cl - '0';
-            arr[t[i].lchild] = 0;
-        }
-        if (cr == '-')
-            t[i].rchild = Null;
-        else
-        {
-            t[i].rchild = cr - '0';
-            arr[t[i].rchild] = 0;
-        }
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] != 0)
-        {
-            root = i;
-            break;
-        }
-    }
-    return root;
-}
-//要明确的一点是Null指的是树的存储结构为数组的下标 下标是从零开始 所以左儿子或者右儿子 为Null 即没有
-bool isomorphic(vector<TreeNode> &t1, int t1Root, vector<TreeNode> &t2, int t2Root)
-{
-    if (t1Root == Null && t2Root == Null)
-        return true;
-    else if ((t1Root != Null && t2Root == Null) ||
-        (t1Root == Null && t2Root != Null))
-        return false;
-    else if (t1[t1Root].Data != t2[t2Root].Data)
-        return false;
-    else if (t1[t1Root].lchild == Null && t2[t2Root].lchild == Null)
-        return isomorphic(t1, t1[t1Root].rchild, t2, t2[t2Root].rchild);
-    else if ((t1[t1Root].lchild != Null && t2[t2Root].lchild != Null) &&
-        (t1[t1[t1Root].lchild].Data == t2[t2[t2Root].lchild].Data))
-        return isomorphic(t1, t1[t1Root].lchild, t2, t2[t2Root].lchild) &&
-        isomorphic(t1, t1[t1Root].rchild, t2, t2[t2Root].rchild);
-    else
-        return isomorphic(t1, t1[t1Root].rchild, t2, t2[t2Root].lchild)&&
-        isomorphic(t1, t1[t1Root].lchild, t2, t2[t2Root].rchild);
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Null -1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> ElemType;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType Data;</span><br><span class="line">	<span class="keyword">int</span> lchild;</span><br><span class="line">	<span class="keyword">int</span> rchild;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">TreeCreate</span><span class="params">(<span class="built_in">vector</span>&lt;TreeNode&gt; &amp;t, <span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isomorphic</span><span class="params">(<span class="built_in">vector</span>&lt;TreeNode&gt; &amp;t1, <span class="keyword">int</span> t1Root, <span class="built_in">vector</span>&lt;TreeNode&gt; &amp;t2, <span class="keyword">int</span> t2Root)</span></span>;</span><br><span class="line"><span class="keyword">int</span> t1Root;</span><br><span class="line"><span class="keyword">int</span> t2Root;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="built_in">vector</span>&lt;TreeNode&gt; t1(n);</span><br><span class="line">	t1Root = TreeCreate(t1, n);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="built_in">vector</span>&lt;TreeNode&gt; t2(n);</span><br><span class="line">	t2Root = TreeCreate(t2, n);</span><br><span class="line">	<span class="keyword">if</span> (isomorphic(t1, t1Root, t2, t2Root))</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"No"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">TreeCreate</span><span class="params">(<span class="built_in">vector</span>&lt;TreeNode&gt; &amp;t, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> root = <span class="number">-1</span>;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr(n, <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">char</span> cl, cr;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; t[i].Data &gt;&gt; cl &gt;&gt; cr;</span><br><span class="line">		<span class="keyword">if</span> (cl == <span class="string">'-'</span>)</span><br><span class="line">			t[i].lchild = Null;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			t[i].lchild = cl - <span class="string">'0'</span>;</span><br><span class="line">			arr[t[i].lchild] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (cr == <span class="string">'-'</span>)</span><br><span class="line">			t[i].rchild = Null;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			t[i].rchild = cr - <span class="string">'0'</span>;</span><br><span class="line">			arr[t[i].rchild] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (arr[i] != <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			root = i;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//要明确的一点是Null指的是树的存储结构为数组的下标 下标是从零开始 所以左儿子或者右儿子 为Null 即没有</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isomorphic</span><span class="params">(<span class="built_in">vector</span>&lt;TreeNode&gt; &amp;t1, <span class="keyword">int</span> t1Root, <span class="built_in">vector</span>&lt;TreeNode&gt; &amp;t2, <span class="keyword">int</span> t2Root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (t1Root == Null &amp;&amp; t2Root == Null)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> ((t1Root != Null &amp;&amp; t2Root == Null) ||</span><br><span class="line">		(t1Root == Null &amp;&amp; t2Root != Null))</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (t1[t1Root].Data != t2[t2Root].Data)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (t1[t1Root].lchild == Null &amp;&amp; t2[t2Root].lchild == Null)</span><br><span class="line">		<span class="keyword">return</span> isomorphic(t1, t1[t1Root].rchild, t2, t2[t2Root].rchild);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> ((t1[t1Root].lchild != Null &amp;&amp; t2[t2Root].lchild != Null) &amp;&amp;</span><br><span class="line">		(t1[t1[t1Root].lchild].Data == t2[t2[t2Root].lchild].Data))</span><br><span class="line">		<span class="keyword">return</span> isomorphic(t1, t1[t1Root].lchild, t2, t2[t2Root].lchild) &amp;&amp;</span><br><span class="line">		isomorphic(t1, t1[t1Root].rchild, t2, t2[t2Root].rchild);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> isomorphic(t1, t1[t1Root].rchild, t2, t2[t2Root].lchild)&amp;&amp;</span><br><span class="line">		isomorphic(t1, t1[t1Root].lchild, t2, t2[t2Root].rchild);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-}</code></pre>
 
     </div>
 
@@ -541,12 +458,12 @@ bool isomorphic(vector<TreeNode> &t1, int t1Root, vector<TreeNode> &t2, int t2Ro
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">42k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">38 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
 </div>
 
         
