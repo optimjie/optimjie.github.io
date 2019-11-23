@@ -55,17 +55,17 @@
   };
 </script>
 
-  <meta name="description" content="题目链接12345678910111213141516171819202122232425262728293031323334#include&amp;lt;iostream&amp;gt;using namespace std;const int N = 100010;int q[N];int n, k;int quick_sort(int q[], int l, int r, int k)&amp;#123;">
+  <meta name="description" content="Here&apos;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第K个数">
 <meta property="og:url" content="https://optimjie.github.io/2019/11/07/第K个数/index.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
-<meta property="og:description" content="题目链接12345678910111213141516171819202122232425262728293031323334#include&amp;lt;iostream&amp;gt;using namespace std;const int N = 100010;int q[N];int n, k;int quick_sort(int q[], int l, int r, int k)&amp;#123;">
+<meta property="og:description" content="Here&apos;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-23T07:57:45.764Z">
+<meta property="og:updated_time" content="2019-11-23T09:51:00.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第K个数">
-<meta name="twitter:description" content="题目链接12345678910111213141516171819202122232425262728293031323334#include&amp;lt;iostream&amp;gt;using namespace std;const int N = 100010;int q[N];int n, k;int quick_sort(int q[], int l, int r, int k)&amp;#123;">
+<meta name="twitter:description" content="Here&apos;s something encrypted, password is required to continue reading.">
   <link rel="canonical" href="https://optimjie.github.io/2019/11/07/第K个数/">
 
 
@@ -248,7 +248,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-23 15:57:45" itemprop="dateModified" datetime="2019-11-23T15:57:45+08:00">2019-11-23</time>
+                <time title="修改时间：2019-11-23 17:51:00" itemprop="dateModified" datetime="2019-11-23T17:51:00+08:00">2019-11-23</time>
               </span>
             
           
@@ -324,17 +324,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a href="https://www.acwing.com/problem/content/788/" target="_blank" rel="noopener">题目链接</a></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"><span class="keyword">int</span> q[N];</span><br><span class="line"><span class="keyword">int</span> n, k;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">quick_sort</span><span class="params">(<span class="keyword">int</span> q[], <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(l == r)</span><br><span class="line">        <span class="keyword">return</span> q[l];</span><br><span class="line">    <span class="keyword">int</span> x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(q[++i] &lt; x)</span><br><span class="line">            ;</span><br><span class="line">        <span class="keyword">while</span>(q[--j] &gt; x)</span><br><span class="line">            ;</span><br><span class="line">        <span class="keyword">if</span>(i &lt; j)</span><br><span class="line">            swap(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> sl = j - l + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(sl &gt;= k)</span><br><span class="line">        <span class="keyword">return</span> quick_sort(q, l, j, k);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> quick_sort(q, j + <span class="number">1</span>, r, k - sl);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;q[i]);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; quick_sort(q, <span class="number">0</span>, n<span class="number">-1</span>, k); <span class="comment">//quick_sort直接返回第K个数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
-
-
-<h5 id="asssdf"><a href="#asssdf" class="headerlink" title="asssdf"></a>asssdf</h5><p>dfsdfs</p>
-<p>sdfsfejdfdsdgsdg</p>
-<p>dg</p>
-<p>ff</p>
-<h5 id="f"><a href="#f" class="headerlink" title="f"></a>f</h5><p>fffff</p>
-<p>dgd</p>
-<h5 id="dg"><a href="#dg" class="headerlink" title="dg"></a>dg</h5><p>dfgdf</p>
-
+        <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="Hey, password is required here." />
+    <label for="hbePass">Hey, password is required here.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="adc2337a258c0bb41d27af8021c3d3b2176482701bd258082a971bbc1467cc93">e28f07e65d1e4c9bee4f88e57db1f97a4b3dcc6d0bcc66455041c18fa3a8a75c42b37d37d90c2a14108ecd49ee129a3f879ad69202d801e9998cae3c79edafd1bb48214edeeb769f8f7732ff6dae644caa968c5f6e8900971b60a35c231b4c0dc078fea65ee859623fe2b0cfadc28c1a730ce2084288371fc31cc1d109dc7e7d2ccc898d432f31b9fa298a0a4839c63514e4284e0e10958b17e6f09c4e8708d96ef3bbc52c7e1457122cd66b46fd0edc22894a17917512ece685c8fc2311d3df384889444adf740aea99bf629a506cd82a676c2b3213f1c809c00ec922a5fa7fc3806a2ea50b0565f21eeddad6d0f83f3823c1d3723bf1d51e64f3e6a453182124bcb4afe134335fa8bd7b7eee626991f3b56b07e64998fc7aab6075edf572df35096ffdeddbb7a9b0f98627de314d3ad52bb333ebfd7f142546691a3ad7403521217a97da7ac3eaa4937b51400961e6876dbe5c7e47e8d32cc67ab996d7bf2052d521cd29157df705d1d2d796213ea06d436e34542105680515bbc61ce3dbfa5cb0c22959f9be9d2c52afd31f9f96c901bb8810e72bce9410641a3a079f05b34ed23cfbadbaad26eb5ed405d9b0b7657c6663f3aea8c3684a52fb0d9f679c8df4dbb01cd593d8bc538262d7826ef5c493b59281ad20264a25c8dbdb42b14f66b21a3ea5d3b836d65eaf813e80c045c04c3d7a287f24e3d848c98032b6d647ad35e2045509f52bb4c29c34139fb32ef215904c5a4bd10390202616fe210b947bb4dd2102afa6ff15674c4fa434b375ceae76e9f25c52c59a722fe6fb56f018f990a7620e526d428a544257a97c80d6b23c05d500e10d62a6a94eb5c6b935d429174493982f653d6e58717d45e74ea516b6ca635b2a79e2048a48d4e2ceca14eb2f1919aee4b11553bd7b756df5ee0523147a60a9c21ccd9df8c76013e20c2c5d2b60a038c53a7ef04cd8b171ac08272d5874ff110288e83d415f2e2b6b750408013a8d0a477b2f7ba0366331dac82ccfa5643b6ed0e5729e5b246f8b6327f3b37e4264e88549d3539d7fa8906117b7e2433d69605d0fd22cff4166f70d005689c66f57687a8128ed4d05324ab69c6a928e4315c53d0235ed243c6bbfd9fa62734b002f71620d7f6f400ad845d148618049f7701683263fd64ec0e8b4db3c22ee126d2ce294de17973415fff44081dd80ecc9ed62f2f803584eb9e8b6733db0502455b8ee3ae31f562f6bc1b5b64087df02a167e975b5c2d6586e761aa450e102fe9e2fb5757039f33901f411fc64cfb4a30ec52f75f5aac8cd766470cf02e2c3cc81efb53f9b2d1c30d0c0b51154c7c317d3b083c94439a127c48d0df69569b8c47ca5ad176682fc3bff6f11a1a549fc1637a46051768e5cf2a40c8ac010f317878a74f876597dbf5f97a7779a64ba1ac2d9a5ea590d7123e9e7e738d6e2188966ce44c6b49079149c451e048c8611e10e9bd03de52240dfd5721879e34f875d96c6e0f2ba70ee8b8e1ab57e6754ff3cc722a47745fcb464e092af0b6369f08d2cc7492be86a3047f55e63388338c42a86a2232bdb918df517457bb4aaa6b59c24c9befaf02544ba456621a3833b648b267748b69f72236ddb66b7688d687f8e4bc5d2bd87aa60e388260c1c7bb7297c3ed870cde96694fe7b5b535d16e92dbb19d33373bd4d85ef9756c2a26208c0e97a2de84315fd07ed37a4a5acacd4afcae8efdbf2852bb4aa595b72afd76dcb224e1791a1a3dcdea95b4a9e2020f4b263fc080c76008fb9f865b48c0688c9549bfcecf7b9816ac036614f4363d82c2074417ff6a0440974cc2faed65836ea4387b7956c06d8dea48244b6c9f58d511dbd2a15a2a988f341cae4c82be3e8a5e12c1bfe552ad73ca86c173fe9873fc04d4c9275f19d75b47ebf72ebdc1301b141e32be42f264811e9d0a1ff12602163d87363df7fa8ada42ac1eb38f9ca35227d468cb8b4844aea428371a50cdb3b3fb6f7515a2e6e7aceb5943705e8e03e6642f4f82f96c3fb7a513898847fc0ac86355231bdb2cd1df01f682bb3f3ba38277a378616f664284c45895535385d9bff8f92392a878420962c468f55e195dad1e626ab36554bc511d35d035ecb65ee45b94feaf534c70bd4e4bf079fb8d0e54b8f947d0a3b8260f722b1fa65f236231ae82fc9b0762c587841474dcb7780e60450410c0ec2d35d7befc0d9992c65b45115b17429833f5f1ed2923ce1d092fb198e55c486e2ec48e93400f48c111e13c9425b3a55341efb47f6187cf99b37f2ca200179fb4ade251e6e086304d30c269f24636a49a6adb3d0c35dc9f85ad1b654063a1b4e66324cf455a36c44a23d06ff2b9335190dd0f3237344950202c5ccef3b0479c1d85683646063bc2c8dfd1d09028f35a6663dc7a79868138f481db31c5687862eb251a30011ab691281cbf690e45e579186653311c0e88fff67e1cd00111c776e5a7d8f3532086d1cb5b0eaa6e46d3dbb68607f0e19862de9ecd09c39ed630896caf7634619c69e27bfebf39667730c899ca3cb3724d73518b4e9835ddc6b537dd4f7d4d814dd0b94601a1a0a073301be2eb4101a6544a65bfe0ec4dd050de5d77189ce7cd8df3d2d0fa7f21af23aaf88e6a3e64dcfb6a640926a957bf540db8b669268d08e7984684c70f8aeee8e54d93ee061bba6fe717c48c34946e2b54de96ddef1b982541a8bb20785585fb786a32cdee2c0224251e6419105301eefb01f387dfcbb8d848a0d48cfe711b99b88028522871596f80c0157c8ee188b15d3ad2083b1e5522045142ff77b0c948ccb0911fa5f74dd3f271f80a09a3913a2f7d5ae8fd9b200de0910b93c76c03fa4f20fd87514e7a638fc49bcdcec6e6f6861ebcaf2f41a3deeb0d28e76c986ded6ad14f61f71adc3238c697eeb1f35c7edc6f25a2f22e331851b85eb2bb38dc8af57ecd2ce8900ebe05542f4cdcc92514a077230dce3dc5519954b1ac2643088846c23c4f37fe251732092b98808632c148442e0de3b9ff4e6f6ad85388155b67b566e26214b5472208c2114a748aafb4f1233bf90f595f1dcd85b2e9ef361efd3489976dc4635bbbd9c3bd7fb0c2bf740f975e9ad7ef80642cd663f4490116adbe42ef6c9009ff9219c37e6093aa33f7ee53ee24774c5e5862f042fa634342b1d4c43b66e19d2ace5bf9c14c2ec02c4b740d33081e9ce8a5977e25ce1b9ddebd4669bbd6972c3918e58a424058d1c0956de0841a0b0852f948fdb35907c8bb80ca976f4add75d943bfa420cc0876f733c58a928cf32ab954196eed49b896983e8d1dce7332b1f4464ddd222a85054a54884b550c9f65ae59d315dc39b4b62020950a0007e01cbd88f9d38e36c9528c9670ebaab9b48a2f023e690cb90a3de36bec4b3c259816f843f031c3dafac6b013f5b620b86b5c90c2234a049f2481af02bf2a56452e5c296e55bceafe07e36352a7f2ff9b4a11206abbfb5c4407d0cb762ae05bd40da47c6b8333229f2f3c534cac4964415555096d797c16e566f298d710444794587b59cd917465ee9f754006a71034b27b11d1f1aa8774ec65855f1bd181d032d22578b5de0071f8de7c6ac0d0ae26fbab16bfa3be30b816e93728f47ebe71f5d737c8f940d62b69b647c43b002b2129f4bb6363ff7eff765da78c6888bd5c4e99262de59ac9709c03b7b0f754481a25d5390af689c0c24bb32350205da1997c71728318a614203e59792fc15000b99843bd714ce9e9085c3d2064c67e31d643f0bf531d590deb53b3488ae8f2ce3477e98ab94c2cb0ddf6fd38a8f3ee28ba5f0a4b33bdf9dfbcd05013c82c22c06ed7fc8ace2312577a52c669a43a6d7f62628e234546c4bd865b0bdb5819f79cdb18670ac3d159cce4722312c6dbc170299fc4183bbec30f8024d355e1b2d6ee78b9920794c33eb20b2411980c6227296f27c9cd1ece0f3adae6bfa8ea163a56dbde19b9e410bad65b57d2cf0a294dd533e87f586b96f6a63ab4c7423a10223e241f309788311e7dcc805b02f34fa4f8f50f87b3cbf931afaa4091fb8ab075ac1ccd76eed862a910490dabb1a931142b98c10de8f83a7f6b836935d2202dc543a5b4f67fa7ff25b31a99830e9195a51f6f14f4d8f05512100e90fea193a632cee1cece142d39f19ae89261d6b04fdeea42125dd9a14ff15f8cb37f51b4bee80736c509b56b8922eaa9666ecbced54c343db89decde5af95592dcfc0413aecf8cef608eee6e043ccd783ee2cd90510604a56c3265b6df2686573aab6310ebdc989afc95385fca20691a4d7046c777c2dda012401feba89a5fa5066b4043b16d248df97f02cdb799606ddd7304c6c9e21203da5cf9bd9cb49613fa0c1dfec067a361ea14907a7caab3d91320ee19b98f605244f0d240f78fb239e884801fffd7eb6f832615b0c9372408f40a5fe63ea33cbdd2926f9a2df5fd9fd31b4c0dc99e92e3d1d671a5310ebe1e00bb1592ea87c9acea91b3fcc22a7ba069fd84dc2717647a23210fa1f7c81a64eeebfc3518496998a7f52b6bde21d9d1107f916e16ea422f704fe07572ccf9677e61c0fdea36f7299381c33aa04bae7e7bd26564fdf9934adf19b94fbdf2ac5bf0d5d3b525150fb616a67c71fcd70238ca1fc4da50e244934e87a50442a24002e7cb49373a2a1dd3c2e30b217ae7b947e78fe2f0902669a128dd6eef4dc44e59ff4fa070e62a80893bfe12bb101d477400dc30b38fdb568c83eaf88b067722305078387df19ff3da79b8a50571f73a24ab4ebcb12074675add2c56ec916905361a742803d091c82a3d8b90ed549582af4d075fa0f605cd072c33e02190b70c7243d95fc1e6792a95ca83709628c16ceea653b640f5654bc69c635065cfa1fc3b6af4fb88c4d9a2c554f17c28a63c19eb0a592ccb68d4cdf66afaee7636d7f12202a733e9c67a07a66e677b25c3e66c06170ea91823ac7c1772b8f2488df477aea21b0e311699008a8dbc355cdd6a9b2b177e911d09ac5c426963cd9dfc79068fd79870ac4ca72fbe4f4685f0c876ba2ed8d3fdd0eda39f5a46af728b8124edf2693814779ed023082f9f7cd4c83f49993b8e20d3b6beb5b704ffa63a49017f13eebfa405fac4bc886ac8cfe4f7d6afadccc86af40dd5e5b1cdac774af91f6aa89b9319323bcb8c0de1d1440f4dfe84dd9a19c3c06f81c3822fce9c00f7607484a132abd0c69e110950ab5112b1ee03764c59adabfd2cdef74eca11eb0f0673bb8c10be05a01126a9a7bf987ede72f74e67c63f62ba9f0ec4db0ea1731d34049d109acf77d69d6cffba6b9b83971b0e7bd8de3e2dd693723fafe44f3bd9e640325e1cafc471583899e0613b2dafcd4689ee3e8a247c1eeed6a7b04719a3b3cdcc57b152adfa0c404ab909425596f97d5be19bcfb7719e93a601fb59020e4f201295dfbab0793009b8c30ce131ba91aadf668f5c7e22e318b57ec4ab616497456b7695626415969bd5d8325defeb5c9705e775b0e1a2d95af5b306c99d4244d160e1d1fca11905767b6ffedb840dc14e7bf3a9f0253fc96f67e210de9ab8f74862ce6577bb7734ee8ba38cb57c204946f25f7e78fa8dc00ba11a67ff2eaf8112dafc7f5e96addcc0796c49246806911de9d316404c2c6b408c8c4202c038e43bacf202537c6877423984a7d530d8b3240c0073d81679bab278c692fc327303a976408cccd2f9d35bb8e45091b3ffdcf9407308aac3f0d4787350e66c7f568734a7d7d432ab711f0cd807b2b880ff63a3166bc17713da507e51121cef6291ce3aec3c1ada14101722e605e6250a483c0e87b0862e95fea5093f6b623e6182480d02d6c1527f71b946aab75f83edb4c481de729f0dad10c029dc3fec3b1d1d84b7de985803c507eafd4ccddb8457d4c7fd4152d60378bb4bf5777572e301aed77a3ec09838fd3904a5740036908935ced26748039886732a8cb0ec51d748a43ce617ee6ae3ef2e1ddb7291bba81194264586a680f371dd0846e5dabdccdaeea6881bd8cb3943c8081d1d720e6c3d486a4aab04cb1695da923b852e0ca990feebb3e4a158783b5a6cc351d210ecd5afe98fd3d289d0b13eaf3114f7d6e871aecdcf0655cc8977b888ccfd7b243abe84d5b62c4f63f0fb06e265b012f7abe2af49f3b1a3152c5d4d3bdb47bb4296389cfea0e20fc639192e0dccea1981617292cae80f31919f00b7fb28b643e81d6b775e1c0db4c16353d41306bf14125bc7f7819167c6faf9d83ca701a8aea5fd583f3b33e01797d9d37a27155d494a56fd508b284cfcfba430d42dfb23c1e1000bc0f588a9a29e48c7c451ed98ff624ae28f2761e580b1e4e74acd097f8fe740aa7bf4cbda9adc8803e81f8ae1bfc25131f49ea7b031f3c9a57fac4ff95f9eee861362c041928e3980801dd439d2f02a4dfb75a7ec84a88828bf57196cc0380da5aba9633b4fdd2e5e251161163e73e20310ae509378c199ed4dbc6fb4e229a17ef492c705e3a94ade572fb68763fe681463227ae8bcdb79da2f2b819b27013821c11bb3a0b808610e4b61c76774549369711518b02df23be6e6e78ae2663c1a490e5e7e9ee053065a5f707876e7a0c300a02912360263310a0a1c01493d976bd6512de5c4bc9031020e23336fd220701947adaf2c9773f14b784c657fd8e9090a9820f4ff315800ee0bc1353056c1a06da93a1ffc839f3e44861214ebd2dca649c8b5448cae86a73fecadbd05c3ffbfb3586f39285ce3806d777def6e472084f77ffe730af1bf9553dbe986faa1b7d6245ca726a73a47c06a1bc5abec3a0695d79a254c154a8b15cc3f1d60fa3ecec7fd38d14cc894e80a9c96d85ad2c1b5b2cba7c09a3f2a3b783ca0f3c2b43385bec90bc3ed7a13a5885c45db585b603b1a4879335b102fd85610b94297c94b4990563c85eef5979ff4f6ed136b5f654ed12546aa7000c06390f05199849feb4aecb489662e4fea6be01c8bd668e6130dc385615aa5b7fb0e56d63253e4df51ca5d183e012e990f5954bc19312e63d04f151fd07b6953f26c2f5b93f011caad4357845a01709085b74e6aadb</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -397,17 +395,8 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -460,23 +449,6 @@
 
         </div>
       </div>
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#asssdf"><span class="nav-number">1.</span> <span class="nav-text">asssdf</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#f"><span class="nav-number">2.</span> <span class="nav-text">f</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dg"><span class="nav-number">3.</span> <span class="nav-text">dg</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
     </div>
   </aside>
