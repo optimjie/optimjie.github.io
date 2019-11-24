@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="optimjie&#39;s blog">
 <meta property="og:description" content="最短路问题中有很多的算法，dijkstra bellman_ford spfa floyd初学真的好难记（更不用说去看算法导论的详细证明了）。y总也总结了很多模板链接，自己再来总结一下加深记忆。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-24T14:13:43.805Z">
+<meta property="og:updated_time" content="2019-11-24T15:07:02.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最短路模板">
 <meta name="twitter:description" content="最短路问题中有很多的算法，dijkstra bellman_ford spfa floyd初学真的好难记（更不用说去看算法导论的详细证明了）。y总也总结了很多模板链接，自己再来总结一下加深记忆。">
@@ -238,7 +238,7 @@
                 
               
 
-              <time title="创建时间：2019-11-24 21:30:47 / 修改时间：22:13:43" itemprop="dateCreated datePublished" datetime="2019-11-24T21:30:47+08:00">2019-11-24</time>
+              <time title="创建时间：2019-11-24 21:30:47 / 修改时间：23:07:02" itemprop="dateCreated datePublished" datetime="2019-11-24T21:30:47+08:00">2019-11-24</time>
             </span>
           
             
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>331</span>
+              <span>1.3k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -320,13 +320,14 @@
         <p>最短路问题中有很多的算法，<code>dijkstra bellman_ford spfa floyd</code>初学真的好难记（更不用说去看算法导论的详细证明了）。y总也总结了很多模板<a href="https://www.acwing.com/blog/content/405/" target="_blank" rel="noopener">链接</a>，自己再来总结一下加深记忆。</p>
 <a id="more"></a>
 
-<h4 id="Dijkstra"><a href="#Dijkstra" class="headerlink" title="Dijkstra"></a>Dijkstra</h4><h5 id="朴素版dijkstra"><a href="#朴素版dijkstra" class="headerlink" title="朴素版dijkstra"></a>朴素版<code>dijkstra</code></h5><h6 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">集合S为已经确定最短路径的点集。</span><br><span class="line"><span class="number">1.</span> 初始化距离</span><br><span class="line"><span class="number">1</span>号结点的距离为零，其他结点的距离设为无穷大（看具体的题）。</span><br><span class="line"><span class="number">2.</span> 循环n次，每一次将集合S之外距离最短X的点加入到S中去（这里的距离最短指的是距离<span class="number">1</span>号点最近。点X的路径一定最短，基于贪心，严格证明待看）。然后用点X更新X邻接点的距离。</span><br></pre></td></tr></table></figure>
+<h4 id="Dijkstra"><a href="#Dijkstra" class="headerlink" title="Dijkstra"></a>Dijkstra</h4><h5 id="朴素版dijkstra适合稠密图"><a href="#朴素版dijkstra适合稠密图" class="headerlink" title="朴素版dijkstra适合稠密图"></a>朴素版<code>dijkstra</code>适合稠密图</h5><h6 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">集合S为已经确定最短路径的点集。</span><br><span class="line"><span class="number">1.</span> 初始化距离</span><br><span class="line"><span class="number">1</span>号结点的距离为零，其他结点的距离设为无穷大（看具体的题）。</span><br><span class="line"><span class="number">2.</span> 循环n次，每一次将集合S之外距离最短X的点加入到S中去（这里的距离最短指的是距离<span class="number">1</span>号点最近。点X的路径一定最短，基于贪心，严格证明待看）。然后用点X更新X邻接点的距离。</span><br></pre></td></tr></table></figure>
 
 <h6 id="时间复杂度分析"><a href="#时间复杂度分析" class="headerlink" title="时间复杂度分析"></a>时间复杂度分析</h6><p>寻找路径最短的点：O(n^2)</p>
 <p>加入集合S：O(n)</p>
 <p>更新距离：O(m)</p>
 <p>所以总的时间复杂度为O(n^2)</p>
-<h6 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a><a href="https://www.acwing.com/problem/content/851/" target="_blank" rel="noopener">具体问题</a></h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h6 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a><a href="https://www.acwing.com/problem/content/851/" target="_blank" rel="noopener">具体问题</a></h6><p>稠密图用邻接矩阵存。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">510</span>, M = <span class="number">10010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> g[N][N], dist[N];</span><br><span class="line"><span class="keyword">bool</span> visited[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dijkstra</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dist, <span class="number">0x3f</span>, <span class="keyword">sizeof</span>(dist));</span><br><span class="line">    dist[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(!visited[j] &amp;&amp; (t == <span class="number">-1</span> || dist[j] &lt; dist[t]))</span><br><span class="line">                t = j;</span><br><span class="line">        &#125;</span><br><span class="line">        visited[t] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">			dist[j] = min(dist[j], dist[t] + g[t][j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(dist[n] == <span class="number">0x3f3f3f3f</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> dist[n];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">   	</span><br><span class="line">    <span class="built_in">memset</span>(g, <span class="number">0x3f</span>, <span class="keyword">sizeof</span>(g));</span><br><span class="line">    <span class="keyword">while</span> (m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> x, y, c;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;x, &amp;y, &amp;c);</span><br><span class="line">       	g[x][y] = min(g[x][y], c);</span><br><span class="line">    &#125;</span><br><span class="line">   	<span class="built_in">cout</span> &lt;&lt; dijkstra() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -488,7 +489,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Dijkstra"><span class="nav-number">1.</span> <span class="nav-text">Dijkstra</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#朴素版dijkstra"><span class="nav-number">1.1.</span> <span class="nav-text">朴素版dijkstra</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#思路"><span class="nav-number">1.1.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#时间复杂度分析"><span class="nav-number">1.1.2.</span> <span class="nav-text">时间复杂度分析</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#具体问题"><span class="nav-number">1.1.3.</span> <span class="nav-text">具体问题</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Dijkstra"><span class="nav-number">1.</span> <span class="nav-text">Dijkstra</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#朴素版dijkstra适合稠密图"><span class="nav-number">1.1.</span> <span class="nav-text">朴素版dijkstra适合稠密图</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#思路"><span class="nav-number">1.1.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#时间复杂度分析"><span class="nav-number">1.1.2.</span> <span class="nav-text">时间复杂度分析</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#具体问题"><span class="nav-number">1.1.3.</span> <span class="nav-text">具体问题</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -515,12 +516,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">38k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">33 分钟</span>
+    <span title="站点阅读时长">34 分钟</span>
 </div>
 
         
