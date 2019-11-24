@@ -55,15 +55,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://optimjie.github.io/categories/index.html">
+  <meta name="description" content="最短路问题中有很多的算法，dijkstra bellman_ford spfa floyd初学真的好难记（更不用说去看算法导论的详细证明了）。y总也总结了很多模板链接，自己再来总结一下加深记忆。">
+<meta name="keywords" content="算法题模板">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最短路模板">
+<meta property="og:url" content="https://optimjie.github.io/2019/11/24/最短路模板/index.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
+<meta property="og:description" content="最短路问题中有很多的算法，dijkstra bellman_ford spfa floyd初学真的好难记（更不用说去看算法导论的详细证明了）。y总也总结了很多模板链接，自己再来总结一下加深记忆。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-23T08:22:56.693Z">
+<meta property="og:updated_time" content="2019-11-24T14:13:43.805Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-  <link rel="canonical" href="https://optimjie.github.io/categories/">
+<meta name="twitter:title" content="最短路模板">
+<meta name="twitter:description" content="最短路问题中有很多的算法，dijkstra bellman_ford spfa floyd初学真的好难记（更不用说去看算法导论的详细证明了）。y总也总结了很多模板链接，自己再来总结一下加深记忆。">
+  <link rel="canonical" href="https://optimjie.github.io/2019/11/24/最短路模板/">
 
 
 <script id="page-configurations">
@@ -71,13 +75,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>categories | optimjie's blog</title>
+  <title>最短路模板 | optimjie's blog</title>
   
 
 
@@ -192,92 +196,184 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content page-post-detail">
             
 
   <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-block page">
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/2019/11/24/最短路模板/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">categories
-
-</h1>
-
-<div class="post-meta">
-  
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-              
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
+          <h1 class="post-title" itemprop="name headline">最短路模板
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
               
                 
-                  
+              
+
+              <time title="创建时间：2019-11-24 21:30:47 / 修改时间：22:13:43" itemprop="dateCreated datePublished" datetime="2019-11-24T21:30:47+08:00">2019-11-24</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
                 
               
-                
-                  
-                
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/24/最短路模板/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/24/最短路模板/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
               
-                
-                  
-                
+                <span class="post-meta-item-text">本文字数：</span>
               
-              目前共计 6 个分类
+              <span>331</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>最短路问题中有很多的算法，<code>dijkstra bellman_ford spfa floyd</code>初学真的好难记（更不用说去看算法导论的详细证明了）。y总也总结了很多模板<a href="https://www.acwing.com/blog/content/405/" target="_blank" rel="noopener">链接</a>，自己再来总结一下加深记忆。</p>
+<a id="more"></a>
+
+<h4 id="Dijkstra"><a href="#Dijkstra" class="headerlink" title="Dijkstra"></a>Dijkstra</h4><h5 id="朴素版dijkstra"><a href="#朴素版dijkstra" class="headerlink" title="朴素版dijkstra"></a>朴素版<code>dijkstra</code></h5><h6 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">集合S为已经确定最短路径的点集。</span><br><span class="line"><span class="number">1.</span> 初始化距离</span><br><span class="line"><span class="number">1</span>号结点的距离为零，其他结点的距离设为无穷大（看具体的题）。</span><br><span class="line"><span class="number">2.</span> 循环n次，每一次将集合S之外距离最短X的点加入到S中去（这里的距离最短指的是距离<span class="number">1</span>号点最近。点X的路径一定最短，基于贪心，严格证明待看）。然后用点X更新X邻接点的距离。</span><br></pre></td></tr></table></figure>
+
+<h6 id="时间复杂度分析"><a href="#时间复杂度分析" class="headerlink" title="时间复杂度分析"></a>时间复杂度分析</h6><p>寻找路径最短的点：O(n^2)</p>
+<p>加入集合S：O(n)</p>
+<p>更新距离：O(m)</p>
+<p>所以总的时间复杂度为O(n^2)</p>
+<h6 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a><a href="https://www.acwing.com/problem/content/851/" target="_blank" rel="noopener">具体问题</a></h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/算法题模板/" rel="tag"># 算法题模板</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/11/16/六度空间/" rel="next" title="六度空间">
+                  <i class="fa fa-chevron-left"></i> 六度空间
+                </a>
+              
             </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AcWing基础课/">AcWing基础课</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PTA/">PTA</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/bug记录/">bug记录</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/传智播客扫地僧c-c-学习笔记/">传智播客扫地僧c/c++学习笔记</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据结构/">数据结构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/浙大数据结构/">浙大数据结构</a><span class="category-list-count">4</span></li></ul>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
             </div>
           </div>
         
-      </div>
-      
-      
-      
-    </div>
+      </footer>
     
+  </div>
+  
+  
+  
+  </article>
 
-    
-    
-    
   </div>
 
 
@@ -300,8 +396,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -373,6 +478,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Dijkstra"><span class="nav-number">1.</span> <span class="nav-text">Dijkstra</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#朴素版dijkstra"><span class="nav-number">1.1.</span> <span class="nav-text">朴素版dijkstra</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#思路"><span class="nav-number">1.1.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#时间复杂度分析"><span class="nav-number">1.1.2.</span> <span class="nav-text">时间复杂度分析</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#具体问题"><span class="nav-number">1.1.3.</span> <span class="nav-text">具体问题</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -496,10 +618,9 @@
 
 
   
-    <script src="/js/scrollspy.js?v=7.3.0"></script>
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
-  
 
     
 
