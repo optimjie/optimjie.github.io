@@ -56,15 +56,16 @@
 </script>
 
   <meta name="description" content="本文将记录以后遇到的bug及解决的方法（因为我觉得这个东西很有必要写，有的时候就简单的一个地方就要debug好久😭😭）">
+<meta name="keywords" content="bug">
 <meta property="og:type" content="article">
-<meta property="og:title" content="报错记录">
+<meta property="og:title" content="bug记录">
 <meta property="og:url" content="https://optimjie.github.io/2019/10/06/报错记录/index.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
 <meta property="og:description" content="本文将记录以后遇到的bug及解决的方法（因为我觉得这个东西很有必要写，有的时候就简单的一个地方就要debug好久😭😭）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-16T06:40:30.647Z">
+<meta property="og:updated_time" content="2019-11-27T13:41:49.978Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="报错记录">
+<meta name="twitter:title" content="bug记录">
 <meta name="twitter:description" content="本文将记录以后遇到的bug及解决的方法（因为我觉得这个东西很有必要写，有的时候就简单的一个地方就要debug好久😭😭）">
   <link rel="canonical" href="https://optimjie.github.io/2019/10/06/报错记录/">
 
@@ -80,7 +81,7 @@
   };
 </script>
 
-  <title>报错记录 | optimjie's blog</title>
+  <title>bug记录 | optimjie's blog</title>
   
 
 
@@ -242,7 +243,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">报错记录
+          <h1 class="post-title" itemprop="name headline">bug记录
 
             
           </h1>
@@ -270,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-16 14:40:30" itemprop="dateModified" datetime="2019-11-16T14:40:30+08:00">2019-11-16</time>
+                <time title="修改时间：2019-11-27 21:41:49" itemprop="dateModified" datetime="2019-11-27T21:41:49+08:00">2019-11-27</time>
               </span>
             
           
@@ -323,7 +324,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>254</span>
+              <span>359</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -352,6 +353,10 @@
 <h6 id="CRT-detected-that-the-application-wrote-to-memory-after-end-of-heap-buffer"><a href="#CRT-detected-that-the-application-wrote-to-memory-after-end-of-heap-buffer" class="headerlink" title="CRT detected that the application wrote to memory after end of heap buffer"></a>CRT detected that the application wrote to memory after end of heap buffer</h6><p>我服了看了这么长时间竟然是数组越界，我从下标1开始了。😂</p>
 <h6 id="Stack-overflow"><a href="#Stack-overflow" class="headerlink" title="Stack overflow"></a>Stack overflow</h6><p>递归时没有写递归出口。</p>
 <h6 id="result-pointer-nullptr"><a href="#result-pointer-nullptr" class="headerlink" title="result_pointer!=nullptr"></a>result_pointer!=nullptr</h6><p>scanf &amp;&amp;&amp;&amp;&amp;&amp;</p>
+<h6 id="if-else"><a href="#if-else" class="headerlink" title="if else"></a>if else</h6><p>写了这么多的<code>if else</code>没想到居然还会再这种地方出现问题😱。写成了：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)</span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">true</span>) func();</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">true</span>) func1();</span><br></pre></td></tr></table></figure>
+
+<p><strong>呆呆呆呆</strong></p>
 
     </div>
 
@@ -362,6 +367,15 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/bug/" rel="tag"># bug</a>
+            
+          </div>
+        
 
         
 
@@ -440,7 +454,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -486,7 +500,9 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+          
+        
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -507,7 +523,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#CRT-detected-that-the-application-wrote-to-memory-after-end-of-heap-buffer"><span class="nav-number">1.</span> <span class="nav-text">CRT detected that the application wrote to memory after end of heap buffer</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Stack-overflow"><span class="nav-number">2.</span> <span class="nav-text">Stack overflow</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#result-pointer-nullptr"><span class="nav-number">3.</span> <span class="nav-text">result_pointer!=nullptr</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#CRT-detected-that-the-application-wrote-to-memory-after-end-of-heap-buffer"><span class="nav-number">1.</span> <span class="nav-text">CRT detected that the application wrote to memory after end of heap buffer</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Stack-overflow"><span class="nav-number">2.</span> <span class="nav-text">Stack overflow</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#result-pointer-nullptr"><span class="nav-number">3.</span> <span class="nav-text">result_pointer!=nullptr</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#if-else"><span class="nav-number">4.</span> <span class="nav-text">if else</span></a></li></ol></div>
             
 
           </div>
@@ -539,7 +555,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">41 分钟</span>
+    <span title="站点阅读时长">42 分钟</span>
 </div>
 
         
