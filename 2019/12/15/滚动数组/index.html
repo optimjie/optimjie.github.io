@@ -55,19 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="本文将记录以后遇到的bug及解决的方法（因为我觉得这个东西很有必要写，有的时候就简单的一个地方就要debug好久😭😭）">
-<meta name="keywords" content="总结">
+  <meta name="description" content="一维数组老生常谈的斐波那契数列。 1 1 2 3 5 8 13 21 ….编写一个函数，输入n，返回第n个数(n &amp;lt;= 50)。(实测当 n = 47 爆int)12345678910111213// 不使用滚动数组LL fib(int n)&amp;#123;    LL fibnacci[55];    fibnacci[0] = fibnacci[1] = 1;        if (n ==">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bug记录">
-<meta property="og:url" content="https://optimjie.github.io/2019/10/06/报错记录/index.html">
+<meta property="og:title" content="滚动数组">
+<meta property="og:url" content="https://optimjie.github.io/2019/12/15/滚动数组/index.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
-<meta property="og:description" content="本文将记录以后遇到的bug及解决的方法（因为我觉得这个东西很有必要写，有的时候就简单的一个地方就要debug好久😭😭）">
+<meta property="og:description" content="一维数组老生常谈的斐波那契数列。 1 1 2 3 5 8 13 21 ….编写一个函数，输入n，返回第n个数(n &amp;lt;= 50)。(实测当 n = 47 爆int)12345678910111213// 不使用滚动数组LL fib(int n)&amp;#123;    LL fibnacci[55];    fibnacci[0] = fibnacci[1] = 1;        if (n ==">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-11T02:57:53.206Z">
+<meta property="og:updated_time" content="2019-12-15T09:16:53.189Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bug记录">
-<meta name="twitter:description" content="本文将记录以后遇到的bug及解决的方法（因为我觉得这个东西很有必要写，有的时候就简单的一个地方就要debug好久😭😭）">
-  <link rel="canonical" href="https://optimjie.github.io/2019/10/06/报错记录/">
+<meta name="twitter:title" content="滚动数组">
+<meta name="twitter:description" content="一维数组老生常谈的斐波那契数列。 1 1 2 3 5 8 13 21 ….编写一个函数，输入n，返回第n个数(n &amp;lt;= 50)。(实测当 n = 47 爆int)12345678910111213// 不使用滚动数组LL fib(int n)&amp;#123;    LL fibnacci[55];    fibnacci[0] = fibnacci[1] = 1;        if (n ==">
+  <link rel="canonical" href="https://optimjie.github.io/2019/12/15/滚动数组/">
 
 
 <script id="page-configurations">
@@ -81,7 +80,7 @@
   };
 </script>
 
-  <title>bug记录 | optimjie's blog</title>
+  <title>滚动数组 | optimjie's blog</title>
   
 
 
@@ -229,7 +228,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/2019/10/06/报错记录/">
+    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/2019/12/15/滚动数组/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
@@ -243,7 +242,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">bug记录
+          <h1 class="post-title" itemprop="name headline">滚动数组
 
             
           </h1>
@@ -260,19 +259,11 @@
                 
               
 
-              <time title="创建时间：2019-10-06 10:16:53" itemprop="dateCreated datePublished" datetime="2019-10-06T10:16:53+08:00">2019-10-06</time>
+              <time title="创建时间：2019-12-15 16:58:57 / 修改时间：17:16:53" itemprop="dateCreated datePublished" datetime="2019-12-15T16:58:57+08:00">2019-12-15</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-11 10:57:53" itemprop="dateModified" datetime="2019-12-11T10:57:53+08:00">2019-12-11</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -281,7 +272,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/bug记录/" itemprop="url" rel="index"><span itemprop="name">bug记录</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
 
                 
                 
@@ -309,8 +300,8 @@
       
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2019/10/06/报错记录/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/10/06/报错记录/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019/12/15/滚动数组/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/15/滚动数组/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -324,7 +315,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>419</span>
+              <span>1.6k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -347,18 +338,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文将记录以后遇到的bug及解决的方法（因为我觉得这个东西很有必要写，有的时候就简单的一个地方就要debug好久😭😭）</p>
-<a id="more"></a>
+        <h6 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h6><p>老生常谈的斐波那契数列。 1 1 2 3 5 8 13 21 ….<br>编写一个函数，输入n，返回第n个数(n &lt;= 50)。(实测当 n = 47 爆int)</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不使用滚动数组</span></span><br><span class="line"><span class="function">LL <span class="title">fib</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL fibnacci[<span class="number">55</span>];</span><br><span class="line">    fibnacci[<span class="number">0</span>] = fibnacci[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">        fibnacci[i] = fibnacci[i - <span class="number">1</span>] + fibnacci[i - <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibnacci[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
 
-<h6 id="CRT-detected-that-the-application-wrote-to-memory-after-end-of-heap-buffer"><a href="#CRT-detected-that-the-application-wrote-to-memory-after-end-of-heap-buffer" class="headerlink" title="CRT detected that the application wrote to memory after end of heap buffer"></a>CRT detected that the application wrote to memory after end of heap buffer</h6><p>我服了看了这么长时间竟然是数组越界，我从下标1开始了。😂</p>
-<h6 id="Stack-overflow"><a href="#Stack-overflow" class="headerlink" title="Stack overflow"></a>Stack overflow</h6><p>递归时没有写递归出口。</p>
-<h6 id="result-pointer-nullptr"><a href="#result-pointer-nullptr" class="headerlink" title="result_pointer!=nullptr"></a>result_pointer!=nullptr</h6><p>scanf &amp;&amp;&amp;&amp;&amp;&amp;</p>
-<h6 id="if-else"><a href="#if-else" class="headerlink" title="if else"></a>if else</h6><p>写了这么多的<code>if else</code>没想到居然还会再这种地方出现问题😱。写成了：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)</span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">true</span>) func();</span><br><span class="line"><span class="keyword">else</span> </span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">true</span>) func1();</span><br></pre></td></tr></table></figure>
 
-<p><strong>呆呆呆呆</strong></p>
-<h6 id="二维字符数组的初始化"><a href="#二维字符数组的初始化" class="headerlink" title="二维字符数组的初始化"></a>二维字符数组的初始化</h6><p>定义了一个全局的二维数组<code>g[5][5]</code>。</p>
-<p>在函数中初始化时写成了<code>g[5][5] = .......</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用滚动数组</span></span><br><span class="line"><span class="comment">// 在求第n个数时，只用到了前面两个值，所以只需开一个长度为三的数组。</span></span><br><span class="line"><span class="function">LL <span class="title">fib</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL fibnacci[<span class="number">3</span>];</span><br><span class="line">    fibnacci[<span class="number">0</span>] = fibnacci[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (n - <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        n--;</span><br><span class="line">        fibnacci[<span class="number">2</span>] = fibnacci[<span class="number">0</span>] + fibnacci[<span class="number">1</span>];</span><br><span class="line">        fibnacci[<span class="number">0</span>] = fibnacci[<span class="number">1</span>];</span><br><span class="line">        fibnacci[<span class="number">1</span>] = fibnacci[<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibnacci[<span class="number">2</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h6><p>递推关系<code>f[i][j] = f[i - 1][j] + f[i - 1][j - x]</code> (其中 x &gt; 0)</p>
+<p>编写一个函数，输入a，b，输出f[a][b]。(i, j &lt;= 50)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不使用滚动数组</span></span><br><span class="line"><span class="comment">// 第0行与第0列为递推的出口</span></span><br><span class="line"><span class="keyword">int</span> f[<span class="number">50</span>][<span class="number">50</span>], x = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">50</span>; i++)</span><br><span class="line">		f[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	init();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= a; i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= b; j++)</span><br><span class="line">			<span class="keyword">if</span> (j &gt;= x) f[i][j] = f[i - <span class="number">1</span>][j] + f[i - <span class="number">1</span>][j - x];</span><br><span class="line">	<span class="keyword">return</span> f[a][b];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用滚动数组</span></span><br><span class="line"><span class="comment">// 在求f[i][j]时只用到了前面一行所以可以使用滚动数组</span></span><br><span class="line"><span class="keyword">int</span> f[<span class="number">2</span>][<span class="number">50</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">50</span>; i++)</span><br><span class="line">        f[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= a; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">50</span>; j++) f[i % <span class="number">2</span>][j] = <span class="number">0</span>; <span class="comment">// 这个地方很重要 一开始我没有想到 打印时才发现问题</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= b; j++)</span><br><span class="line">            <span class="keyword">if</span> (j &gt;= x) f[i % <span class="number">2</span>][j] = f[<span class="number">1</span> - i % <span class="number">2</span>][j] + f[<span class="number">1</span> - i % <span class="number">2</span>][j - x]; <span class="comment">// 第1行使用第0行，第0行使用第1行</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> f[a % <span class="number">2</span>][b];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -369,23 +359,14 @@
       
 
       <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/总结/" rel="tag"># 总结</a>
-            
-          </div>
-        
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/05/数组模板类-MyVector/" rel="next" title="数组模板类(MyVector)">
-                  <i class="fa fa-chevron-left"></i> 数组模板类(MyVector)
+                <a href="/2019/12/09/Dungeon-Master/" rel="next" title="Dungeon Master">
+                  <i class="fa fa-chevron-left"></i> Dungeon Master
                 </a>
               
             </div>
@@ -393,10 +374,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/23/树的同构/" rel="prev" title="树的同构">
-                  树的同构 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -535,7 +512,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#CRT-detected-that-the-application-wrote-to-memory-after-end-of-heap-buffer"><span class="nav-number">1.</span> <span class="nav-text">CRT detected that the application wrote to memory after end of heap buffer</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Stack-overflow"><span class="nav-number">2.</span> <span class="nav-text">Stack overflow</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#result-pointer-nullptr"><span class="nav-number">3.</span> <span class="nav-text">result_pointer!=nullptr</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#if-else"><span class="nav-number">4.</span> <span class="nav-text">if else</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#二维字符数组的初始化"><span class="nav-number">5.</span> <span class="nav-text">二维字符数组的初始化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#一维数组"><span class="nav-number">1.</span> <span class="nav-text">一维数组</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#二维数组"><span class="nav-number">2.</span> <span class="nav-text">二维数组</span></a></li></ol></div>
             
 
           </div>
