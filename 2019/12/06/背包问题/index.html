@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="optimjie&#39;s blog">
 <meta property="og:description" content="01背包问题给定物品的数量n（每一种物品只有一件）以及每件物品的价值，一个容量为v的背包，问怎样装物品使总价值最大。朴素算法1234567891011121314151617181920212223242526272829#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace st">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-16T01:24:15.958Z">
+<meta property="og:updated_time" content="2019-12-22T06:17:02.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="背包问题">
 <meta name="twitter:description" content="01背包问题给定物品的数量n（每一种物品只有一件）以及每件物品的价值，一个容量为v的背包，问怎样装物品使总价值最大。朴素算法1234567891011121314151617181920212223242526272829#include&amp;lt;iostream&amp;gt;#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;using namespace st">
@@ -271,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-16 09:24:15" itemprop="dateModified" datetime="2019-12-16T09:24:15+08:00">2019-12-16</time>
+                <time title="修改时间：2019-12-22 14:17:02" itemprop="dateModified" datetime="2019-12-22T14:17:02+08:00">2019-12-22</time>
               </span>
             
           
@@ -363,7 +363,7 @@
 
 <h5 id="优化成一维"><a href="#优化成一维" class="headerlink" title="优化成一维"></a>优化成一维</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> v[N], w[N];</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">int</span> f[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; v[i] &gt;&gt; w[i];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = v[i]; j &lt;= m; j++)</span><br><span class="line">            f[j] = max(f[j], f[j - v[i]] + w[i]);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; f[m] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="多重背包问题"><a href="#多重背包问题" class="headerlink" title="多重背包问题"></a>多重背包问题</h4>
+<h4 id="多重背包问题"><a href="#多重背包问题" class="headerlink" title="多重背包问题"></a>多重背包问题</h4><h5 id="朴素算法-2"><a href="#朴素算法-2" class="headerlink" title="朴素算法"></a>朴素算法</h5>
     </div>
 
     
@@ -545,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#01背包问题"><span class="nav-number">1.</span> <span class="nav-text">01背包问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#朴素算法"><span class="nav-number">1.1.</span> <span class="nav-text">朴素算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优化"><span class="nav-number">1.2.</span> <span class="nav-text">优化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完全背包问题"><span class="nav-number">2.</span> <span class="nav-text">完全背包问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#朴素算法-1"><span class="nav-number">2.1.</span> <span class="nav-text">朴素算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优化-1"><span class="nav-number">2.2.</span> <span class="nav-text">优化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优化成一维"><span class="nav-number">2.3.</span> <span class="nav-text">优化成一维</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多重背包问题"><span class="nav-number">3.</span> <span class="nav-text">多重背包问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#01背包问题"><span class="nav-number">1.</span> <span class="nav-text">01背包问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#朴素算法"><span class="nav-number">1.1.</span> <span class="nav-text">朴素算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优化"><span class="nav-number">1.2.</span> <span class="nav-text">优化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完全背包问题"><span class="nav-number">2.</span> <span class="nav-text">完全背包问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#朴素算法-1"><span class="nav-number">2.1.</span> <span class="nav-text">朴素算法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优化-1"><span class="nav-number">2.2.</span> <span class="nav-text">优化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优化成一维"><span class="nav-number">2.3.</span> <span class="nav-text">优化成一维</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多重背包问题"><span class="nav-number">3.</span> <span class="nav-text">多重背包问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#朴素算法-2"><span class="nav-number">3.1.</span> <span class="nav-text">朴素算法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -563,7 +563,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
