@@ -56,14 +56,14 @@
 </script>
 
   <meta name="description" content="题目描述分析等差数列的任意两项之差为公差的倍数。($a_n-a_1=(n-1)d, n\ge2$)拿样例来说，2, 6, 4, 10, 20，排序之后为2, 4, 6, 10, 20，与首项的差为2, 4, 8, 18。要使得等差数列最短就要使公差尽可能的大，就是要求差的最大公约数。n个数的最大公约数为求前两个的gcd，再用求出gcd与后面的数依次求。证明？不会😁">
-<meta name="keywords" content="数论,欧几里得算法,蓝桥杯">
+<meta name="keywords" content="数论,蓝桥杯">
 <meta property="og:type" content="article">
 <meta property="og:title" content="等差数列">
 <meta property="og:url" content="http://47.93.29.175/2020/02/10/等差数列/index.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
 <meta property="og:description" content="题目描述分析等差数列的任意两项之差为公差的倍数。($a_n-a_1=(n-1)d, n\ge2$)拿样例来说，2, 6, 4, 10, 20，排序之后为2, 4, 6, 10, 20，与首项的差为2, 4, 8, 18。要使得等差数列最短就要使公差尽可能的大，就是要求差的最大公约数。n个数的最大公约数为求前两个的gcd，再用求出gcd与后面的数依次求。证明？不会😁">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-10T12:00:56.555Z">
+<meta property="og:updated_time" content="2020-02-10T16:05:03.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="等差数列">
 <meta name="twitter:description" content="题目描述分析等差数列的任意两项之差为公差的倍数。($a_n-a_1=(n-1)d, n\ge2$)拿样例来说，2, 6, 4, 10, 20，排序之后为2, 4, 6, 10, 20，与首项的差为2, 4, 8, 18。要使得等差数列最短就要使公差尽可能的大，就是要求差的最大公约数。n个数的最大公约数为求前两个的gcd，再用求出gcd与后面的数依次求。证明？不会😁">
@@ -260,11 +260,19 @@
                 
               
 
-              <time title="创建时间：2020-02-10 19:19:43 / 修改时间：20:00:56" itemprop="dateCreated datePublished" datetime="2020-02-10T19:19:43+08:00">2020-02-10</time>
+              <time title="创建时间：2020-02-10 19:19:43" itemprop="dateCreated datePublished" datetime="2020-02-10T19:19:43+08:00">2020-02-10</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-11 00:05:03" itemprop="dateModified" datetime="2020-02-11T00:05:03+08:00">2020-02-11</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -274,6 +282,13 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing蓝桥杯/" itemprop="url" rel="index"><span itemprop="name">AcWing蓝桥杯</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing蓝桥杯/数论/" itemprop="url" rel="index"><span itemprop="name">数论</span></a></span>
 
                 
                 
@@ -316,7 +331,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>740</span>
+              <span>801</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -343,6 +358,9 @@
 
 
 
+<p><strong>等差数列需要注意公差为1的情况</strong></p>
+<h3 id="用到的知识"><a href="#用到的知识" class="headerlink" title="用到的知识"></a>用到的知识</h3><p>1.等差数列的通项公式，注意公差为1的情况。</p>
+<p>2.欧几里得算法又称辗转相除法。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b ? gcd(b, a % b) : a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">    sort(a, a + n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">        ans = gcd(ans, a[i] - a[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (ans == <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; n &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; (a[n - <span class="number">1</span>] - a[<span class="number">0</span>]) / ans + <span class="number">1</span>&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
@@ -376,8 +394,6 @@
             
               <a href="/tags/数论/" rel="tag"># 数论</a>
             
-              <a href="/tags/欧几里得算法/" rel="tag"># 欧几里得算法</a>
-            
               <a href="/tags/蓝桥杯/" rel="tag"># 蓝桥杯</a>
             
           </div>
@@ -397,6 +413,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/02/10/X的因子链/" rel="prev" title="X的因子链">
+                  X的因子链 <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -456,7 +476,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -489,7 +509,9 @@
         
           
         
-        <span class="site-state-item-count">9</span>
+          
+        
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -528,9 +550,7 @@
         
           
         
-          
-        
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -556,7 +576,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用到的知识"><span class="nav-number">3.</span> <span class="nav-text">用到的知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
