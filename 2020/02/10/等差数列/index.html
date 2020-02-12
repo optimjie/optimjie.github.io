@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="optimjie&#39;s blog">
 <meta property="og:description" content="题目题目描述数学老师给小明出了一道等差数列求和的题目。但是粗心的小明忘记了一部分的数列，只记得其中$N$个整数。现在给出这$N$个整数，小明想知道包含这$N$个整数的最短的等差数列有几项？输入格式输入的第一行包含一个整数$N$。第二行包含$N$个整数$A_1$,$A_2$,⋅⋅⋅,$A_N$。(注意$A_1$∼$A_N$并不一定是按等差数列中的顺序给出)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-11T07:20:05.681Z">
+<meta property="og:updated_time" content="2020-02-12T05:53:23.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="等差数列">
 <meta name="twitter:description" content="题目题目描述数学老师给小明出了一道等差数列求和的题目。但是粗心的小明忘记了一部分的数列，只记得其中$N$个整数。现在给出这$N$个整数，小明想知道包含这$N$个整数的最短的等差数列有几项？输入格式输入的第一行包含一个整数$N$。第二行包含$N$个整数$A_1$,$A_2$,⋅⋅⋅,$A_N$。(注意$A_1$∼$A_N$并不一定是按等差数列中的顺序给出)">
@@ -271,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-11 15:20:05" itemprop="dateModified" datetime="2020-02-11T15:20:05+08:00">2020-02-11</time>
+                <time title="修改时间：2020-02-12 13:53:23" itemprop="dateModified" datetime="2020-02-12T13:53:23+08:00">2020-02-12</time>
               </span>
             
           
@@ -373,8 +373,8 @@
 <p>拿样例来说，<code>2, 6, 4, 10, 20</code>，排序之后为<code>2, 4, 6, 10, 20</code>，与首项的差为<code>2, 4, 8, 18</code>。</p>
 <p>要使得等差数列最短就要使公差尽可能的大，就是要求差的最大公约数。</p>
 <p>n个数的最大公约数为求前两个的gcd，再用求出gcd与后面的数依次求。证明？不会😁</p>
-<p><strong>等差数列需要注意公差为1的情况</strong></p>
-<h3 id="用到的知识"><a href="#用到的知识" class="headerlink" title="用到的知识"></a>用到的知识</h3><p>1.等差数列的通项公式，注意公差为1的情况。</p>
+<p><strong>等差数列需要注意公差为0的情况</strong></p>
+<h3 id="用到的知识"><a href="#用到的知识" class="headerlink" title="用到的知识"></a>用到的知识</h3><p>1.等差数列的通项公式，注意公差为0的情况。</p>
 <p>2.欧几里得算法又称辗转相除法。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[N];</span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b ? gcd(b, a % b) : a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">    sort(a, a + n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">        ans = gcd(ans, a[i] - a[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (ans == <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; n &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; (a[n - <span class="number">1</span>] - a[<span class="number">0</span>]) / ans + <span class="number">1</span>&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
@@ -618,12 +618,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">75k</span>
+    <span title="站点总字数">76k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:08</span>
+    <span title="站点阅读时长">1:09</span>
 </div>
 
 <!-- 网站运行时间的设置 -->
