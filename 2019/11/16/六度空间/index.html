@@ -765,32 +765,6 @@ setInterval("createtime()",250);
 
 
     
-
-<script>
-NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
-  var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#comments',
-    verify: false,
-    notify: false,
-    appId: 'DfO1YtJmXCgD1sV6KmPrDjIP-gzGzoHsz',
-    appKey: 'JcgXsTtvwezQBuNQ2qjaQoeo',
-    placeholder: '留下邮箱，有回复时你将收到提醒，邮箱不会被公开。',
-    avatar: 'mm',
-    meta: guest,
-    pageSize: '10' || 10,
-    visitor: false,
-    lang: '' || 'zh-cn',
-    path: location.pathname
-  });
-}, window.Valine);
-</script>
-
-
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   <script src="/js/src/Valine.min.js"></script>
   
