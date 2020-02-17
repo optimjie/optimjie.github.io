@@ -4,28 +4,22 @@
 
 
 
-<html class="theme-next gemini" lang="zh-CN">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.3.0">
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=7.3.0" color="#222">
-  <link rel="manifest" href="/images/site.webmanifest">
-  <meta name="msapplication-config" content="/images/browserconfig.xml">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="google-site-verification" content="SJUudYL5q_atXSgew2qwy69FXOnSnNB2rAmwHmcBT9U">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/QQ图片20180108124805.png?v=7.3.0" color="#222">
 
 <link rel="stylesheet" href="/css/main.css?v=7.3.0">
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
 
 <script id="hexo-configurations">
@@ -36,13 +30,13 @@
     version: '7.3.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     save_scroll: false,
-    copycode: {"enable":true,"show_result":true,"style":"mac"},
-    fancybox: true,
+    copycode: {"enable":true,"show_result":true,"style":null},
+    fancybox: false,
     mediumzoom: false,
-    lazyload: true,
-    pangu: true,
+    lazyload: false,
+    pangu: false,
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -50,9 +44,9 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: '',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
       copy_success: '复制成功',
@@ -84,16 +78,6 @@
 
   <title>optimjie's blog</title>
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141207776-1"></script>
-  <script pjax>
-    var host = window.location.hostname;
-    if (host !== "localhost" || !true) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-141207776-1');
-    }
-  </script>
 
 
 
@@ -168,48 +152,20 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>博客首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
       
       
       
         
-          
-          
-          
-            
-            
-    
-  
-  <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
       
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-location-arrow"></i> <br>关于更多</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
-
-
-          
-        
-          
-          
-          
-        
-          
-          
-          
-        
-          
-          
-          
-        
-          
-          
-          
-        
-      
       
       
       
@@ -218,7 +174,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>各种标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
       
@@ -229,7 +185,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类专栏</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
       
@@ -240,39 +196,12 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>文章归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
-      <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
-      </li>
-    
   </ul>
 
 </nav>
-  <div class="site-search">
-    
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-  </div>
 </div>
     </header>
 
@@ -294,12 +223,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/02/20/学术不神秘/20170220-Top-Journals-in-Economics/">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/27/染色法判定二分图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -310,7 +239,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2017/02/20/学术不神秘/20170220-Top-Journals-in-Economics/" class="post-title-link" itemprop="url">Top Journals in Economics</a>
+              <a href="/2019/11/27/染色法判定二分图/" class="post-title-link" itemprop="url">染色法判定二分图</a>
             
           </h1>
         
@@ -320,22 +249,26 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text"> </span>
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2017-02-20 09:30:00" itemprop="dateCreated datePublished" datetime="2017-02-20T09:30:00+08:00">2017-02-20</time>
+              <time title="创建时间：2019-11-27 21:08:45 / 修改时间：22:05:51" itemprop="dateCreated datePublished" datetime="2019-11-27T21:08:45+08:00">2019-11-27</time>
             </span>
+          
+            
+
+            
           
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">专栏：</span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学术不神秘/" itemprop="url" rel="index"><span itemprop="name">学术不神秘</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
 
                 
                 
@@ -343,14 +276,6 @@
             </span>
           
 
-          
-            <span id="/2017/02/20/学术不神秘/20170220-Top-Journals-in-Economics/" class="post-meta-item leancloud_visitors" data-flag-title="Top Journals in Economics" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
           
             
   
@@ -359,10 +284,12 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">评论：</span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2017/02/20/学术不神秘/20170220-Top-Journals-in-Economics/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/02/20/学术不神秘/20170220-Top-Journals-in-Economics/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019/11/27/染色法判定二分图/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/27/染色法判定二分图/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -376,720 +303,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>1.8k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>2 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>The rank of this list is based on <a href="http://econ.shufe.edu.cn/se/kxyj_con/87/1489" target="_blank" rel="noopener">SUFE journal list</a>.</p>
-<h2 id="Top-Tier"><a href="#Top-Tier" class="headerlink" title="Top Tier"></a>Top Tier</h2><ul>
-<li><a href="http://econpapers.repec.org/article/aeaaecrev/" target="_blank" rel="noopener">American Economic Review</a></li>
-<li><a href="http://econpapers.repec.org/article/wlyemetrp/" target="_blank" rel="noopener">Econometrica</a></li>
-<li><a href="http://econpapers.repec.org/article/ucpjpolec/" target="_blank" rel="noopener">Journal of Political Economy</a></li>
-<li><a href="http://econpapers.repec.org/article/oupqjecon/" target="_blank" rel="noopener">Quarterly Journal of Economics</a></li>
-<li><a href="http://econpapers.repec.org/article/ouprestud/" target="_blank" rel="noopener">Review of Economic Studies</a></li></ul>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/02/20/学术不神秘/20170220-Top-Journals-in-Economics/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/01/16/生活随手记/20170116-我在台湾过新年/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2017/01/16/生活随手记/20170116-我在台湾过新年/" class="post-title-link" itemprop="url">我在台湾过新年</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-01-16 17:30:00" itemprop="dateCreated datePublished" datetime="2017-01-16T17:30:00+08:00">2017-01-16</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随手记/" itemprop="url" rel="index"><span itemprop="name">生活随手记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2017/01/16/生活随手记/20170116-我在台湾过新年/" class="post-meta-item leancloud_visitors" data-flag-title="我在台湾过新年" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2017/01/16/生活随手记/20170116-我在台湾过新年/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/01/16/生活随手记/20170116-我在台湾过新年/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>3.3k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>3 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>刚从台湾回来，七天六夜的行程，扣除购物花费，单单算交通（机票、台铁、高铁、捷运、公交与客运）、住宿、吃饭、门票这类花费大概折合 RMB  3500 元左右。这次主要在台北周边还有阿里山玩，下次可以考虑去南台湾和花东：</p>
-<blockquote>
-<p>1.1：香港-台北（西门町、宁夏夜市）【住台北】<br>1.2：平溪线-九份【住九份】<br>1.3：台北故宫-士林官邸-中正纪念堂-淡水【住台北】</p></blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/01/16/生活随手记/20170116-我在台湾过新年/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2016/12/20/学术不神秘/20161220-Crowdfunding-and-Online-Social-Capital-A Research-Idea/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2016/12/20/学术不神秘/20161220-Crowdfunding-and-Online-Social-Capital-A Research-Idea/" class="post-title-link" itemprop="url">Crowdfunding and Online Social Capital: A Research Idea</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2016-12-20 01:35:21" itemprop="dateCreated datePublished" datetime="2016-12-20T01:35:21+08:00">2016-12-20</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学术不神秘/" itemprop="url" rel="index"><span itemprop="name">学术不神秘</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2016/12/20/学术不神秘/20161220-Crowdfunding-and-Online-Social-Capital-A Research-Idea/" class="post-meta-item leancloud_visitors" data-flag-title="Crowdfunding and Online Social Capital: A Research Idea" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2016/12/20/学术不神秘/20161220-Crowdfunding-and-Online-Social-Capital-A Research-Idea/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2016/12/20/学术不神秘/20161220-Crowdfunding-and-Online-Social-Capital-A Research-Idea/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>2.6k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>2 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-Background"><a href="#1-Background" class="headerlink" title="1. Background"></a>1. Background</h2><p><a href="http://tech.sina.com.cn/z/luoear" target="_blank" rel="noopener">Luo Er raised money</a> for his daughter’s treatment fee through a WeChat media platform account in P2P finance. But people found that Luo actually is not so poor that he can’t afford his daughter’s treatment fee and the Shenzhen medical insurance can also cover part of her treatment fee.</p>
-<p>In Zhihu, the largest Chinese Q&amp;A online community, when answering a question about people’s opinions toward this case, <a href="https://www.zhihu.com/question/53144742/answer/133639599" target="_blank" rel="noopener">Katy家怡</a> mentions that:</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/12/20/学术不神秘/20161220-Crowdfunding-and-Online-Social-Capital-A Research-Idea/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2016/12/17/书影拾光机/20161217-竺可桢-科学的方法-公正的态度-果断的决心/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2016/12/17/书影拾光机/20161217-竺可桢-科学的方法-公正的态度-果断的决心/" class="post-title-link" itemprop="url">竺可桢：科学的方法 公正的态度 果断的决心</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2016-12-17 15:30:00" itemprop="dateCreated datePublished" datetime="2016-12-17T15:30:00+08:00">2016-12-17</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/书影拾光机/" itemprop="url" rel="index"><span itemprop="name">书影拾光机</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2016/12/17/书影拾光机/20161217-竺可桢-科学的方法-公正的态度-果断的决心/" class="post-meta-item leancloud_visitors" data-flag-title="竺可桢：科学的方法 公正的态度 果断的决心" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2016/12/17/书影拾光机/20161217-竺可桢-科学的方法-公正的态度-果断的决心/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2016/12/17/书影拾光机/20161217-竺可桢-科学的方法-公正的态度-果断的决心/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>2.6k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>2 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>　　诸位同学，学校开课已一周，今天训育处召集这个会，能如家人似的在一起谈话，觉得非常愉快。<br>　　大学生，是人生最快活的时期，没有直接的经济负担，没有谋生的问题。诸位在中学中，同学大都是同县或同省，可是，来大学后，有从全国各方面来的同学，可以知道全国的情形，时间长了，各人都认识。这样，各人家庭的状况，故乡的风物，都能互相知道，这亦是一种教育。大学比之中学，在经费和设备方面，都来的充实，教师的经验和学识，也远胜于中学，这供给诸位切磋学问的极好机会。同时，国家花在诸位身上的钱，每年有一千五百元，而且，全中国大学生仅四万人，诸位都是这一万分之一的青年，这种机会，万万不能错过。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/12/17/书影拾光机/20161217-竺可桢-科学的方法-公正的态度-果断的决心/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2016/12/16/学术不神秘/20161216-Antimonopoly-Law-Legislation-in-USA-and-China/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2016/12/16/学术不神秘/20161216-Antimonopoly-Law-Legislation-in-USA-and-China/" class="post-title-link" itemprop="url">Antimonopoly Law Legislation in USA and China</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2016-12-16 18:31:22" itemprop="dateCreated datePublished" datetime="2016-12-16T18:31:22+08:00">2016-12-16</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学术不神秘/" itemprop="url" rel="index"><span itemprop="name">学术不神秘</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2016/12/16/学术不神秘/20161216-Antimonopoly-Law-Legislation-in-USA-and-China/" class="post-meta-item leancloud_visitors" data-flag-title="Antimonopoly Law Legislation in USA and China" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2016/12/16/学术不神秘/20161216-Antimonopoly-Law-Legislation-in-USA-and-China/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2016/12/16/学术不神秘/20161216-Antimonopoly-Law-Legislation-in-USA-and-China/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>25k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>23 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <div class="note success">
-            <p>This is the essay of CUHK PhD level course <em>Industrial Organization</em> </p>
-          </div>
-
-<p><strong>Abstract:</strong> This article explores the facts during the anti-monopoly legislation in the US and China with historical evidences. Small and insufficient firms in the US were more active in lobbying the antitrust legislation, while in China, SOEs and multinational companies were more active. The core problem in the US is whether the country needed an antitrust act at that time, but people in China concerned more about what should be included in the law. The effect of the implementation of the law in both countries is not as good as expected. The unclear definition of concepts in Sherman Act and the inefficient distribution of enforcement power in China are the reasons.</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/12/16/学术不神秘/20161216-Antimonopoly-Law-Legislation-in-USA-and-China/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2016/08/26/学术不神秘/20160826-商学院里的经济学PhD项目和经济系的有什么区别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2016/08/26/学术不神秘/20160826-商学院里的经济学PhD项目和经济系的有什么区别/" class="post-title-link" itemprop="url">商学院里的经济学 PhD 项目和经济系的有什么区别</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2016-08-26 02:33:00" itemprop="dateCreated datePublished" datetime="2016-08-26T02:33:00+08:00">2016-08-26</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学术不神秘/" itemprop="url" rel="index"><span itemprop="name">学术不神秘</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2016/08/26/学术不神秘/20160826-商学院里的经济学PhD项目和经济系的有什么区别/" class="post-meta-item leancloud_visitors" data-flag-title="商学院里的经济学 PhD 项目和经济系的有什么区别" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2016/08/26/学术不神秘/20160826-商学院里的经济学PhD项目和经济系的有什么区别/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2016/08/26/学术不神秘/20160826-商学院里的经济学PhD项目和经济系的有什么区别/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>1.3k</span>
+              <span>1.2k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -1112,17 +326,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <div class="note success">
-            <p>本文被收录于 <a href="https://www.zhihu.com/roundtable/biz-school" target="_blank" rel="noopener">知乎圆桌 - 读个商学院</a> 。 </p>
-          </div>
-
-<p><a href="https://www.zhihu.com/question/46344210/answer/118946681" target="_blank" rel="noopener">知乎回答链接</a></p>
-<p>关注了好久的问题，最近刚入读某校商学院的经济学PhD项目，而敝校刚好在商学院和经济系都有经济学 PhD 项目，所以终于可以就自己近期的一些了解来答题了。</p>
-<p><strong>从行政管理上</strong>，以敝校为例，商学院的经济学项目（仅仅指 Economics ，不算 Finance 、MKT 这类的）在决策科学与企业经济学系（DSE）下面的 Business Economics 方向，而经济系在社会科学学院下面。通常社科院对经济系没什么影响力，而商学院对于我们系的管理权就相对比较大。比如申请材料寄送这块为例，经济系通常是直接寄去他们系里，而我们系的招生录取材料都需要先寄到学院那边。</p>
+          <p>二分图：</p>
+<p>一个无向图，使得顶点集V可以分割为两个互不相交的子集A,B，使得所有边两端分别属于两个子集A,B。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2016/08/26/学术不神秘/20160826-商学院里的经济学PhD项目和经济系的有什么区别/" rel="contents">
+              <a class="btn" href="/2019/11/27/染色法判定二分图/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1153,12 +362,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2016/04/22/书影拾光机/20160422-如何看待奔跑吧兄弟节目组去杭州博物馆拍摄/">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/26/最小生成树模板/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1169,7 +378,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2016/04/22/书影拾光机/20160422-如何看待奔跑吧兄弟节目组去杭州博物馆拍摄/" class="post-title-link" itemprop="url">如何看待奔跑吧兄弟节目组去杭州博物馆拍摄</a>
+              <a href="/2019/11/26/最小生成树模板/" class="post-title-link" itemprop="url">最小生成树模板</a>
             
           </h1>
         
@@ -1179,22 +388,26 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text"> </span>
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2016-04-22 08:49:00" itemprop="dateCreated datePublished" datetime="2016-04-22T08:49:00+08:00">2016-04-22</time>
+              <time title="创建时间：2019-11-26 18:41:04 / 修改时间：23:19:50" itemprop="dateCreated datePublished" datetime="2019-11-26T18:41:04+08:00">2019-11-26</time>
             </span>
+          
+            
+
+            
           
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">专栏：</span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/书影拾光机/" itemprop="url" rel="index"><span itemprop="name">书影拾光机</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
 
                 
                 
@@ -1202,14 +415,6 @@
             </span>
           
 
-          
-            <span id="/2016/04/22/书影拾光机/20160422-如何看待奔跑吧兄弟节目组去杭州博物馆拍摄/" class="post-meta-item leancloud_visitors" data-flag-title="如何看待奔跑吧兄弟节目组去杭州博物馆拍摄" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
           
             
   
@@ -1218,436 +423,12 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2016/04/22/书影拾光机/20160422-如何看待奔跑吧兄弟节目组去杭州博物馆拍摄/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2016/04/22/书影拾光机/20160422-如何看待奔跑吧兄弟节目组去杭州博物馆拍摄/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>910</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://www.zhihu.com/question/43452588/answer/96280097" target="_blank" rel="noopener">知乎回答链接</a></p>
-<p>先说结论：（我不是来洗地的）个人认为，如果是在博物馆非开放时间段拍摄，而且付费+做好了「文物保护措施」的话好像没什么不妥。对，前提是一定要做好完善的文保措施；如果有损坏文物的风险，那么当然应该拒绝拍摄！同时，节目有必要担负一种文化宣传的角色，寓科普于乐。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/04/22/书影拾光机/20160422-如何看待奔跑吧兄弟节目组去杭州博物馆拍摄/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
-    </div>
-
+      <span class="post-meta-item-text">Valine：</span>
     
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2016/04/13/生活随手记/20160413-本科毕业出国读研的留学生户口档案的处理方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2016/04/13/生活随手记/20160413-本科毕业出国读研的留学生户口档案的处理方法/" class="post-title-link" itemprop="url">本科毕业出境读研的户口与档案处理方法</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2016-04-13 01:12:00" itemprop="dateCreated datePublished" datetime="2016-04-13T01:12:00+08:00">2016-04-13</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随手记/" itemprop="url" rel="index"><span itemprop="name">生活随手记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2016/04/13/生活随手记/20160413-本科毕业出国读研的留学生户口档案的处理方法/" class="post-meta-item leancloud_visitors" data-flag-title="本科毕业出境读研的户口与档案处理方法" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2016/04/13/生活随手记/20160413-本科毕业出国读研的留学生户口档案的处理方法/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2016/04/13/生活随手记/20160413-本科毕业出国读研的留学生户口档案的处理方法/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>1.7k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>2 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://www.zhihu.com/question/31133427/answer/95017252" target="_blank" rel="noopener">知乎回答链接</a></p>
-<p>本文不能作为档案存档、就业落户、党组织关系转接等手续办理的依据，请在参阅本文最后的参考链接、咨询有关部门人员、了解最新政策后再做决定（注：本文时效性截至20160520）。</p>
-<h2 id="1-境外的几个「没有」"><a href="#1-境外的几个「没有」" class="headerlink" title="1. 境外的几个「没有」"></a>1. 境外的几个「没有」</h2><p>几个事实：境外没有党组织（香港除了中央政府驻港机构、驻港部队等之外，没有党组织）、没有人事档案/学籍档案，境外高校毕业后就业没有三方协议、没有报到证、没有毕业证书（仅有学位证书）。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/04/13/生活随手记/20160413-本科毕业出国读研的留学生户口档案的处理方法/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2016/04/10/碎碎念不停/20160410-浙大人有哪些经典语录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2016/04/10/碎碎念不停/20160410-浙大人有哪些经典语录/" class="post-title-link" itemprop="url">浙大人有哪些经典语录</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2016-04-10 16:35:00" itemprop="dateCreated datePublished" datetime="2016-04-10T16:35:00+08:00">2016-04-10</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/碎碎念不停/" itemprop="url" rel="index"><span itemprop="name">碎碎念不停</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2016/04/10/碎碎念不停/20160410-浙大人有哪些经典语录/" class="post-meta-item leancloud_visitors" data-flag-title="浙大人有哪些经典语录" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2016/04/10/碎碎念不停/20160410-浙大人有哪些经典语录/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2016/04/10/碎碎念不停/20160410-浙大人有哪些经典语录/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>742</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://www.zhihu.com/question/40129748/answer/94637444" target="_blank" rel="noopener">知乎回答链接</a></p>
-<p><strong>1. 两问</strong></p>
-<blockquote>
-<p>竺校长：到浙大来干什么？<br>ZJUer：混。<br>竺校长：将来毕业要做什么？<br>ZJUer：混混。</p></blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/04/10/碎碎念不停/20160410-浙大人有哪些经典语录/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2016/04/07/学术不神秘/20160407-再说缘分-PhD申请面试与录取之后/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2016/04/07/学术不神秘/20160407-再说缘分-PhD申请面试与录取之后/" class="post-title-link" itemprop="url">再说缘分：PhD 申请面试与录取之后</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2016-04-07 23:00:42" itemprop="dateCreated datePublished" datetime="2016-04-07T23:00:42+08:00">2016-04-07</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学术不神秘/" itemprop="url" rel="index"><span itemprop="name">学术不神秘</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2016/04/07/学术不神秘/20160407-再说缘分-PhD申请面试与录取之后/" class="post-meta-item leancloud_visitors" data-flag-title="再说缘分：PhD 申请面试与录取之后" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2016/04/07/学术不神秘/20160407-再说缘分-PhD申请面试与录取之后/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2016/04/07/学术不神秘/20160407-再说缘分-PhD申请面试与录取之后/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019/11/26/最小生成树模板/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/26/最小生成树模板/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1684,12 +465,1164 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>提交申请之后，其实主要就两件事情，其一是检查自己的材料是否提交齐全；其二是等待面试通知和参加面试。</p>
-<p>检查自己的材料是否提交齐全其实是蛮重要的，特别是在你申请的项目如果比较多，不同学校的要求又不太一样的情况下。比如 CUHK 和 NUS 会要求你寄送纸质材料，而且 CUHK 还要求在录取前所有的 Standard Test 成绩必须通过官方送达；相反，像 HKUST 就是全部网申，录取前不需要寄送纸质的材料，送分也可以在录取之后进行。所以，建议提交申请之后可以发给申请的项目小米发邮件确认一下是否提交成功以及材料是否都送达了，有没有缺失的情况。</p>
+          <p>最小生成树也是图论中的一类问题。最小生成树问题最终要求出使所有点连通的最短距离，典型问题为修公路问题。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2016/04/07/学术不神秘/20160407-再说缘分-PhD申请面试与录取之后/" rel="contents">
+              <a class="btn" href="/2019/11/26/最小生成树模板/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/24/最短路模板/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/24/最短路模板/" class="post-title-link" itemprop="url">最短路模板</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-24 21:30:47" itemprop="dateCreated datePublished" datetime="2019-11-24T21:30:47+08:00">2019-11-24</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-26 18:44:42" itemprop="dateModified" datetime="2019-11-26T18:44:42+08:00">2019-11-26</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/24/最短路模板/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/24/最短路模板/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>6.2k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>6 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最短路问题中有很多的算法，<code>dijkstra bellman_ford spfa floyd</code>初学真的好难记（更不用说去看算法导论的详细证明了）。y总也总结了很多模板<a href="https://www.acwing.com/blog/content/405/" target="_blank" rel="noopener">链接</a>，自己再来总结一下加深记忆。另外安利y总算法课，讲的真的很好，我觉得收获很大，而且价格也很良心😂😂。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/24/最短路模板/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/16/六度空间/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/16/六度空间/" class="post-title-link" itemprop="url">六度空间</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-16 16:41:08 / 修改时间：16:48:57" itemprop="dateCreated datePublished" datetime="2019-11-16T16:41:08+08:00">2019-11-16</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/浙大数据结构/" itemprop="url" rel="index"><span itemprop="name">浙大数据结构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/16/六度空间/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/16/六度空间/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.7k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>2 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>“六度空间”理论又称作“六度分隔（Six Degrees of Separation）”理论。这个理论可以通俗地阐述为：“你和任何一个陌生人之间所间隔的人不会超过六个，也就是说，最多通过五个人你就能够认识任何一个陌生人。”如图所示。</p>
+<img src="/2019/11/16/六度空间/Snipaste_2019-11-16_16-42-02.png" title="This is an image">
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/16/六度空间/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/16/拯救007/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/16/拯救007/" class="post-title-link" itemprop="url">拯救007</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-16 15:19:52 / 修改时间：15:23:49" itemprop="dateCreated datePublished" datetime="2019-11-16T15:19:52+08:00">2019-11-16</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/浙大数据结构/" itemprop="url" rel="index"><span itemprop="name">浙大数据结构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/16/拯救007/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/16/拯救007/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>2.9k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>3 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>Saving James Bond - Easy Version</strong></p><p>This time let us consider the situation in the movie “Live and Let Die” in which James Bond, the world’s most famous spy, was captured by a group of drug dealers. He was sent to a small piece of land at the center of a lake filled with crocodiles. There he performed the most daring action to escape – he jumped onto the head of the nearest crocodile! Before the animal realized what was happening, James jumped again onto the next big head… Finally he reached the bank before the last crocodile could bite him (actually the stunt man was caught by the big mouth and barely escaped with his extra thick boot).</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/16/拯救007/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/08/数的范围/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/08/数的范围/" class="post-title-link" itemprop="url">数的范围</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-08 15:06:14" itemprop="dateCreated datePublished" datetime="2019-11-08T15:06:14+08:00">2019-11-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-25 19:11:33" itemprop="dateModified" datetime="2019-11-25T19:11:33+08:00">2019-11-25</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/08/数的范围/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/08/数的范围/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>701</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.acwing.com/problem/content/791/" target="_blank" rel="noopener">题目链接</a></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/08/数的范围/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/08/逆序对的数量/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/08/逆序对的数量/" class="post-title-link" itemprop="url">逆序对的数量</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-08 09:32:22" itemprop="dateCreated datePublished" datetime="2019-11-08T09:32:22+08:00">2019-11-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-25 19:11:36" itemprop="dateModified" datetime="2019-11-25T19:11:36+08:00">2019-11-25</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/08/逆序对的数量/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/08/逆序对的数量/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.2k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.acwing.com/problem/content/description/790/" target="_blank" rel="noopener">题目链接</a></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/08/逆序对的数量/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/08/归并排序/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/08/归并排序/" class="post-title-link" itemprop="url">归并排序</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-08 08:29:10" itemprop="dateCreated datePublished" datetime="2019-11-08T08:29:10+08:00">2019-11-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-25 19:11:38" itemprop="dateModified" datetime="2019-11-25T19:11:38+08:00">2019-11-25</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/08/归并排序/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/08/归并排序/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>729</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.acwing.com/problem/content/789/" target="_blank" rel="noopener">题目链接</a></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/08/归并排序/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/07/第K个数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/07/第K个数/" class="post-title-link" itemprop="url">第K个数</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-07 19:18:05" itemprop="dateCreated datePublished" datetime="2019-11-07T19:18:05+08:00">2019-11-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-26 18:39:36" itemprop="dateModified" datetime="2019-11-26T18:39:36+08:00">2019-11-26</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/07/第K个数/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/07/第K个数/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>795</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.acwing.com/problem/content/788/" target="_blank" rel="noopener">题目链接</a></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/07/第K个数/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/10/28/快速排序/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/10/28/快速排序/" class="post-title-link" itemprop="url">快速排序</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-28 19:11:31" itemprop="dateCreated datePublished" datetime="2019-10-28T19:11:31+08:00">2019-10-28</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-25 19:11:37" itemprop="dateModified" datetime="2019-11-25T19:11:37+08:00">2019-11-25</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/10/28/快速排序/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/10/28/快速排序/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>662</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.acwing.com/problem/content/787/" target="_blank" rel="noopener">题目链接</a></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/10/28/快速排序/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1717,7 +1650,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1743,7 +1676,7 @@
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-      src="/cloud/img/blog-avatar.jpg"
+      src="/images/QQ图片20180108124805.png"
       alt="optimjie">
   <p class="site-author-name" itemprop="name">optimjie</p>
   <div class="site-description motion-element" itemprop="description"></div>
@@ -1753,8 +1686,8 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">43</span>
-          <span class="site-state-item-name">文章</span>
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
     
@@ -1776,8 +1709,22 @@
         
           
         
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">专栏</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
         </a>
       </div>
     
@@ -1815,105 +1762,12 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
     
   </nav>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="https://weibo.com/7216640993" title="微博 &rarr; https://weibo.com/7216640993" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="https://twitter.com/lei2rock" title="Twitter &rarr; https://twitter.com/lei2rock" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="https://github.com/lei2rock" title="GitHub &rarr; https://github.com/lei2rock" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-      </span>
-    
-  </div>
   <div class="cc-license motion-element" itemprop="license">
     
   
@@ -1944,12 +1798,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">99k</span>
+    <span title="站点总字数">79k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:30</span>
+    <span title="站点阅读时长">1:12</span>
 </div>
 
 <!-- 网站运行时间的设置 -->
@@ -1973,7 +1827,7 @@ setInterval("createtime()",250);
 </script>
         
 <div class="busuanzi-count">
-  <script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item-icon">
       <i class="fa fa-user"></i>
     </span>
@@ -2004,8 +1858,6 @@ setInterval("createtime()",250);
     </footer>
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
       </div>
 
     
@@ -2013,13 +1865,12 @@ setInterval("createtime()",250);
   </div>
 
   
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 <script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
 
 
   <script src="/js/affix.js?v=7.3.0"></script>
@@ -2033,136 +1884,6 @@ setInterval("createtime()",250);
 
 
   
-  <script pjax>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-
-  
-  <script pjax>
-  if (CONFIG.page.isPost) {
-    function addCount(Counter) {
-      var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-              .done(function() {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.time + 1);
-              })
-            
-              .fail(function ({ responseJSON }) {
-                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
-              })
-          } else {
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
-                .done(function() {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function() {
-                  console.log('Failed to create');
-                });
-            
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
-        });
-    }
-  } else {
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
-        });
-    }
-  }
-
-  $(function() {
-    $.get('https://app-router.leancloud.cn/2/route?appId=' + 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI')
-      .done(function({ api_server }) {
-        var Counter = function(method, url, data) {
-          return $.ajax({
-            method: method,
-            url: `https://${api_server}/1.1${url}`,
-            headers: {
-              'X-LC-Id': 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
-              'X-LC-Key': '5jRfX3rExENmJqhdzkRqPndP',
-              'Content-Type': 'application/json',
-            },
-            data: data
-          });
-        };
-        if (CONFIG.page.isPost) {
-          const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
-          if (localhost.test(document.URL)) return;
-          addCount(Counter);
-        } else {
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
-        }
-      });
-  });
-  </script>
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.3.0"></script>
 
 
 
@@ -2176,7 +1897,20 @@ setInterval("createtime()",250);
 
 
 
-    <div id="pjax">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
@@ -2241,9 +1975,9 @@ setInterval("createtime()",250);
     
 
 <script>
-NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', function() {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
   var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail';
+  var guest = 'nick,mail,link';
   guest = guest.split(',').filter(function(item) {
     return GUEST.indexOf(item) > -1;
   });
@@ -2251,10 +1985,10 @@ NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', functio
     el: '#comments',
     verify: false,
     notify: false,
-    appId: 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
-    appKey: '5jRfX3rExENmJqhdzkRqPndP',
-    placeholder: '请在上方填写你的邮箱，有回复时将邮件提醒，邮箱不会被公开。',
-    avatar: 'wavatar',
+    appId: 'DfO1YtJmXCgD1sV6KmPrDjIP-gzGzoHsz',
+    appKey: 'JcgXsTtvwezQBuNQ2qjaQoeo',
+    placeholder: '留下邮箱，有回复时你将收到提醒，邮箱不会被公开。',
+    avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
@@ -2273,55 +2007,13 @@ NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', functio
         lang: 'zh-cn',
         admin_email: '填写博主邮箱',
         el: '#comments' ,
-        appId: 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
-        appKey: '5jRfX3rExENmJqhdzkRqPndP',
+        appId: 'DfO1YtJmXCgD1sV6KmPrDjIP-gzGzoHsz',
+        appKey: 'JcgXsTtvwezQBuNQ2qjaQoeo',
         emoticon_url: 'https://cloud.panjunwen.com/alu',
         emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
-        placeholder: '请在上方填写你的邮箱，有回复时将邮件提醒，邮箱不会被公开。',
+        placeholder: '留下邮箱，有回复时你将收到提醒，邮箱不会被公开。',
   });
   </script>
-
-    
-<script src="/js/comment-locate.js"></script>
-<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script>
-
-    </div>
-    <script>
-var pjax = new Pjax({
-  selectors: [
-    'title',
-    '#page-configurations',
-    '.content-wrap',
-    '.sidebar-inner',
-    '#pjax'
-  ],
-  switches: {
-    '.sidebar-inner': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo: !CONFIG.save_scroll
-});
-$(document).on('pjax:send', function() {
-  $('.sidebar-inner').stop().fadeTo('fast', 0);
-  CONFIG.save_scroll && clearInterval(NexT.utils.saveScrollTimer);
-});
-$(document).on('pjax:success', function() {
-  $('script[pjax], script#page-configurations, #pjax script').each(function(i, o) {
-    $(o).parent().append($(o).remove());
-  });
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  $('.sidebar-inner .motion-element').css('opacity', 1);
-  $('.sidebar-inner').fadeTo('fast', 1);
-  NexT.utils.updateSidebarPosition();
-});
-</script>
 
 </body>
 </html>

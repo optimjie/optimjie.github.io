@@ -4,28 +4,22 @@
 
 
 
-<html class="theme-next gemini" lang="zh-CN">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.3.0">
-  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=7.3.0" color="#222">
-  <link rel="manifest" href="/images/site.webmanifest">
-  <meta name="msapplication-config" content="/images/browserconfig.xml">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="google-site-verification" content="SJUudYL5q_atXSgew2qwy69FXOnSnNB2rAmwHmcBT9U">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/QQ图片20180108124805.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/QQ图片20180108124805.png?v=7.3.0" color="#222">
 
 <link rel="stylesheet" href="/css/main.css?v=7.3.0">
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
 
 <script id="hexo-configurations">
@@ -36,13 +30,13 @@
     version: '7.3.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     save_scroll: false,
-    copycode: {"enable":true,"show_result":true,"style":"mac"},
-    fancybox: true,
+    copycode: {"enable":true,"show_result":true,"style":null},
+    fancybox: false,
     mediumzoom: false,
-    lazyload: true,
-    pangu: true,
+    lazyload: false,
+    pangu: false,
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -50,9 +44,9 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: '',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
       copy_success: '复制成功',
@@ -84,16 +78,6 @@
 
   <title>optimjie's blog</title>
   
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141207776-1"></script>
-  <script pjax>
-    var host = window.location.hostname;
-    if (host !== "localhost" || !true) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-141207776-1');
-    }
-  </script>
 
 
 
@@ -168,48 +152,20 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>博客首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
       
       
       
         
-          
-          
-          
-            
-            
-    
-  
-  <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-about">
       
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-location-arrow"></i> <br>关于更多</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
-
-
-          
-        
-          
-          
-          
-        
-          
-          
-          
-        
-          
-          
-          
-        
-          
-          
-          
-        
-      
       
       
       
@@ -218,7 +174,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>各种标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
       
@@ -229,7 +185,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类专栏</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
       
@@ -240,39 +196,12 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>文章归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
-      <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>站点搜索</a>
-      </li>
-    
   </ul>
 
 </nav>
-  <div class="site-search">
-    
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-  </div>
 </div>
     </header>
 
@@ -294,12 +223,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2018/06/11/生活随手记/20180611-Hexo-NexT-博客增加瀑布流相册页面/">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2020/02/03/糖果传递/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -310,7 +239,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2018/06/11/生活随手记/20180611-Hexo-NexT-博客增加瀑布流相册页面/" class="post-title-link" itemprop="url">Hexo NexT 博客增加瀑布流相册页面</a>
+              <a href="/2020/02/03/糖果传递/" class="post-title-link" itemprop="url">糖果传递</a>
             
           </h1>
         
@@ -320,22 +249,34 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text"> </span>
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2018-06-11 12:24:01" itemprop="dateCreated datePublished" datetime="2018-06-11T12:24:01+08:00">2018-06-11</time>
+              <time title="创建时间：2020-02-03 12:55:34" itemprop="dateCreated datePublished" datetime="2020-02-03T12:55:34+08:00">2020-02-03</time>
             </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-07 11:23:13" itemprop="dateModified" datetime="2020-02-07T11:23:13+08:00">2020-02-07</time>
+              </span>
+            
           
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">专栏：</span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随手记/" itemprop="url" rel="index"><span itemprop="name">生活随手记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing蓝桥杯/" itemprop="url" rel="index"><span itemprop="name">AcWing蓝桥杯</span></a></span>
 
                 
                 
@@ -343,14 +284,6 @@
             </span>
           
 
-          
-            <span id="/2018/06/11/生活随手记/20180611-Hexo-NexT-博客增加瀑布流相册页面/" class="post-meta-item leancloud_visitors" data-flag-title="Hexo NexT 博客增加瀑布流相册页面" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
           
             
   
@@ -359,857 +292,12 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2018/06/11/生活随手记/20180611-Hexo-NexT-博客增加瀑布流相册页面/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/06/11/生活随手记/20180611-Hexo-NexT-博客增加瀑布流相册页面/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>5.1k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>5 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>要展示自己拍摄的照片，可以给博客添加一个瀑布流的相册页面。本文基于 Hexo 3.9.0 / NexT 7.3.0，参考了 <a href="https://asdfv1929.github.io/2018/05/26/next-add-photos/" target="_blank" rel="noopener">asdfv1929 的方法</a>。</p>
-<h2 id="1-json-文件处理图片信息"><a href="#1-json-文件处理图片信息" class="headerlink" title="1. json 文件处理图片信息"></a>1. json 文件处理图片信息</h2><p>在博客根目录的 <code>/scripts/</code> 文件夹下新建一个 <code>phototool.js</code> 文件，内容如下。主要功能是访问照片文件夹，获取每张照片的大小和文件名，并生成对应的 <code>json</code> 文件：</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/06/11/生活随手记/20180611-Hexo-NexT-博客增加瀑布流相册页面/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
-    </div>
-
+      <span class="post-meta-item-text">Valine：</span>
     
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2018/06/06/生活随手记/20180606-个人主页与-Hexo-NexT-博客搭建记录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2018/06/06/生活随手记/20180606-个人主页与-Hexo-NexT-博客搭建记录/" class="post-title-link" itemprop="url">个人主页与 Hexo NexT 博客搭建记录</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-06 18:03:02" itemprop="dateCreated datePublished" datetime="2018-06-06T18:03:02+08:00">2018-06-06</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随手记/" itemprop="url" rel="index"><span itemprop="name">生活随手记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2018/06/06/生活随手记/20180606-个人主页与-Hexo-NexT-博客搭建记录/" class="post-meta-item leancloud_visitors" data-flag-title="个人主页与 Hexo NexT 博客搭建记录" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2018/06/06/生活随手记/20180606-个人主页与-Hexo-NexT-博客搭建记录/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/06/06/生活随手记/20180606-个人主页与-Hexo-NexT-博客搭建记录/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>5.9k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>5 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近把 <a href="https://dlzhang.com" target="_blank" rel="noopener">个人学术主页</a> 与 <a href="/">博客</a> 都重新设计了，所以就打算写个总结，自己记录一下一些细节。虽然自认为不会有几个访客，但还是进行了相应的区别定位。个人主页主要是展现个人的简历、研究项目等内容，主要是个人展示目的；博客偏向于个性化一些，主要想进行一些生活日常或者研究过程等记录，也可以展现一些自己的兴趣爱好之类的东西。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/06/06/生活随手记/20180606-个人主页与-Hexo-NexT-博客搭建记录/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/12/15/学术不神秘/20171215-知乎Live-香港研究生申请-商科与经济学/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2017/12/15/学术不神秘/20171215-知乎Live-香港研究生申请-商科与经济学/" class="post-title-link" itemprop="url">知乎 Live | 香港研究生申请：商科与经济学</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-12-15 21:00:00" itemprop="dateCreated datePublished" datetime="2017-12-15T21:00:00+08:00">2017-12-15</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学术不神秘/" itemprop="url" rel="index"><span itemprop="name">学术不神秘</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2017/12/15/学术不神秘/20171215-知乎Live-香港研究生申请-商科与经济学/" class="post-meta-item leancloud_visitors" data-flag-title="知乎 Live | 香港研究生申请：商科与经济学" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2017/12/15/学术不神秘/20171215-知乎Live-香港研究生申请-商科与经济学/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/12/15/学术不神秘/20171215-知乎Live-香港研究生申请-商科与经济学/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>521</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://www.zhihu.com/lives/922106856669868032" target="_blank" rel="noopener">香港研究生申请：商科与经济学 - 知乎 Live</a></p>
-<h2 id="Live-简介"><a href="#Live-简介" class="headerlink" title="Live 简介"></a>Live 简介</h2><p>来香港学习之后，常有人向我咨询香港留学的情况，但很多是较为具体的问题，所以给出的相关建议和看法很难有普遍性。我在知乎、寄托论坛等地方也写过一些申请总结，不过这些很大程度上是我自己的申请过程总结。因此希望通过本次 Live，可以向你介绍一些我总结的申请香港商科与经济学研究生项目的经验以及常见问题，也谈谈在香港研究生学习生活的情况。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/12/15/学术不神秘/20171215-知乎Live-香港研究生申请-商科与经济学/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/12/09/碎碎念不停/20171209-上手无人机体验一把飞行的乐趣/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2017/12/09/碎碎念不停/20171209-上手无人机体验一把飞行的乐趣/" class="post-title-link" itemprop="url">上手无人机 体验一把飞行的乐趣</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-12-09 08:15:07" itemprop="dateCreated datePublished" datetime="2017-12-09T08:15:07+08:00">2017-12-09</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/碎碎念不停/" itemprop="url" rel="index"><span itemprop="name">碎碎念不停</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2017/12/09/碎碎念不停/20171209-上手无人机体验一把飞行的乐趣/" class="post-meta-item leancloud_visitors" data-flag-title="上手无人机 体验一把飞行的乐趣" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2017/12/09/碎碎念不停/20171209-上手无人机体验一把飞行的乐趣/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/12/09/碎碎念不停/20171209-上手无人机体验一把飞行的乐趣/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>640</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>说起无人机，班班可是种草了整整一年了。自从去年双十一看到新发布的小米无人机就开始种草，到最近趁着「黑五」终于剁手下单了一架无人机（虽然不是小米的）。</p>
-<p>当时看着小米无人机，确实是便宜。但是看到发布会直播中云台装不牢掉下来，加上起飞不久就炸机，看得我是真心不敢买啊。相比较，大疆里差不多价位的有精灵 3 SE，然而体积实在有点大，不想要；而体积小、便携的比如御 Marvic Pro ，又太贵。就这样看了一圈，科技测评节目也看了不少，却依旧没有剁手下单。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/12/09/碎碎念不停/20171209-上手无人机体验一把飞行的乐趣/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/12/08/碎碎念不停/20171208-期末阅卷有感/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2017/12/08/碎碎念不停/20171208-期末阅卷有感/" class="post-title-link" itemprop="url">期末阅卷有感</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-12-08 08:22:51" itemprop="dateCreated datePublished" datetime="2017-12-08T08:22:51+08:00">2017-12-08</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/碎碎念不停/" itemprop="url" rel="index"><span itemprop="name">碎碎念不停</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2017/12/08/碎碎念不停/20171208-期末阅卷有感/" class="post-meta-item leancloud_visitors" data-flag-title="期末阅卷有感" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2017/12/08/碎碎念不停/20171208-期末阅卷有感/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/12/08/碎碎念不停/20171208-期末阅卷有感/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>806</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>嗯，前几天在改本学期本科生统计学期末考试卷，总体成绩不佳，最终的平均分、中位数都很低。虽说一年多来已经改了几次本科生期中期末卷见怪不怪了，但在改卷时依然会不时吐槽学生的答卷情况。</p>
-<p>由于是商学院本科生试卷，所以老师出得也很偏向于应用，但是学生答卷依然错误颇多，情况不理想。改完试卷统计了一下，有一道4分但不算是很难的题目两个班83份试卷，只有两个学生全对…… 再比如一道题目给了数据表，要求画一个二维坐标的 scatter plot（Sales-Clients），结果有两个学生居然把数据的序号（下图中的 Broker ）也当做一个维度，画了个 3D 的图，还很精美，实在佩服佩服。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/12/08/碎碎念不停/20171208-期末阅卷有感/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/11/06/学术不神秘/20171106-国内的研究生博士生的收入状况是怎样的/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2017/11/06/学术不神秘/20171106-国内的研究生博士生的收入状况是怎样的/" class="post-title-link" itemprop="url">国内的研究生博士生的收入状况是怎样的</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-11-06 22:52:14" itemprop="dateCreated datePublished" datetime="2017-11-06T22:52:14+08:00">2017-11-06</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学术不神秘/" itemprop="url" rel="index"><span itemprop="name">学术不神秘</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2017/11/06/学术不神秘/20171106-国内的研究生博士生的收入状况是怎样的/" class="post-meta-item leancloud_visitors" data-flag-title="国内的研究生博士生的收入状况是怎样的" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2017/11/06/学术不神秘/20171106-国内的研究生博士生的收入状况是怎样的/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/11/06/学术不神秘/20171106-国内的研究生博士生的收入状况是怎样的/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>1.4k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://www.zhihu.com/question/54633507/answer/256014267" target="_blank" rel="noopener">知乎回答链接</a></p>
-<p>问的是「国内」研究生博士生收入状况，那我这种在祖国不可分割的一部分某高校（香港中文大学）的博士生就来向大家汇报一下好了。</p>
-<p><strong>经常性的固定收入与奖学金方面</strong></p>
-<p>第一种，授课式硕士研究生（MSc / MA 类，一年制）与授课式法律博士（JD，好像是两年制），这类项目定位上很像内地高校的「专业硕士」（专硕）：需要自己交学费（从十几万港币到三四十万港币一年不等）。没有每月定期发放的奖学金，个别项目可能会由系里面给一些学业成绩优秀的学生办法一次奖学金，金额在几千到一两万不等。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/11/06/学术不神秘/20171106-国内的研究生博士生的收入状况是怎样的/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/11/05/书影拾光机/20171105-如何评价极限挑战第三季第十期/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2017/11/05/书影拾光机/20171105-如何评价极限挑战第三季第十期/" class="post-title-link" itemprop="url">如何评价《极限挑战》第三季第十期</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text"> </span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-11-05 07:03:11" itemprop="dateCreated datePublished" datetime="2017-11-05T07:03:11+08:00">2017-11-05</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">专栏：</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/书影拾光机/" itemprop="url" rel="index"><span itemprop="name">书影拾光机</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            <span id="/2017/11/05/书影拾光机/20171105-如何评价极限挑战第三季第十期/" class="post-meta-item leancloud_visitors" data-flag-title="如何评价《极限挑战》第三季第十期" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论：</span>
-    
-    <a title="valine" href="/2017/11/05/书影拾光机/20171105-如何评价极限挑战第三季第十期/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/11/05/书影拾光机/20171105-如何评价极限挑战第三季第十期/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/02/03/糖果传递/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/03/糖果传递/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1246,12 +334,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="https://www.zhihu.com/question/67596469/answer/255094346" target="_blank" rel="noopener">知乎回答链接</a></p>
-<p>感觉很少有中国综艺节目能吸引我的眼球的，之前暑期回家陪老妈看了好多电视台的综艺节目，感觉都是一个游戏接一个游戏，没有很好的过渡，好像就是纯粹的玩游戏而其中的剧情什么的就是鸡肋班的存在。其中做的还不错的，我觉得第一当属《极限挑战》，其次的话《全员加速中》最开始那几期也很不错，《极速前进》前几季也做得挺好（可惜最近这季做得太烂了）。自从《极限挑战》前几个月停播就不怎么关注综艺节目了，于是每天只好上油管看湾湾的「政论娱乐」节目。</p>
+          <h3 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1-&gt;2-&gt;3-&gt;4-&gt;...-&gt;n-&gt;1  构成一个环</span><br><span class="line">x1 x2 x3 x4 .... xn   xi表示xi给xi+1糖果的个数，xi可正可负可为零。</span><br><span class="line">本题要求|x1|+|x2|+|x3|+.....+|xn|的最小值。</span><br><span class="line"> </span><br><span class="line">限制条件：最后每个人获得均等糖果。</span><br><span class="line">av表示平均值，a数组表示每个人初始糖果的数量。</span><br><span class="line"></span><br><span class="line">a[1] - x1 + xn = av;                    a[1] - x1 + xn = av;</span><br><span class="line">a[2] - x2 + x1 = av;                    a[2] - x2 + x1 = av;</span><br><span class="line">a[3] - x3 + x2 = av;                    a[2] + a[3] - x3 + x1 = 2 * av;</span><br><span class="line">a[4] - x4 + x3 = av;                                     .                                                          </span><br><span class="line">        .                  ==========&gt;                   .                                                               等价成cn。  cn = cn-1 + an - av; (n &gt;= 2)</span><br><span class="line">        .                                                .                                                                 ^         c1 = 0;</span><br><span class="line">        .                                                .                                                                 |</span><br><span class="line">        .                                                .                                  通项公式              ----------------------</span><br><span class="line">a[n-1] - xn-1 + xn-2 = av;              a[2] + ... + a[n - 1] - xn-1 + x1 = (n - 2) * av;                       | n                    |</span><br><span class="line">a[n] - xn + xn-1 = av;                  a[2] + ... + a[n] - xn + x1 = (n - 1) * av;        =========&gt;  xn = x1 +| ∑ an - (n - 1) * av; | (n &gt;= 2)                     </span><br><span class="line">                                                                                                                |n=2                   |</span><br><span class="line">                                                                                                                 ----------------------</span><br><span class="line">经过上面的等价推导，所以：</span><br><span class="line">   |x1|+|x2|+|x3|+.....+|xn| ==&gt; |x1 + c1|+|x1 + c2|+|x1 + c3|+.....+|xn + cn|</span><br><span class="line">   到这里就转换成AcWing 104.货仓选址这道题了。(链接在下方)</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/11/05/书影拾光机/20171105-如何评价极限挑战第三季第十期/" rel="contents">
+              <a class="btn" href="/2020/02/03/糖果传递/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1282,12 +369,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/06/09/生活随手记/20170609-一万港币买了16个软件/">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/12/17/各种排序算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1298,7 +385,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2017/06/09/生活随手记/20170609-一万港币买了16个软件/" class="post-title-link" itemprop="url">一万港币买了16个软件</a>
+              <a href="/2019/12/17/各种排序算法/" class="post-title-link" itemprop="url">各种排序算法</a>
             
           </h1>
         
@@ -1308,22 +395,34 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text"> </span>
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2017-06-09 11:36:40" itemprop="dateCreated datePublished" datetime="2017-06-09T11:36:40+08:00">2017-06-09</time>
+              <time title="创建时间：2019-12-17 20:58:13" itemprop="dateCreated datePublished" datetime="2019-12-17T20:58:13+08:00">2019-12-17</time>
             </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-07 11:32:15" itemprop="dateModified" datetime="2020-02-07T11:32:15+08:00">2020-02-07</time>
+              </span>
+            
           
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">专栏：</span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活随手记/" itemprop="url" rel="index"><span itemprop="name">生活随手记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
 
                 
                 
@@ -1331,14 +430,6 @@
             </span>
           
 
-          
-            <span id="/2017/06/09/生活随手记/20170609-一万港币买了16个软件/" class="post-meta-item leancloud_visitors" data-flag-title="一万港币买了16个软件" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
           
             
   
@@ -1347,10 +438,566 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">评论：</span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2017/06/09/生活随手记/20170609-一万港币买了16个软件/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/06/09/生活随手记/20170609-一万港币买了16个软件/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019/12/17/各种排序算法/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/17/各种排序算法/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.8k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>2 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>各种排序算法的总结</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/12/17/各种排序算法/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/12/16/电话聊天狂人/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/12/16/电话聊天狂人/" class="post-title-link" itemprop="url">电话聊天狂人</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-16 16:20:51 / 修改时间：16:23:16" itemprop="dateCreated datePublished" datetime="2019-12-16T16:20:51+08:00">2019-12-16</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/浙大数据结构/" itemprop="url" rel="index"><span itemprop="name">浙大数据结构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/12/16/电话聊天狂人/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/16/电话聊天狂人/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>4k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>4 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*#include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;cstdio&gt;</span></span><br><span class="line"><span class="comment">#include &lt;cstring&gt;</span></span><br><span class="line"><span class="comment">#include &lt;algorithm&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">using namespace std;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">typedef long long LL;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">const int N = 400009, null = -1;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">LL h[N];</span></span><br><span class="line"><span class="comment">int sum[N];</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">int n, ans, cnt;</span></span><br><span class="line"><span class="comment">LL ansNum[N];</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">void insert(LL x)</span></span><br><span class="line"><span class="comment">&#123;  </span></span><br><span class="line"><span class="comment">    int a = x % N;</span></span><br><span class="line"><span class="comment">    while (h[a] != null &amp;&amp; h[a] != x)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        a++;</span></span><br><span class="line"><span class="comment">        if (a == N) a = 0;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    sum[a]++;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    if (sum[a] == ans)</span></span><br><span class="line"><span class="comment">        ansNum[cnt++] = x;</span></span><br><span class="line"><span class="comment">    else if (sum[a] &gt; ans)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        ans = sum[a];</span></span><br><span class="line"><span class="comment">        if (ans == 0)</span></span><br><span class="line"><span class="comment">            ansNum[cnt++] = x;</span></span><br><span class="line"><span class="comment">        else</span></span><br><span class="line"><span class="comment">        &#123;</span></span><br><span class="line"><span class="comment">            memset(ansNum, 0, sizeof(ansNum));</span></span><br><span class="line"><span class="comment">            cnt = 0;</span></span><br><span class="line"><span class="comment">            ansNum[cnt++] = x;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">    &#125;   </span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    h[a] = x;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">int main()</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    memset(h, -1, sizeof(h));</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    cin &gt;&gt; n;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    while (n--)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        LL from, to;</span></span><br><span class="line"><span class="comment">        scanf("%lld%lld", &amp;from, &amp;to);</span></span><br><span class="line"><span class="comment">        insert(from), insert(to);</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    if (cnt == 1)</span></span><br><span class="line"><span class="comment">        printf("%lld %d\n", ansNum[0], ans);</span></span><br><span class="line"><span class="comment">    else </span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        LL min = 1e12;</span></span><br><span class="line"><span class="comment">        for (int i = 0; i &lt; cnt; i++)</span></span><br><span class="line"><span class="comment">            if (ansNum[i] &lt; min)</span></span><br><span class="line"><span class="comment">                min = ansNum[i];</span></span><br><span class="line"><span class="comment">        printf("%lld %d %d", min, ans, cnt);</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    return 0;</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">Position</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> PhoneNum[<span class="number">12</span>];</span><br><span class="line">	<span class="keyword">int</span> cnt;</span><br><span class="line">	Position Next;</span><br><span class="line">&#125; *List;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">HashTbl</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> TableSize;</span><br><span class="line">	List *TheLists;<span class="comment">//建立一个ListNode的指针数组</span></span><br><span class="line">&#125; *HashTable;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">NextPrime</span><span class="params">(<span class="keyword">int</span> x)</span></span>;</span><br><span class="line"><span class="function">HashTable <span class="title">InitializeTable</span><span class="params">(<span class="keyword">int</span> TableSize)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DestroyTable</span><span class="params">(HashTable H)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">Find</span><span class="params">(<span class="keyword">char</span> Key[], HashTable H)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">char</span> Key[], HashTable H)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Hash</span><span class="params">(<span class="keyword">int</span> Key, <span class="keyword">int</span> TableSize)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FindMax</span><span class="params">(HashTable H)</span></span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">// freopen("test.txt", "r", stdin);</span></span><br><span class="line">	<span class="keyword">int</span> N;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">	HashTable H = InitializeTable(<span class="number">2</span> * N);</span><br><span class="line">	<span class="keyword">char</span> send[<span class="number">12</span>], rec[<span class="number">12</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s %s\n"</span>, send, rec);</span><br><span class="line">		Insert(send, H), Insert(rec, H);</span><br><span class="line">	&#125;</span><br><span class="line">	FindMax(H);</span><br><span class="line">	DestroyTable(H);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">NextPrime</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i; </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> Next = x; ; Next++)&#123;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">2</span>; i * i &lt;= Next; i++)</span><br><span class="line">			<span class="keyword">if</span> (Next % i == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">if</span> (i * i &gt; Next)</span><br><span class="line">			<span class="keyword">return</span> Next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">HashTable <span class="title">InitializeTable</span><span class="params">(<span class="keyword">int</span> TableSize)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	HashTable H;</span><br><span class="line">	H = (HashTable)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct HashTbl));</span><br><span class="line">	H-&gt;TableSize = NextPrime(TableSize);</span><br><span class="line">	H-&gt;TheLists = (List*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(List)*H-&gt;TableSize);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i != H-&gt;TableSize; i++)&#123;</span><br><span class="line">		H-&gt;TheLists[i] = (List)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">		H-&gt;TheLists[i]-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> H;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DestroyTable</span><span class="params">(HashTable H)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; H-&gt;TableSize; i++)</span><br><span class="line">		<span class="built_in">free</span>(H-&gt;TheLists[i]);</span><br><span class="line">	<span class="built_in">free</span>(H-&gt;TheLists);</span><br><span class="line">	<span class="built_in">free</span>(H);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Position <span class="title">Find</span><span class="params">(<span class="keyword">char</span> Key[], HashTable H)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Position P;</span><br><span class="line">	List L;</span><br><span class="line">	L = H-&gt;TheLists[Hash(atoi(Key + <span class="number">6</span>), H-&gt;TableSize)];</span><br><span class="line">	P = L-&gt;Next;</span><br><span class="line">	<span class="keyword">while</span> (P != <span class="literal">NULL</span> &amp;&amp; <span class="built_in">strcmp</span>(P-&gt;PhoneNum, Key))</span><br><span class="line">		P = P-&gt;Next;</span><br><span class="line">	<span class="keyword">return</span> P;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">char</span> Key[], HashTable H)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Position Pos, Tmp;</span><br><span class="line">	List L = H-&gt;TheLists[Hash(atoi(Key + <span class="number">6</span>), H-&gt;TableSize)];</span><br><span class="line">	Pos = Find(Key, H);</span><br><span class="line">	<span class="keyword">if</span> (Pos == <span class="literal">NULL</span>)&#123;</span><br><span class="line">		Tmp = (List)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">		<span class="built_in">strcpy</span>(Tmp-&gt;PhoneNum, Key);</span><br><span class="line">		Tmp-&gt;cnt = <span class="number">1</span>;</span><br><span class="line">		Tmp-&gt;Next = L-&gt;Next;</span><br><span class="line">		L-&gt;Next = Tmp;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		(Pos-&gt;cnt)++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Hash</span><span class="params">(<span class="keyword">int</span> Key, <span class="keyword">int</span> TableSize)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (Key % TableSize);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FindMax</span><span class="params">(HashTable H)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Position P;</span><br><span class="line">	<span class="keyword">int</span> maxcnt = <span class="number">0</span>, maxSame = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">char</span> MinPhone[<span class="number">12</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; H-&gt;TableSize; i++)&#123;</span><br><span class="line">		P = H-&gt;TheLists[i]-&gt;Next;</span><br><span class="line">		<span class="keyword">while</span> (P != <span class="literal">NULL</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span> (P-&gt;cnt &gt; maxcnt)&#123;</span><br><span class="line">				<span class="built_in">strcpy</span>(MinPhone, P-&gt;PhoneNum);</span><br><span class="line">				maxcnt = P-&gt;cnt;</span><br><span class="line">				maxSame = <span class="number">1</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (P-&gt;cnt == maxcnt)&#123;</span><br><span class="line">				<span class="keyword">if</span> (<span class="built_in">strcmp</span>(MinPhone, P-&gt;PhoneNum) &gt; <span class="number">0</span>)</span><br><span class="line">					<span class="built_in">strcpy</span>(MinPhone, P-&gt;PhoneNum);</span><br><span class="line">				maxSame++;</span><br><span class="line">			&#125;</span><br><span class="line">			P = P-&gt;Next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s %d"</span>, MinPhone, maxcnt);</span><br><span class="line">	<span class="keyword">if</span> (maxSame &gt; <span class="number">1</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">" %d"</span>, maxSame);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/12/15/滚动数组/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/12/15/滚动数组/" class="post-title-link" itemprop="url">滚动数组</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-15 16:58:57 / 修改时间：17:16:53" itemprop="dateCreated datePublished" datetime="2019-12-15T16:58:57+08:00">2019-12-15</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/12/15/滚动数组/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/15/滚动数组/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.6k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h6 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h6><p>老生常谈的斐波那契数列。 1 1 2 3 5 8 13 21 ….<br>编写一个函数，输入n，返回第n个数(n &lt;= 50)。(实测当 n = 47 爆int)</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不使用滚动数组</span></span><br><span class="line"><span class="function">LL <span class="title">fib</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL fibnacci[<span class="number">55</span>];</span><br><span class="line">    fibnacci[<span class="number">0</span>] = fibnacci[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">        fibnacci[i] = fibnacci[i - <span class="number">1</span>] + fibnacci[i - <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibnacci[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/12/15/滚动数组/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/12/09/Dungeon-Master/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/12/09/Dungeon-Master/" class="post-title-link" itemprop="url">Dungeon Master</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-09 10:06:49" itemprop="dateCreated datePublished" datetime="2019-12-09T10:06:49+08:00">2019-12-09</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-15 17:16:41" itemprop="dateModified" datetime="2019-12-15T17:16:41+08:00">2019-12-15</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/POJ/" itemprop="url" rel="index"><span itemprop="name">POJ</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/12/09/Dungeon-Master/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/09/Dungeon-Master/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>4.2k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>4 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>You are trapped in a 3D dungeon and need to find the quickest way out! The dungeon is composed of unit cubes which may or may not be filled with rock. It takes one minute to move one unit north, south, east, west, up or down. You cannot move diagonally and the maze is surrounded by solid rock on all sides. </p>
+<p>Is an escape possible? If yes, how long will it take? </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/12/09/Dungeon-Master/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/12/09/迷宫问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/12/09/迷宫问题/" class="post-title-link" itemprop="url">迷宫问题</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-09 09:50:06 / 修改时间：10:07:53" itemprop="dateCreated datePublished" datetime="2019-12-09T09:50:06+08:00">2019-12-09</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/POJ/" itemprop="url" rel="index"><span itemprop="name">POJ</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/12/09/迷宫问题/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/09/迷宫问题/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1387,12 +1034,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>标题里说的这一万块港币怎么来的呢？当然不会是我突然土豪起来了，然后表示要「资瓷正版，从我做起」！真实情况是，我们「高（土）贵（豪）」的商学院从今年开始，给每个 research postgraduate（研究式项目研究生）一万元港币用于购买软件（当然是学术用途啊，不能买！游！戏！），而且限期在第一学年要花完。</p>
-<p>然后，眼看着第一学年快结束了，一个软件也没买，小秘都发了好几次邮件催我们抓紧买买买！！既然「花钱压力」这么大，最近就和办公室的小伙伴讨论了一下买哪些软件。经过「几个星期」的研究，上星期一下子买了16个软件，感觉棒棒的，哈哈哈～ 所以，今天就让我来介绍一下最近买的这16个软件吧。</p>
+          <p>定义一个二维数组： </p>
+<p>int maze[5][5] = {</p>
+<pre><code>0, 1, 0, 0, 0,
+
+0, 1, 0, 1, 0,
+
+0, 0, 0, 0, 0,
+
+0, 1, 1, 1, 0,
+
+0, 0, 0, 1, 0,</code></pre><p>};</p>
+<p>它表示一个迷宫，其中的1表示墙壁，0表示可以走的路，只能横着走或竖着走，不能斜着走，要求编程序找出从左上角到右下角的最短路线。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/06/09/生活随手记/20170609-一万港币买了16个软件/" rel="contents">
+              <a class="btn" href="/2019/12/09/迷宫问题/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1423,12 +1080,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/05/24/碎碎念不停/20170524-在浙大你学到的最重要的东西是什么/">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/12/07/棋盘问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1439,7 +1096,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2017/05/24/碎碎念不停/20170524-在浙大你学到的最重要的东西是什么/" class="post-title-link" itemprop="url">在浙大你学到的最重要的东西是什么</a>
+              <a href="/2019/12/07/棋盘问题/" class="post-title-link" itemprop="url">棋盘问题</a>
             
           </h1>
         
@@ -1449,22 +1106,34 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text"> </span>
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2017-05-24 03:36:40" itemprop="dateCreated datePublished" datetime="2017-05-24T03:36:40+08:00">2017-05-24</time>
+              <time title="创建时间：2019-12-07 23:48:44" itemprop="dateCreated datePublished" datetime="2019-12-07T23:48:44+08:00">2019-12-07</time>
             </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-09 11:10:20" itemprop="dateModified" datetime="2019-12-09T11:10:20+08:00">2019-12-09</time>
+              </span>
+            
           
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">专栏：</span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/碎碎念不停/" itemprop="url" rel="index"><span itemprop="name">碎碎念不停</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/POJ/" itemprop="url" rel="index"><span itemprop="name">POJ</span></a></span>
 
                 
                 
@@ -1472,14 +1141,6 @@
             </span>
           
 
-          
-            <span id="/2017/05/24/碎碎念不停/20170524-在浙大你学到的最重要的东西是什么/" class="post-meta-item leancloud_visitors" data-flag-title="在浙大你学到的最重要的东西是什么" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
           
             
   
@@ -1488,10 +1149,12 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">评论：</span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2017/05/24/碎碎念不停/20170524-在浙大你学到的最重要的东西是什么/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/05/24/碎碎念不停/20170524-在浙大你学到的最重要的东西是什么/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019/12/07/棋盘问题/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/07/棋盘问题/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1505,7 +1168,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>747</span>
+              <span>1.2k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -1528,12 +1191,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="https://www.zhihu.com/question/60105944/answer/173699976" target="_blank" rel="noopener">知乎回答链接</a></p>
-<p>在浙大学到的，其一是校训「求是」。六年前，进入浙大时候大概我就是属于「考败来浙」的那一批人，所以大概我一开始对浙大是没什么感觉的。但是我依然记得开学第一课参观浙大校史馆对我的震撼。在那里，我第一次感受到了浙大从1897年求是书院建立以来的风风雨雨。特别是抗战期间举校西迁，烽火硝烟中的浙大人对知识的渴望和对国家的热爱深深影响了我。这大概是浙大第一次对我的影响，也是我第一次从浙大学到的东西。无曰已是，无曰遂真，无论是做人的踏实，还是科研学术的严谨，都是浙大的校史、师长、同学带给我潜移默化的影响。而求是的精神化为对母校的深深凝聚力则是这次120校庆里，校友们给我的另一种震撼。</p>
+          <p>在一个给定形状的棋盘（形状可能是不规则的）上面摆放棋子，棋子没有区别。要求摆放时任意的两个棋子不能放在棋盘中的同一行或者同一列，请编程求解对于给定形状和大小的棋盘，摆放k个棋子的所有可行的摆放方案C。</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/05/24/碎碎念不停/20170524-在浙大你学到的最重要的东西是什么/" rel="contents">
+              <a class="btn" href="/2019/12/07/棋盘问题/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1564,12 +1226,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2017/02/21/学术不神秘/20170221-Websites-for-Economic-Research/">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/12/06/背包问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/cloud/img/blog-avatar.jpg">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1580,7 +1242,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2017/02/21/学术不神秘/20170221-Websites-for-Economic-Research/" class="post-title-link" itemprop="url">Websites for Economic Study & Research</a>
+              <a href="/2019/12/06/背包问题/" class="post-title-link" itemprop="url">背包问题</a>
             
           </h1>
         
@@ -1590,22 +1252,34 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text"> </span>
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2017-02-21 18:30:00" itemprop="dateCreated datePublished" datetime="2017-02-21T18:30:00+08:00">2017-02-21</time>
+              <time title="创建时间：2019-12-06 23:39:24" itemprop="dateCreated datePublished" datetime="2019-12-06T23:39:24+08:00">2019-12-06</time>
             </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-17 14:41:12" itemprop="dateModified" datetime="2020-02-17T14:41:12+08:00">2020-02-17</time>
+              </span>
+            
           
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">专栏：</span>
+              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学术不神秘/" itemprop="url" rel="index"><span itemprop="name">学术不神秘</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
 
                 
                 
@@ -1613,14 +1287,6 @@
             </span>
           
 
-          
-            <span id="/2017/02/21/学术不神秘/20170221-Websites-for-Economic-Research/" class="post-meta-item leancloud_visitors" data-flag-title="Websites for Economic Study & Research" title="阅读">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
           
             
   
@@ -1629,10 +1295,12 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">评论：</span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2017/02/21/学术不神秘/20170221-Websites-for-Economic-Research/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2017/02/21/学术不神秘/20170221-Websites-for-Economic-Research/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019/12/06/背包问题/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/06/背包问题/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1646,7 +1314,299 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>983</span>
+              <span>3.2k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>3 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h4><p>给定物品的数量n（每一种物品只有一件）以及每件物品的价值，一个容量为v的背包，问怎样装物品使总价值最大。</p><h5 id="朴素算法"><a href="#朴素算法" class="headerlink" title="朴素算法"></a>朴素算法</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> v[N], w[N]; <span class="comment">// v 代表体积 w 代表权重 y总写的和其他人正好反着。 其他人 w 代表weight v 代表 value </span></span><br><span class="line"><span class="keyword">int</span> f[N][N];</span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;v[i], &amp;w[i]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= m; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">            <span class="keyword">if</span> (v[i] &lt;= j) f[i][j] = max(f[i][j], f[i - <span class="number">1</span>][j - v[i]] + w[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; f[n][m] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/12/06/背包问题/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/30/刷题总结1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/30/刷题总结1/" class="post-title-link" itemprop="url">刷题总结1</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-30 16:51:53" itemprop="dateCreated datePublished" datetime="2019-11-30T16:51:53+08:00">2019-11-30</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-17 20:59:29" itemprop="dateModified" datetime="2019-12-17T20:59:29+08:00">2019-12-17</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/30/刷题总结1/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/30/刷题总结1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>3.4k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>3 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>刷题总结第一篇。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/11/30/刷题总结1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/2019/11/27/匈牙利算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/11/27/匈牙利算法/" class="post-title-link" itemprop="url">匈牙利算法</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-27 21:59:51" itemprop="dateCreated datePublished" datetime="2019-11-27T21:59:51+08:00">2019-11-27</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-29 21:46:00" itemprop="dateModified" datetime="2019-11-29T21:46:00+08:00">2019-11-29</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing基础课/" itemprop="url" rel="index"><span itemprop="name">AcWing基础课</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/11/27/匈牙利算法/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/27/匈牙利算法/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.3k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -1669,14 +1629,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1-Papers-and-Journals"><a href="#1-Papers-and-Journals" class="headerlink" title="1. Papers and Journals"></a>1. Papers and Journals</h2><ul>
-<li><a href="http://econpapers.repec.org/" target="_blank" rel="noopener">EconPaper</a></li>
-<li><a href="https://ideas.repec.org/" target="_blank" rel="noopener">IDEAS</a></li>
-<li><a href="http://blog.donglei.me/#5" target="_blank" rel="noopener">Top Journals in Economics</a></li></ul>
+          <p>匈牙利算法是一种在多项式时间内求解任务分配问题的组合优化算法，并推动了后来的原始对偶方法。美国数学家哈罗德·库恩于1955年提出该算法。此算法之所以被称作匈牙利算法，是因为算法很大一部分是基于以前匈牙利数学家Dénes Kőnig和Jenő Egerváry的工作之上创建起来的。<br>                                                                                                          —————百度百科</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/02/21/学术不神秘/20170221-Websites-for-Economic-Research/" rel="contents">
+              <a class="btn" href="/2019/11/27/匈牙利算法/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1704,7 +1661,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1730,7 +1687,7 @@
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-      src="/cloud/img/blog-avatar.jpg"
+      src="/images/QQ图片20180108124805.png"
       alt="optimjie">
   <p class="site-author-name" itemprop="name">optimjie</p>
   <div class="site-description motion-element" itemprop="description"></div>
@@ -1740,8 +1697,8 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">43</span>
-          <span class="site-state-item-name">文章</span>
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
     
@@ -1763,8 +1720,22 @@
         
           
         
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">专栏</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span>
         </a>
       </div>
     
@@ -1802,105 +1773,12 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
     
   </nav>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="https://weibo.com/7216640993" title="微博 &rarr; https://weibo.com/7216640993" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="https://twitter.com/lei2rock" title="Twitter &rarr; https://twitter.com/lei2rock" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-      
-        
-      
-        <a href="https://github.com/lei2rock" title="GitHub &rarr; https://github.com/lei2rock" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-      </span>
-    
-  </div>
   <div class="cc-license motion-element" itemprop="license">
     
   
@@ -1931,12 +1809,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">99k</span>
+    <span title="站点总字数">79k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:30</span>
+    <span title="站点阅读时长">1:12</span>
 </div>
 
 <!-- 网站运行时间的设置 -->
@@ -1960,7 +1838,7 @@ setInterval("createtime()",250);
 </script>
         
 <div class="busuanzi-count">
-  <script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item-icon">
       <i class="fa fa-user"></i>
     </span>
@@ -1991,8 +1869,6 @@ setInterval("createtime()",250);
     </footer>
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
       </div>
 
     
@@ -2000,13 +1876,12 @@ setInterval("createtime()",250);
   </div>
 
   
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 <script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
 
 
   <script src="/js/affix.js?v=7.3.0"></script>
@@ -2020,136 +1895,6 @@ setInterval("createtime()",250);
 
 
   
-  <script pjax>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-
-  
-  <script pjax>
-  if (CONFIG.page.isPost) {
-    function addCount(Counter) {
-      var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-              .done(function() {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.time + 1);
-              })
-            
-              .fail(function ({ responseJSON }) {
-                console.log(`Failed to save Visitor num, with error message: ${responseJSON.error}`);
-              })
-          } else {
-              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1 }))
-                .done(function() {
-                  var $element = $(document.getElementById(url));
-                  $element.find('.leancloud-visitors-count').text(1);
-                })
-                .fail(function() {
-                  console.log('Failed to create');
-                });
-            
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
-        });
-    }
-  } else {
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
-        });
-    }
-  }
-
-  $(function() {
-    $.get('https://app-router.leancloud.cn/2/route?appId=' + 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI')
-      .done(function({ api_server }) {
-        var Counter = function(method, url, data) {
-          return $.ajax({
-            method: method,
-            url: `https://${api_server}/1.1${url}`,
-            headers: {
-              'X-LC-Id': 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
-              'X-LC-Key': '5jRfX3rExENmJqhdzkRqPndP',
-              'Content-Type': 'application/json',
-            },
-            data: data
-          });
-        };
-        if (CONFIG.page.isPost) {
-          const localhost = /http:\/\/(localhost|127.0.0.1|0.0.0.0)/;
-          if (localhost.test(document.URL)) return;
-          addCount(Counter);
-        } else {
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
-        }
-      });
-  });
-  </script>
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.3.0"></script>
 
 
 
@@ -2163,7 +1908,20 @@ setInterval("createtime()",250);
 
 
 
-    <div id="pjax">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
@@ -2228,9 +1986,9 @@ setInterval("createtime()",250);
     
 
 <script>
-NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', function() {
+NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
   var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail';
+  var guest = 'nick,mail,link';
   guest = guest.split(',').filter(function(item) {
     return GUEST.indexOf(item) > -1;
   });
@@ -2238,10 +1996,10 @@ NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', functio
     el: '#comments',
     verify: false,
     notify: false,
-    appId: 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
-    appKey: '5jRfX3rExENmJqhdzkRqPndP',
-    placeholder: '请在上方填写你的邮箱，有回复时将邮件提醒，邮箱不会被公开。',
-    avatar: 'wavatar',
+    appId: 'DfO1YtJmXCgD1sV6KmPrDjIP-gzGzoHsz',
+    appKey: 'JcgXsTtvwezQBuNQ2qjaQoeo',
+    placeholder: '留下邮箱，有回复时你将收到提醒，邮箱不会被公开。',
+    avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
     visitor: false,
@@ -2260,55 +2018,13 @@ NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', functio
         lang: 'zh-cn',
         admin_email: '填写博主邮箱',
         el: '#comments' ,
-        appId: 'ydaoV9samWgzerLX7OHEbRgk-MdYXbMMI',
-        appKey: '5jRfX3rExENmJqhdzkRqPndP',
+        appId: 'DfO1YtJmXCgD1sV6KmPrDjIP-gzGzoHsz',
+        appKey: 'JcgXsTtvwezQBuNQ2qjaQoeo',
         emoticon_url: 'https://cloud.panjunwen.com/alu',
         emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
-        placeholder: '请在上方填写你的邮箱，有回复时将邮件提醒，邮箱不会被公开。',
+        placeholder: '留下邮箱，有回复时你将收到提醒，邮箱不会被公开。',
   });
   </script>
-
-    
-<script src="/js/comment-locate.js"></script>
-<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script>
-
-    </div>
-    <script>
-var pjax = new Pjax({
-  selectors: [
-    'title',
-    '#page-configurations',
-    '.content-wrap',
-    '.sidebar-inner',
-    '#pjax'
-  ],
-  switches: {
-    '.sidebar-inner': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo: !CONFIG.save_scroll
-});
-$(document).on('pjax:send', function() {
-  $('.sidebar-inner').stop().fadeTo('fast', 0);
-  CONFIG.save_scroll && clearInterval(NexT.utils.saveScrollTimer);
-});
-$(document).on('pjax:success', function() {
-  $('script[pjax], script#page-configurations, #pjax script').each(function(i, o) {
-    $(o).parent().append($(o).remove());
-  });
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  $('.sidebar-inner .motion-element').css('opacity', 1);
-  $('.sidebar-inner').fadeTo('fast', 1);
-  NexT.utils.updateSidebarPosition();
-});
-</script>
 
 </body>
 </html>
