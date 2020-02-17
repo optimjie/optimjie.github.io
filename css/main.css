@@ -1710,7 +1710,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3b8109;
+  background: #b432ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2798,9 +2798,8 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background: url("https://i.loli.net/2019/07/17/5d2eb8c92e2e265357.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../images/background.png");
+  background-repeat: repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
 }
