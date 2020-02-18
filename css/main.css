@@ -1710,7 +1710,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5eeccd;
+  background: #29fff2;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2803,13 +2803,14 @@ body {
   background-attachment: fixed;
   background-position: 50% 50%;
 }
-.main-inner {
-  background: #fff;
-  opacity: 0.8;
+/*.main-inner {
+      background: #fff;
+      opacity: 0.8;
 }
+
 .header-inner {
-  opacity: 0.8;
-}
+      opacity: 0.8;
+}*/
 .vsys {
   display: none !important;
 }
