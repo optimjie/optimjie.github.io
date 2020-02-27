@@ -65,7 +65,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://optimjie.top/2020/02/27/空间限制/1.png">
 <meta property="og:image" content="http://optimjie.top/2020/02/27/空间限制/2.png">
-<meta property="og:updated_time" content="2020-02-27T13:47:26.629Z">
+<meta property="og:updated_time" content="2020-02-27T13:50:01.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="空间限制">
 <meta name="twitter:description" content="一般题目中不会卡空间，但是还是需要会计算。首先看一下，各种数据类型的长度。在K&amp;amp;R的The C Programming Language中写道：char占用一个字节，int通常代表特定机器中整数的自然长度。short类型通常为16位，long类型通常为32位，int类型可以为16位或32位。各编译器可以根据硬件特性自主选择合适的类型长度，但要遵循以下限制：short与int类型至少为16位">
@@ -263,7 +263,7 @@
                 
               
 
-              <time title="创建时间：2020-02-27 21:09:36 / 修改时间：21:47:26" itemprop="dateCreated datePublished" datetime="2020-02-27T21:09:36+08:00">2020-02-27</time>
+              <time title="创建时间：2020-02-27 21:09:36 / 修改时间：21:50:01" itemprop="dateCreated datePublished" datetime="2020-02-27T21:09:36+08:00">2020-02-27</time>
             </span>
           
             
@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>422</span>
+              <span>426</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -342,7 +342,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>一般题目中不会卡空间，但是还是需要会计算。</p><p>首先看一下，各种数据类型的长度。</p><p>在K&amp;R的The C Programming Language中写道：char占用一个字节，int通常代表特定机器中整数的自然长度。short类型通常为16位，long类型通常为32位，int类型可以为16位或32位。各编译器可以根据硬件特性自主选择合适的类型长度，但要遵循以下限制：<strong>short与int类型至少为16位，而long类型至少为32位，并且short类型不得长于int类型，int类型不得长于long类型</strong>。</p><a id="more"></a>
+        <p>一般题目中不会卡空间，但是还是需要会计算。</p><p>首先看一下，各种数据类型的长度。</p><p>在<strong>K&amp;R</strong>的<strong>The C Programming Language</strong>中写道：char占用一个字节，int通常代表特定机器中整数的自然长度。short类型通常为16位，long类型通常为32位，int类型可以为16位或32位。各编译器可以根据硬件特性自主选择合适的类型长度，但要遵循以下限制：<strong>short与int类型至少为16位，而long类型至少为32位，并且short类型不得长于int类型，int类型不得长于long类型</strong>。</p><a id="more"></a>
 
 
 <p>在我电脑（win10，64位）中实测各种数据类型的长度如下：</p>
@@ -351,7 +351,7 @@
 <img src="/2020/02/27/空间限制/2.png" title="This is an image">
 
 <p>一般题目中的空间限制为64MB，假设都用来开int数组：</p>
-<p>一个int为4个Byte，1MB为1024<em>1024个Byte，所以64MB最多可以开16777216个int（$1.67</em>10^7$个int）。</p>
+<p>一个int为4个Byte，1MB为1024*1024个Byte，所以64MB最多可以开16777216个int（$1.67 * 10^7$个int）。</p>
 <p>参考文献：</p>
 <p><a href="https://book.douban.com/subject/1139336/" target="_blank" rel="noopener">The C Programming Language</a></p>
 
