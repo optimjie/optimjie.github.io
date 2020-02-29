@@ -58,16 +58,16 @@
   <meta name="description" content="一般题目中不会卡空间，但是还是需要会计算。首先看一下，各种数据类型的长度。在K&amp;amp;R的The C Programming Language中写道：char占用一个字节，int通常代表特定机器中整数的自然长度。short类型通常为16位，long类型通常为32位，int类型可以为16位或32位。各编译器可以根据硬件特性自主选择合适的类型长度，但要遵循以下限制：short与int类型至少为16位">
 <meta name="keywords" content="总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="空间限制">
+<meta property="og:title" content="空间限制xxMB">
 <meta property="og:url" content="http://optimjie.top/2020/02/27/空间限制/index.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
 <meta property="og:description" content="一般题目中不会卡空间，但是还是需要会计算。首先看一下，各种数据类型的长度。在K&amp;amp;R的The C Programming Language中写道：char占用一个字节，int通常代表特定机器中整数的自然长度。short类型通常为16位，long类型通常为32位，int类型可以为16位或32位。各编译器可以根据硬件特性自主选择合适的类型长度，但要遵循以下限制：short与int类型至少为16位">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://optimjie.top/2020/02/27/空间限制/1.png">
 <meta property="og:image" content="http://optimjie.top/2020/02/27/空间限制/2.png">
-<meta property="og:updated_time" content="2020-02-27T13:50:01.231Z">
+<meta property="og:updated_time" content="2020-02-29T10:57:23.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="空间限制">
+<meta name="twitter:title" content="空间限制xxMB">
 <meta name="twitter:description" content="一般题目中不会卡空间，但是还是需要会计算。首先看一下，各种数据类型的长度。在K&amp;amp;R的The C Programming Language中写道：char占用一个字节，int通常代表特定机器中整数的自然长度。short类型通常为16位，long类型通常为32位，int类型可以为16位或32位。各编译器可以根据硬件特性自主选择合适的类型长度，但要遵循以下限制：short与int类型至少为16位">
 <meta name="twitter:image" content="http://optimjie.top/2020/02/27/空间限制/1.png">
   <link rel="canonical" href="http://optimjie.top/2020/02/27/空间限制/">
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title>空间限制 | optimjie's blog</title>
+  <title>空间限制xxMB | optimjie's blog</title>
   
 
 
@@ -246,7 +246,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">空间限制
+          <h1 class="post-title" itemprop="name headline">空间限制xxMB
 
             
           </h1>
@@ -263,11 +263,19 @@
                 
               
 
-              <time title="创建时间：2020-02-27 21:09:36 / 修改时间：21:50:01" itemprop="dateCreated datePublished" datetime="2020-02-27T21:09:36+08:00">2020-02-27</time>
+              <time title="创建时间：2020-02-27 21:09:36" itemprop="dateCreated datePublished" datetime="2020-02-27T21:09:36+08:00">2020-02-27</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-29 18:57:23" itemprop="dateModified" datetime="2020-02-29T18:57:23+08:00">2020-02-29</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -319,7 +327,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>426</span>
+              <span>482</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -351,7 +359,7 @@
 <img src="/2020/02/27/空间限制/2.png" title="This is an image">
 
 <p>一般题目中的空间限制为64MB，假设都用来开int数组：</p>
-<p>一个int为4个Byte，1MB为1024*1024个Byte，所以64MB最多可以开16777216个int（$1.67 * 10^7$个int）。</p>
+<p>一个int为4个Byte，1MB为1024*1024个Byte，所以64MB最多可以开16777216个int（$1.67 * 10^7$个int）。但是y总说过，操作系统会为我们做优化，只有真正用到时才会开这么大，emmmmm~😅等我学的更深入了再看一下吧。</p>
 <p>参考文献：</p>
 <p><a href="https://book.douban.com/subject/1139336/" target="_blank" rel="noopener">The C Programming Language</a></p>
 
@@ -370,7 +378,7 @@
     <strong>本文作者： </strong>optimjie</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://optimjie.top/2020/02/27/空间限制/" title="空间限制">http://optimjie.top/2020/02/27/空间限制/</a>
+    <a href="http://optimjie.top/2020/02/27/空间限制/" title="空间限制xxMB">http://optimjie.top/2020/02/27/空间限制/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
