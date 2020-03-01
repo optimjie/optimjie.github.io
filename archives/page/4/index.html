@@ -44,8 +44,8 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -199,9 +199,36 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
   </ul>
 
 </nav>
+  <div class="site-search">
+    
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+  </div>
 </div>
     </header>
 
@@ -469,72 +496,6 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/10/01/树的同构/" itemprop="url">
-            
-              <span itemprop="name">树的同构</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-01T14:16:23+08:00"
-              content="2019-10-01">
-          10-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-  
-
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/01/03-树2-List-Leaves/" itemprop="url">
-            
-              <span itemprop="name">03-树2 List Leaves</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-01T14:16:23+08:00"
-              content="2019-10-01">
-          10-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-  
-
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
           <a class="post-title-link" href="/2019/10/01/循环队列的操作/" itemprop="url">
             
               <span itemprop="name">循环队列的操作</span>
@@ -568,9 +529,75 @@
 
       <h2 class="post-title">
         
+          <a class="post-title-link" href="/2019/10/01/二级指针做函数参数/" itemprop="url">
+            
+              <span itemprop="name">二级指针做输入输出</span>
+            
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-10-01T14:16:23+08:00"
+              content="2019-10-01">
+          10-01
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+  
+  
+  
+
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
           <a class="post-title-link" href="/2019/10/01/PTA数据结构与算法题目集(中文)6-5/" itemprop="url">
             
               <span itemprop="name">PTA数据结构与算法题目集(中文)6-5</span>
+            
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-10-01T14:16:23+08:00"
+              content="2019-10-01">
+          10-01
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+  
+  
+  
+
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/2019/10/01/树的同构/" itemprop="url">
+            
+              <span itemprop="name">树的同构</span>
             
           </a>
         
@@ -870,6 +897,8 @@ setInterval("createtime()",250);
 
 
 
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
 
 
 
@@ -986,5 +1015,5 @@ NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', funct
   });
   </script>
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
