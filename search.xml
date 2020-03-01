@@ -855,19 +855,6 @@
       </categories>
   </entry>
   <entry>
-    <title>PTA数据结构与算法题目集(中文)6-5</title>
-    <url>/2019/10/01/PTA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE%E9%9B%86(%E4%B8%AD%E6%96%87)6-5/</url>
-    <content><![CDATA[<p>本题为无头结点的链表操作集</p>
-<a id="more"></a>
-
-
-
-]]></content>
-      <categories>
-        <category>PTA</category>
-      </categories>
-  </entry>
-  <entry>
     <title>树的同构</title>
     <url>/2019/10/01/%E6%A0%91%E7%9A%84%E5%90%8C%E6%9E%84/</url>
     <content><![CDATA[<p>每次做课后布置的题就要做好久，这个题老师讲的时候用的是<code>C</code>语言，我想用<code>C++</code>中的<code>vector</code>做发现做的过程中遇到了许多的问题，老是出现程序宕掉的问题，但让我十分开心的是，改完以后居然一次就<code>AC</code>了别提有多激动了，不过这代码只是完成了功能，可读性做的很差，尤其是判断同构的函数，但是以后回过头来看还是很有意思的吧😂😂。</p>
@@ -878,6 +865,19 @@
 ]]></content>
       <categories>
         <category>浙大数据结构</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>PTA数据结构与算法题目集(中文)6-5</title>
+    <url>/2019/10/01/PTA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE%E9%9B%86(%E4%B8%AD%E6%96%87)6-5/</url>
+    <content><![CDATA[<p>本题为无头结点的链表操作集</p>
+<a id="more"></a>
+
+
+
+]]></content>
+      <categories>
+        <category>PTA</category>
       </categories>
   </entry>
   <entry>
