@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>LeetCode 1360.日期之间隔几天</title>
+    <url>/posts/20200306a1.html</url>
+    <content><![CDATA[<h3 id="自己写"><a href="#自己写" class="headerlink" title="自己写"></a>自己写</h3><p><strong>只能说写的太繁琐了</strong></p><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">leap_year</span><span class="params">(<span class="keyword">int</span> year)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span> || year % <span class="number">400</span> == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> month[<span class="number">2</span>][<span class="number">13</span>] = &#123;</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>&#125;,</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">31</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">get_date</span><span class="params">(<span class="built_in">string</span> date, <span class="keyword">int</span> &amp;year, <span class="keyword">int</span> &amp;month, <span class="keyword">int</span> &amp;day)</span></span>&#123;</span><br><span class="line">        <span class="built_in">sscanf</span>(date.c_str(), <span class="string">"%d-%d-%d"</span>, &amp;year, &amp;month, &amp;day);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get_num</span><span class="params">(<span class="keyword">int</span> y, <span class="keyword">int</span> m, <span class="keyword">int</span> d)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> y * <span class="number">10000</span> + m * <span class="number">100</span> + d;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">daysBetweenDates</span><span class="params">(<span class="built_in">string</span> date1, <span class="built_in">string</span> date2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> y1, m1, d1, y2, m2, d2;</span><br><span class="line">        get_date(date1, y1, m1, d1);</span><br><span class="line">        get_date(date2, y2, m2, d2);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (get_num(y1, m1, d1) &gt; get_num(y2, m2, d2))&#123;</span><br><span class="line">            swap(y1, y2);</span><br><span class="line">            swap(m1, m2);</span><br><span class="line">            swap(d1, d2);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = y1 + <span class="number">1</span>; i &lt; y2; i++)</span><br><span class="line">            <span class="keyword">if</span> (leap_year(i)) ans += <span class="number">366</span>;</span><br><span class="line">            <span class="keyword">else</span> ans += <span class="number">365</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (y1 == y2)&#123;</span><br><span class="line">            <span class="keyword">bool</span> leap = leap_year(y1);</span><br><span class="line">            <span class="keyword">if</span> (m1 == m2) ans += d2 - d1;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                ans += month[leap][m1] - d1;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = m1 + <span class="number">1</span>; i &lt; m2; i++) ans += month[leap][i];</span><br><span class="line">                ans += d2;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">bool</span> leap = leap_year(y1);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">12</span>; i &gt;= m1; i--)</span><br><span class="line">                <span class="keyword">if</span> (i &gt; m1) ans += month[leap][i];</span><br><span class="line">                <span class="keyword">else</span> ans += month[leap][i] - d1;</span><br><span class="line">            leap = leap_year(y2);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m2; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (i &lt; m2) ans += month[leap][i];</span><br><span class="line">                <span class="keyword">else</span> ans += d2;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+<h3 id="y总"><a href="#y总" class="headerlink" title="y总"></a>y总</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">daysBetweenDates</span><span class="params">(<span class="built_in">string</span> date1, <span class="built_in">string</span> date2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">abs</span>(get_sum(date1) - get_sum(date2));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> month[<span class="number">2</span>][<span class="number">13</span>] = &#123;</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>&#125;,</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">31</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">leap_year</span><span class="params">(<span class="keyword">int</span> year)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> || year % <span class="number">400</span> == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get_sum</span><span class="params">(<span class="built_in">string</span> date)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> y, m, d;</span><br><span class="line">        <span class="built_in">sscanf</span>(date.c_str(), <span class="string">"%d-%d-%d"</span>, &amp;y, &amp;m, &amp;d);</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1971</span>; i &lt; y; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (leap_year(i)) res += <span class="number">366</span>;</span><br><span class="line">            <span class="keyword">else</span> res += <span class="number">365</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">bool</span> leap = leap_year(y);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i++)&#123;</span><br><span class="line">            res += month[leap][i];</span><br><span class="line">        &#125;</span><br><span class="line">        res += d;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>y总代码<a href="https://www.acwing.com/activity/content/code/content/226785/" target="_blank" rel="noopener">链接</a><br>还有视频讲解哦！</p>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>空间限制xxMB</title>
     <url>/posts/20200227a1.html</url>
     <content><![CDATA[<p>一般题目中不会卡空间，但是还是需要会计算。</p><p>首先看一下，各种数据类型的长度。</p><p>在<strong>K&amp;R</strong>的<strong>The C Programming Language</strong>中写道：char占用一个字节，int通常代表特定机器中整数的自然长度。short类型通常为16位，long类型通常为32位，int类型可以为16位或32位。各编译器可以根据硬件特性自主选择合适的类型长度，但要遵循以下限制：<strong>short与int类型至少为16位，而long类型至少为32位，并且short类型不得长于int类型，int类型不得长于long类型</strong>。</p><a id="more"></a>
@@ -792,6 +809,9 @@
       <categories>
         <category>c/c++</category>
       </categories>
+      <tags>
+        <tag>c/c++</tag>
+      </tags>
   </entry>
   <entry>
     <title>树的同构</title>
@@ -853,6 +873,9 @@
       <categories>
         <category>c/c++</category>
       </categories>
+      <tags>
+        <tag>c/c++</tag>
+      </tags>
   </entry>
   <entry>
     <title>PTA数据结构与算法题目集(中文)6-5</title>
@@ -892,6 +915,9 @@
       <categories>
         <category>c/c++</category>
       </categories>
+      <tags>
+        <tag>c/c++</tag>
+      </tags>
   </entry>
   <entry>
     <title>循环队列的操作</title>
@@ -918,6 +944,9 @@
       <categories>
         <category>c/c++</category>
       </categories>
+      <tags>
+        <tag>c/c++</tag>
+      </tags>
   </entry>
   <entry>
     <title>二级指针做输入输出</title>
@@ -984,5 +1013,8 @@
       <categories>
         <category>c/c++</category>
       </categories>
+      <tags>
+        <tag>c/c++</tag>
+      </tags>
   </entry>
 </search>
