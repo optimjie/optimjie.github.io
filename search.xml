@@ -477,7 +477,7 @@
 
 <h4 id="多重背包问题"><a href="#多重背包问题" class="headerlink" title="多重背包问题"></a>多重背包问题</h4><h5 id="朴素算法-2"><a href="#朴素算法-2" class="headerlink" title="朴素算法"></a>朴素算法</h5>]]></content>
       <categories>
-        <category>AcWing基础课</category>
+        <category>AcWing算法基础</category>
       </categories>
       <tags>
         <tag>DP</tag>
@@ -520,10 +520,10 @@
 
 <h4 id="时间复杂夫"><a href="#时间复杂夫" class="headerlink" title="时间复杂夫"></a>时间复杂夫</h4><h4 id="具体题目"><a href="#具体题目" class="headerlink" title="具体题目"></a><a href="https://www.acwing.com/problem/content/863/" target="_blank" rel="noopener">具体题目</a></h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">510</span>, M = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n1, n2, m, res;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> h[N], e[M], ne[M], idx;</span><br><span class="line"><span class="keyword">int</span> match[N]; <span class="comment">// 配对</span></span><br><span class="line"><span class="keyword">bool</span> st[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    e[idx] = y;</span><br><span class="line">    ne[idx] = h[x];</span><br><span class="line">    h[x] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = h[x]; i != <span class="number">-1</span>; i = ne[i])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j = e[i];</span><br><span class="line">        <span class="keyword">if</span>(!st[j])</span><br><span class="line">        &#123;</span><br><span class="line">            st[j] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(!match[j] || find(match[j]))</span><br><span class="line">            &#123;</span><br><span class="line">                match[j] = x;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(h, <span class="number">-1</span>, <span class="keyword">sizeof</span>(h));</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;n1, &amp;n2, &amp;m);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> x, y;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x, &amp;y);</span><br><span class="line">        add(x, y);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n1; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(st, <span class="literal">false</span>, <span class="keyword">sizeof</span>(st));</span><br><span class="line">        <span class="keyword">if</span>(find(i)) res++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; res &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>AcWing基础课</category>
+        <category>AcWing算法基础</category>
       </categories>
       <tags>
-        <tag>AcWing算法模板</tag>
+        <tag>图论</tag>
       </tags>
   </entry>
   <entry>
@@ -790,7 +790,7 @@
 
 ]]></content>
       <categories>
-        <category>传智播客扫地僧c/c++学习笔记</category>
+        <category>c/c++</category>
       </categories>
   </entry>
   <entry>
@@ -851,7 +851,7 @@
 
 <h6 id="输出结果：-3"><a href="#输出结果：-3" class="headerlink" title="输出结果："></a>输出结果：</h6><img src="/posts/20191002a1/Snipaste_2019-10-02_19-17-09.png" title="This is an image">]]></content>
       <categories>
-        <category>传智播客扫地僧c/c++学习笔记</category>
+        <category>c/c++</category>
       </categories>
   </entry>
   <entry>
@@ -890,7 +890,7 @@
 <p>运算符重载函数可以为全局函数也可以为成员函数，大部分情况下二者可以相互转换，以二元运算符为例，全局函数需要两个参数，左操作数与右操作数，而成员函数可通过<code>this</code>指针“隐藏”一个参数。但也有例外，在重载&lt;&lt;时必须使用成员函数，因为我们不能进入到<code>ostream</code>类中写成员函数。</p>
 ]]></content>
       <categories>
-        <category>传智播客扫地僧c/c++学习笔记</category>
+        <category>c/c++</category>
       </categories>
   </entry>
   <entry>
@@ -916,7 +916,7 @@
 
 ]]></content>
       <categories>
-        <category>传智播客扫地僧c/c++学习笔记</category>
+        <category>c/c++</category>
       </categories>
   </entry>
   <entry>
@@ -982,7 +982,7 @@
 
 ]]></content>
       <categories>
-        <category>传智播客扫地僧c/c++学习笔记</category>
+        <category>c/c++</category>
       </categories>
   </entry>
 </search>
