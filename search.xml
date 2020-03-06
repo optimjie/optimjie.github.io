@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>LeetCode 1361.验证二叉树</title>
-    <url>/posts/20200306a1.html</url>
+    <url>/posts/20200306a2.html</url>
     <content><![CDATA[<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><blockquote>
 <p>若是二叉树应该满足下面3个条件：<br>1.有且仅有一个根节点(入度为0)。<br>2.其他的节点的入度均为1。<br>3.所有的节点均在一棵树上(其实这个就相当于条件1了)。</p>
 </blockquote>

@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="自己写只能说写的太繁琐了1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859class Solution &amp;#123;public:    bool leap_year(int year)&amp;#123;        if (year">
+  <meta name="description" content="分析 若是二叉树应该满足下面3个条件：1.有且仅有一个根节点(入度为0)。2.其他的节点的入度均为1。3.所有的节点均在一棵树上(其实这个就相当于条件1了)。  c++代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253class Solution &amp;#">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 1360.日期之间隔几天">
-<meta property="og:url" content="http://optimjie.top/posts/20200306a1.html">
+<meta property="og:title" content="LeetCode 1361.验证二叉树">
+<meta property="og:url" content="http://optimjie.top/posts/20200306a2.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
-<meta property="og:description" content="自己写只能说写的太繁琐了1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859class Solution &amp;#123;public:    bool leap_year(int year)&amp;#123;        if (year">
+<meta property="og:description" content="分析 若是二叉树应该满足下面3个条件：1.有且仅有一个根节点(入度为0)。2.其他的节点的入度均为1。3.所有的节点均在一棵树上(其实这个就相当于条件1了)。  c++代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253class Solution &amp;#">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-05T17:18:57.947Z">
+<meta property="og:updated_time" content="2020-03-06T06:28:09.378Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 1360.日期之间隔几天">
-<meta name="twitter:description" content="自己写只能说写的太繁琐了1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859class Solution &amp;#123;public:    bool leap_year(int year)&amp;#123;        if (year">
-  <link rel="canonical" href="http://optimjie.top/posts/20200306a1">
+<meta name="twitter:title" content="LeetCode 1361.验证二叉树">
+<meta name="twitter:description" content="分析 若是二叉树应该满足下面3个条件：1.有且仅有一个根节点(入度为0)。2.其他的节点的入度均为1。3.所有的节点均在一棵树上(其实这个就相当于条件1了)。  c++代码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253class Solution &amp;#">
+  <link rel="canonical" href="http://optimjie.top/posts/20200306a2">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>LeetCode 1360.日期之间隔几天 | optimjie's blog</title>
+  <title>LeetCode 1361.验证二叉树 | optimjie's blog</title>
   
 
 
@@ -256,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/posts/20200306a1.html">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/posts/20200306a2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
@@ -270,7 +270,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">LeetCode 1360.日期之间隔几天
+          <h1 class="post-title" itemprop="name headline">LeetCode 1361.验证二叉树
 
             
           </h1>
@@ -287,7 +287,7 @@
                 
               
 
-              <time title="创建时间：2020-03-06 00:44:54 / 修改时间：01:18:57" itemprop="dateCreated datePublished" datetime="2020-03-06T00:44:54+08:00">2020-03-06</time>
+              <time title="创建时间：2020-03-06 14:22:45 / 修改时间：14:28:09" itemprop="dateCreated datePublished" datetime="2020-03-06T14:22:45+08:00">2020-03-06</time>
             </span>
           
             
@@ -328,8 +328,8 @@
       
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/posts/20200306a1.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200306a1.html" itemprop="commentCount"></span>
+    <a title="valine" href="/posts/20200306a2.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200306a2.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -343,7 +343,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>2.7k</span>
+              <span>1.8k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -366,13 +366,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="自己写"><a href="#自己写" class="headerlink" title="自己写"></a>自己写</h3><p><strong>只能说写的太繁琐了</strong></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">leap_year</span><span class="params">(<span class="keyword">int</span> year)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span> || year % <span class="number">400</span> == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> month[<span class="number">2</span>][<span class="number">13</span>] = &#123;</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>&#125;,</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">31</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">get_date</span><span class="params">(<span class="built_in">string</span> date, <span class="keyword">int</span> &amp;year, <span class="keyword">int</span> &amp;month, <span class="keyword">int</span> &amp;day)</span></span>&#123;</span><br><span class="line">        <span class="built_in">sscanf</span>(date.c_str(), <span class="string">"%d-%d-%d"</span>, &amp;year, &amp;month, &amp;day);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get_num</span><span class="params">(<span class="keyword">int</span> y, <span class="keyword">int</span> m, <span class="keyword">int</span> d)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> y * <span class="number">10000</span> + m * <span class="number">100</span> + d;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">daysBetweenDates</span><span class="params">(<span class="built_in">string</span> date1, <span class="built_in">string</span> date2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> y1, m1, d1, y2, m2, d2;</span><br><span class="line">        get_date(date1, y1, m1, d1);</span><br><span class="line">        get_date(date2, y2, m2, d2);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (get_num(y1, m1, d1) &gt; get_num(y2, m2, d2))&#123;</span><br><span class="line">            swap(y1, y2);</span><br><span class="line">            swap(m1, m2);</span><br><span class="line">            swap(d1, d2);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = y1 + <span class="number">1</span>; i &lt; y2; i++)</span><br><span class="line">            <span class="keyword">if</span> (leap_year(i)) ans += <span class="number">366</span>;</span><br><span class="line">            <span class="keyword">else</span> ans += <span class="number">365</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (y1 == y2)&#123;</span><br><span class="line">            <span class="keyword">bool</span> leap = leap_year(y1);</span><br><span class="line">            <span class="keyword">if</span> (m1 == m2) ans += d2 - d1;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                ans += month[leap][m1] - d1;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = m1 + <span class="number">1</span>; i &lt; m2; i++) ans += month[leap][i];</span><br><span class="line">                ans += d2;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">bool</span> leap = leap_year(y1);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">12</span>; i &gt;= m1; i--)</span><br><span class="line">                <span class="keyword">if</span> (i &gt; m1) ans += month[leap][i];</span><br><span class="line">                <span class="keyword">else</span> ans += month[leap][i] - d1;</span><br><span class="line">            leap = leap_year(y2);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m2; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (i &lt; m2) ans += month[leap][i];</span><br><span class="line">                <span class="keyword">else</span> ans += d2;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><a id="more"></a>
-
-
-<h3 id="y总"><a href="#y总" class="headerlink" title="y总"></a>y总</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">daysBetweenDates</span><span class="params">(<span class="built_in">string</span> date1, <span class="built_in">string</span> date2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">abs</span>(get_sum(date1) - get_sum(date2));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> month[<span class="number">2</span>][<span class="number">13</span>] = &#123;</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>&#125;,</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">31</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">leap_year</span><span class="params">(<span class="keyword">int</span> year)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> || year % <span class="number">400</span> == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get_sum</span><span class="params">(<span class="built_in">string</span> date)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> y, m, d;</span><br><span class="line">        <span class="built_in">sscanf</span>(date.c_str(), <span class="string">"%d-%d-%d"</span>, &amp;y, &amp;m, &amp;d);</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1971</span>; i &lt; y; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (leap_year(i)) res += <span class="number">366</span>;</span><br><span class="line">            <span class="keyword">else</span> res += <span class="number">365</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">bool</span> leap = leap_year(y);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i++)&#123;</span><br><span class="line">            res += month[leap][i];</span><br><span class="line">        &#125;</span><br><span class="line">        res += d;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>y总代码<a href="https://www.acwing.com/activity/content/code/content/226785/" target="_blank" rel="noopener"><strong>链接</strong></a><br>还有视频讲解哦！</p>
-
+        <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><blockquote>
+<p>若是二叉树应该满足下面3个条件：<br>1.有且仅有一个根节点(入度为0)。<br>2.其他的节点的入度均为1。<br>3.所有的节点均在一棵树上(其实这个就相当于条件1了)。</p>
+</blockquote>
+<h3 id="c-代码"><a href="#c-代码" class="headerlink" title="c++代码"></a>c++代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">validateBinaryTreeNodes</span><span class="params">(<span class="keyword">int</span> n, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; leftChild, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; rightChild)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; indegree(n, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (leftChild[i] != <span class="number">-1</span>) indegree[leftChild[i]]++;</span><br><span class="line">            <span class="keyword">if</span> (rightChild[i] != <span class="number">-1</span>) indegree[rightChild[i]]++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> root = <span class="number">-1</span>;</span><br><span class="line">        <span class="comment">// 要明确的是跳出这个循环有两种可能性：1.找到root 2.遍历完所有的点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (indegree[i] == <span class="number">0</span>)&#123;</span><br><span class="line">                root = i;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="number">-1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//cout &lt;&lt; "root:" &lt;&lt; root &lt;&lt; endl;</span></span><br><span class="line">        </span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt; vis(n, <span class="literal">false</span>);</span><br><span class="line">        <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">        q.push(root);</span><br><span class="line">        vis[root] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (q.size())&#123;</span><br><span class="line">            <span class="keyword">int</span> t = q.front();</span><br><span class="line">            q.pop();</span><br><span class="line">            <span class="keyword">if</span> (leftChild[t] != <span class="number">-1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span> (vis[leftChild[t]]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    q.push(leftChild[t]);</span><br><span class="line">                    vis[leftChild[t]] = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (rightChild[t] != <span class="number">-1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span> (vis[rightChild[t]]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    q.push(rightChild[t]);</span><br><span class="line">                    vis[rightChild[t]] = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//cout &lt;&lt; "here" &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (!vis[i]) &#123;</span><br><span class="line">                <span class="comment">//cout &lt;&lt; i &lt;&lt; endl;</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -411,7 +408,7 @@
     <strong>本文作者： </strong>optimjie</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://optimjie.top/posts/20200306a1.html" title="LeetCode 1360.日期之间隔几天">http://optimjie.top/posts/20200306a1.html</a>
+    <a href="http://optimjie.top/posts/20200306a2.html" title="LeetCode 1361.验证二叉树">http://optimjie.top/posts/20200306a2.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -436,8 +433,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/posts/20200227a1.html" rel="next" title="空间限制xxMB">
-                  <i class="fa fa-chevron-left"></i> 空间限制xxMB
+                <a href="/posts/20200306a1.html" rel="next" title="LeetCode 1360.日期之间隔几天">
+                  <i class="fa fa-chevron-left"></i> LeetCode 1360.日期之间隔几天
                 </a>
               
             </div>
@@ -445,10 +442,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/posts/20200306a2.html" rel="prev" title="LeetCode 1361.验证二叉树">
-                  LeetCode 1361.验证二叉树 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -630,7 +623,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自己写"><span class="nav-number">1.</span> <span class="nav-text">自己写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#y总"><span class="nav-number">2.</span> <span class="nav-text">y总</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-代码"><span class="nav-number">2.</span> <span class="nav-text">c++代码</span></a></li></ol></div>
             
 
           </div>
