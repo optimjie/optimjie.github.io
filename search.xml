@@ -23,6 +23,7 @@
 <p>5.Application 也是单例的典型应用</p>
 <p>6.Windows的Task Manager (任务管理器)就是很典型的单例模式</p>
 <p>7.Windows的Recycle Bin (回收站)也是典型的单例应用。在整个系统运行过程中，回收站一直维护着仅有的一个实例</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>宋红康Java核心基础</p>
 ]]></content>
       <categories>
         <category>设计模式</category>
