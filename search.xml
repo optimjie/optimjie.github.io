@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>单例模式</title>
+    <url>/posts/20200318a1.html</url>
+    <content><![CDATA[<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>所谓类的单例设计模式，就是采取一定的方法保证在整个的系统软件中，对某个类只能存在一个对象实例，并且该类只提供一个取得该对象实例的方法。如果我们要让一个类在一个虚拟机中只能产生一个对象，我们首先必须将累的构造器的访问权限设置为private，这样就不能通过new操作符在类的外部产生类的对象了，但在类的内部仍然可以产生该类的对象。因为在诶的外部开始还无法得到类的对象，只能通过调用该类的某个静态方法以返回类内部创建的对象，静态方法只能访问静态成员变量，所以指向类内部产生的该类对象的变量也必须定义成静态的。</p><a id="more"></a>
+<h3 id="Java实现"><a href="#Java实现" class="headerlink" title="Java实现"></a>Java实现</h3><h4 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h4><p>饿汉式：</p>
+<blockquote>
+<p>缺点：对象加载时间过长。<br>优点：饿汉式是线程安全的。</p>
+</blockquote>
+<p>懒汉式：</p>
+<blockquote>
+<p>优点：延迟对象的创建<br>缺点：该写法线程不安全，以后在改进。</p>
+</blockquote>
+<h3 id="单例模式的应用场景"><a href="#单例模式的应用场景" class="headerlink" title="单例模式的应用场景"></a>单例模式的应用场景</h3><p>网站的计数器，一般也是单例模式实现，否则难以同步。<br>应用程序的日志应用，一般都使用单例模式实现，这一般是由于共享的日志文件一直处于打开状态，因为只能有一个实例去操作，否则内容不好追加。<br>数据库连接池的设计一般也是采用单例模式，因为数据库连接是一种数据库<br>资源。<br>项目中，读取配置文件的类，一般也只有一个对象。没有必要每次使用配置文件数据，都生成一个对象去读取。<br>Application 也是单例的典型应用<br>Windows的Task Manager (任务管理器)就是很典型的单例模式<br>Windows的Recycle Bin (回收站)也是典型的单例应用。在整个系统运行过程中，回收站一直维护着仅有的一个实例</p>
+]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>外卖店优先级</title>
     <url>/posts/20200311a1.html</url>
     <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><strong><a href="https://www.acwing.com/problem/content/1243/" target="_blank" rel="noopener">题目链接</a></strong></p><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>拿到题目之后，首先想想暴力的做法，暴力的做法按照时间枚举，在某个时间点上枚举所有的外卖店若是有订单优先级就加上<code>cnt(订单的数量) * 2</code>，否则就减去<code>1</code>，再按照优先级的数值判断是否在优先缓存中。枚举完所有时间以后，再看<code>T</code>时刻的优先缓存中的外卖店的数量。这种暴力的时间复杂度我写的代码是$O(N * T + M * T)$，显然是会超时的。</p><a id="more"></a>
