@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>LeetCode 5.最长回文子串</title>
+    <url>/posts/20200320a1.html</url>
+    <content><![CDATA[<h3 id="算法一：动态规划"><a href="#算法一：动态规划" class="headerlink" title="算法一：动态规划"></a>算法一：动态规划</h3><h4 id="时间复杂度：O-4n-ln-n"><a href="#时间复杂度：O-4n-ln-n" class="headerlink" title="时间复杂度：O($4n\ln n$)"></a>时间复杂度：O($4n\ln n$)</h4><p>状态个数：内层循环为调和级数$\frac{n}{1}+\frac{n}{2}+\frac{n}{3}+…+\frac{n}{n} = n(\ln(n+1)+r)$(r为欧拉常数)<br>状态转移：4</p><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p><a href="https://www.acwing.com/" target="_blank" rel="noopener">闫氏Dp分析法</a>:</p><p>f[i][j]表示所有i~j的回文串的集合的最大值。</p><a id="more"></a>
+
+
+<p>集合划分：</p>
+<blockquote>
+<p>1.包含i，j两个点。包含i，j两点首先要满足<code>s[i] == s[j]</code>并且i+1~j-1也要是个回文串（否则会出现这种情况<code>abca</code>显然不是回文串）。所以<code>f[i][j] = f[i + 1][j - 1] + 2</code>。<br>2.包含i，不包含j。首先要明确<code>f[i][j - 1]</code>与这种情况不完全相等，包含i，不包含j的集合是<code>f[i][j - 1]</code>的子集，但由于要求最大值，所以在集合划分的时候可以有交集。<br>3.不包含i，包含j。同2<code>f[i + 1][j]</code>。<br>4.i，j两点均不包含。<code>f[i + 1][j - 1]</code>。</p>
+</blockquote>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = s.size();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; f(n, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(n));</span><br><span class="line">        <span class="keyword">int</span> maxLength = <span class="number">1</span>, begin = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> len = <span class="number">1</span>; len &lt;= n; len++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>; l + len - <span class="number">1</span> &lt; n; l++)&#123;</span><br><span class="line">                <span class="keyword">int</span> r = l + len - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (len == <span class="number">1</span>) f[l][r] = <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (s[l] == s[r] &amp;&amp; f[l + <span class="number">1</span>][r - <span class="number">1</span>] == (r - l - <span class="number">1</span>)) f[l][r] = f[l + <span class="number">1</span>][r - <span class="number">1</span>] + <span class="number">2</span>;</span><br><span class="line">                    f[l][r] = max(f[l][r], f[l + <span class="number">1</span>][r - <span class="number">1</span>]);</span><br><span class="line">                    f[l][r] = max(f[l][r], f[l][r - <span class="number">1</span>]);</span><br><span class="line">                    f[l][r] = max(f[l][r], f[l + <span class="number">1</span>][r]);</span><br><span class="line">                    <span class="keyword">if</span> (f[l][r] &gt; maxLength)&#123;</span><br><span class="line">                        maxLength = f[l][r];</span><br><span class="line">                        begin = l;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> s.substr(begin, maxLength);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>DP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>单例模式</title>
     <url>/posts/20200318a1.html</url>
     <content><![CDATA[<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>所谓类的单例设计模式，就是采取一定的方法保证在整个的系统软件中，对某个类只能存在一个对象实例，并且该类只提供一个取得该对象实例的方法。如果我们要让一个类在一个虚拟机中只能产生一个对象，我们首先必须将累的构造器的访问权限设置为private，这样就不能通过new操作符在类的外部产生类的对象了，但在类的内部仍然可以产生该类的对象。因为在诶的外部开始还无法得到类的对象，只能通过调用该类的某个静态方法以返回类内部创建的对象，静态方法只能访问静态成员变量，所以指向类内部产生的该类对象的变量也必须定义成静态的。</p><a id="more"></a>
