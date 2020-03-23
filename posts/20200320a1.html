@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="算法一：动态规划时间复杂度：O($4n\ln n$)状态个数：内层循环为调和级数$\frac{n}{1}+\frac{n}{2}+\frac{n}{3}+…+\frac{n}{n} = n(\ln(n+1)+r)$(r为欧拉常数)状态转移：4分析闫氏Dp分析法:f[i][j]表示所有i~j的回文串的集合的最大值。">
+  <meta name="description" content="算法一：动态规划时间复杂度：O($n^2$)状态个数：$\frac{(n+1)n}{2}$状态转移：4分析闫氏Dp分析法:f[i][j]表示所有i~j的回文串的集合的最大值。集合划分： 1.包含i，j两个点。包含i，j两点首先要满足s[i] == s[j]并且i+1~j-1也要是个回文串（否则会出现这种情况abca显然不是回文串）。所以f[i][j] = f[i + 1][j - 1] + 2。2">
 <meta name="keywords" content="LeetCode,DP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode 5.最长回文子串">
 <meta property="og:url" content="http://optimjie.top/posts/20200320a1.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
-<meta property="og:description" content="算法一：动态规划时间复杂度：O($4n\ln n$)状态个数：内层循环为调和级数$\frac{n}{1}+\frac{n}{2}+\frac{n}{3}+…+\frac{n}{n} = n(\ln(n+1)+r)$(r为欧拉常数)状态转移：4分析闫氏Dp分析法:f[i][j]表示所有i~j的回文串的集合的最大值。">
+<meta property="og:description" content="算法一：动态规划时间复杂度：O($n^2$)状态个数：$\frac{(n+1)n}{2}$状态转移：4分析闫氏Dp分析法:f[i][j]表示所有i~j的回文串的集合的最大值。集合划分： 1.包含i，j两个点。包含i，j两点首先要满足s[i] == s[j]并且i+1~j-1也要是个回文串（否则会出现这种情况abca显然不是回文串）。所以f[i][j] = f[i + 1][j - 1] + 2。2">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-20T06:48:01.002Z">
+<meta property="og:updated_time" content="2020-03-20T11:25:09.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode 5.最长回文子串">
-<meta name="twitter:description" content="算法一：动态规划时间复杂度：O($4n\ln n$)状态个数：内层循环为调和级数$\frac{n}{1}+\frac{n}{2}+\frac{n}{3}+…+\frac{n}{n} = n(\ln(n+1)+r)$(r为欧拉常数)状态转移：4分析闫氏Dp分析法:f[i][j]表示所有i~j的回文串的集合的最大值。">
+<meta name="twitter:description" content="算法一：动态规划时间复杂度：O($n^2$)状态个数：$\frac{(n+1)n}{2}$状态转移：4分析闫氏Dp分析法:f[i][j]表示所有i~j的回文串的集合的最大值。集合划分： 1.包含i，j两个点。包含i，j两点首先要满足s[i] == s[j]并且i+1~j-1也要是个回文串（否则会出现这种情况abca显然不是回文串）。所以f[i][j] = f[i + 1][j - 1] + 2。2">
   <link rel="canonical" href="http://optimjie.top/posts/20200320a1">
 
 
@@ -287,7 +287,7 @@
                 
               
 
-              <time title="创建时间：2020-03-20 14:17:12 / 修改时间：14:48:01" itemprop="dateCreated datePublished" datetime="2020-03-20T14:17:12+08:00">2020-03-20</time>
+              <time title="创建时间：2020-03-20 14:17:12 / 修改时间：19:25:09" itemprop="dateCreated datePublished" datetime="2020-03-20T14:17:12+08:00">2020-03-20</time>
             </span>
           
             
@@ -343,7 +343,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>1.4k</span>
+              <span>1.3k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -366,13 +366,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="算法一：动态规划"><a href="#算法一：动态规划" class="headerlink" title="算法一：动态规划"></a>算法一：动态规划</h3><h4 id="时间复杂度：O-4n-ln-n"><a href="#时间复杂度：O-4n-ln-n" class="headerlink" title="时间复杂度：O($4n\ln n$)"></a>时间复杂度：O($4n\ln n$)</h4><p>状态个数：内层循环为调和级数$\frac{n}{1}+\frac{n}{2}+\frac{n}{3}+…+\frac{n}{n} = n(\ln(n+1)+r)$(r为欧拉常数)<br>状态转移：4</p><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p><a href="https://www.acwing.com/" target="_blank" rel="noopener">闫氏Dp分析法</a>:</p><p>f[i][j]表示所有i~j的回文串的集合的最大值。</p><a id="more"></a>
-
-
-<p>集合划分：</p>
-<blockquote>
+        <h3 id="算法一：动态规划"><a href="#算法一：动态规划" class="headerlink" title="算法一：动态规划"></a>算法一：动态规划</h3><h4 id="时间复杂度：O-n-2"><a href="#时间复杂度：O-n-2" class="headerlink" title="时间复杂度：O($n^2$)"></a>时间复杂度：O($n^2$)</h4><p>状态个数：$\frac{(n+1)n}{2}$<br>状态转移：4</p><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p><a href="https://www.acwing.com/" target="_blank" rel="noopener">闫氏Dp分析法</a>:</p><p>f[i][j]表示所有i~j的回文串的集合的最大值。</p><p>集合划分：</p><blockquote>
 <p>1.包含i，j两个点。包含i，j两点首先要满足<code>s[i] == s[j]</code>并且i+1~j-1也要是个回文串（否则会出现这种情况<code>abca</code>显然不是回文串）。所以<code>f[i][j] = f[i + 1][j - 1] + 2</code>。<br>2.包含i，不包含j。首先要明确<code>f[i][j - 1]</code>与这种情况不完全相等，包含i，不包含j的集合是<code>f[i][j - 1]</code>的子集，但由于要求最大值，所以在集合划分的时候可以有交集。<br>3.不包含i，包含j。同2<code>f[i + 1][j]</code>。<br>4.i，j两点均不包含。<code>f[i + 1][j - 1]</code>。</p>
-</blockquote>
+</blockquote><a id="more"></a>
+
+
+
+
 <h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = s.size();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; f(n, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(n));</span><br><span class="line">        <span class="keyword">int</span> maxLength = <span class="number">1</span>, begin = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> len = <span class="number">1</span>; len &lt;= n; len++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>; l + len - <span class="number">1</span> &lt; n; l++)&#123;</span><br><span class="line">                <span class="keyword">int</span> r = l + len - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (len == <span class="number">1</span>) f[l][r] = <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (s[l] == s[r] &amp;&amp; f[l + <span class="number">1</span>][r - <span class="number">1</span>] == (r - l - <span class="number">1</span>)) f[l][r] = f[l + <span class="number">1</span>][r - <span class="number">1</span>] + <span class="number">2</span>;</span><br><span class="line">                    f[l][r] = max(f[l][r], f[l + <span class="number">1</span>][r - <span class="number">1</span>]);</span><br><span class="line">                    f[l][r] = max(f[l][r], f[l][r - <span class="number">1</span>]);</span><br><span class="line">                    f[l][r] = max(f[l][r], f[l + <span class="number">1</span>][r]);</span><br><span class="line">                    <span class="keyword">if</span> (f[l][r] &gt; maxLength)&#123;</span><br><span class="line">                        maxLength = f[l][r];</span><br><span class="line">                        begin = l;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> s.substr(begin, maxLength);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </div>
 
@@ -633,7 +633,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法一：动态规划"><span class="nav-number">1.</span> <span class="nav-text">算法一：动态规划</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#时间复杂度：O-4n-ln-n"><span class="nav-number">1.1.</span> <span class="nav-text">时间复杂度：O($4n\ln n$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">1.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">1.3.</span> <span class="nav-text">C++代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法一：动态规划"><span class="nav-number">1.</span> <span class="nav-text">算法一：动态规划</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#时间复杂度：O-n-2"><span class="nav-number">1.1.</span> <span class="nav-text">时间复杂度：O($n^2$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">1.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">1.3.</span> <span class="nav-text">C++代码</span></a></li></ol></li></ol></div>
             
 
           </div>
