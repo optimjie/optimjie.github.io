@@ -64,7 +64,7 @@
 <meta property="og:description" content="树状数组与线段树的关系是完全包含关系，就是说只要是树状数组能求解的问题用线段树也能求解，但是树状数组有他的好处：① 代码短 ② 常数很小，即运行效率高。树状数组看树状数组前，先看一下lowbit操作。假如x的末尾有k个零，则lowbit(x)返回的是$2^k$。举个例子：若x = 10010000则lowbit(x)返回的是$2^4$就是10000。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://optimjie.top/posts/20200307a1/lowbit.png">
-<meta property="og:updated_time" content="2020-03-25T14:32:18.231Z">
+<meta property="og:updated_time" content="2020-03-25T14:34:34.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树状数组与线段树">
 <meta name="twitter:description" content="树状数组与线段树的关系是完全包含关系，就是说只要是树状数组能求解的问题用线段树也能求解，但是树状数组有他的好处：① 代码短 ② 常数很小，即运行效率高。树状数组看树状数组前，先看一下lowbit操作。假如x的末尾有k个零，则lowbit(x)返回的是$2^k$。举个例子：若x = 10010000则lowbit(x)返回的是$2^4$就是10000。">
@@ -300,7 +300,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-25 22:32:18" itemprop="dateModified" datetime="2020-03-25T22:32:18+08:00">2020-03-25</time>
+                <time title="修改时间：2020-03-25 22:34:34" itemprop="dateModified" datetime="2020-03-25T22:34:34+08:00">2020-03-25</time>
               </span>
             
           
@@ -388,7 +388,7 @@
 
 <p>那么如何写<code>lowbit</code>操作呢？ <code>lowbit(x) = x &amp; -x</code>，下面来简单的验证一下：</p>
 <p>先假设int占四个字节：</p>
-<img src="/posts/20200307a1/lowbit.png" title="This is an image">
+<img src="/posts/20200307a1/lowbit.png" title="lowbit简单验证">
 
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>树状数组的作用：快速的求前缀和。<br>有专门的求前缀和的算法，但是那个算法不支持修改操作，也就是说只能算静态的序列，而树状数组可以维护动态的序列。</p>
 <p>树状数组支持的操作：① 给某个位置的数加上常数c ② 求前缀和</p>

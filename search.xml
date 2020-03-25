@@ -90,7 +90,7 @@
 
 <p>那么如何写<code>lowbit</code>操作呢？ <code>lowbit(x) = x &amp; -x</code>，下面来简单的验证一下：</p>
 <p>先假设int占四个字节：</p>
-<img src="/posts/20200307a1/lowbit.png" title="This is an image">
+<img src="/posts/20200307a1/lowbit.png" title="lowbit简单验证">
 
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>树状数组的作用：快速的求前缀和。<br>有专门的求前缀和的算法，但是那个算法不支持修改操作，也就是说只能算静态的序列，而树状数组可以维护动态的序列。</p>
 <p>树状数组支持的操作：① 给某个位置的数加上常数c ② 求前缀和</p>
