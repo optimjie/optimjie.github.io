@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>多线程</title>
+    <url>/posts/20200324a1.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LeetCode 5.最长回文子串</title>
     <url>/posts/20200320a1.html</url>
     <content><![CDATA[<h3 id="算法一：动态规划"><a href="#算法一：动态规划" class="headerlink" title="算法一：动态规划"></a>算法一：动态规划</h3><h4 id="时间复杂度：O-n-2"><a href="#时间复杂度：O-n-2" class="headerlink" title="时间复杂度：O($n^2$)"></a>时间复杂度：O($n^2$)</h4><p>状态个数：$\frac{(n+1)n}{2}$<br>状态转移：4</p><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p><a href="https://www.acwing.com/" target="_blank" rel="noopener">闫氏Dp分析法</a>:</p><p>f[i][j]表示所有i~j的回文串的集合的最大值。</p><p>集合划分：</p><blockquote>
@@ -74,8 +85,14 @@
   <entry>
     <title>树状数组与线段树</title>
     <url>/posts/20200307a1.html</url>
-    <content><![CDATA[<p>树状数组与线段树的关系是完全包含关系，就是说只要是树状数组能求解的问题用线段树也能求解，但是树状数组有他的好处：① 代码短 ② 常数很小，即运行效率高。</p><h3 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h3><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>树状数组的作用：快速的求前缀和。<br>有专门的求前缀和的算法，但是那个算法不支持修改操作，也就是说只能算静态的序列，而树状数组可以维护动态的序列。</p><a id="more"></a>
+    <content><![CDATA[<p>树状数组与线段树的关系是完全包含关系，就是说只要是树状数组能求解的问题用线段树也能求解，但是树状数组有他的好处：① 代码短 ② 常数很小，即运行效率高。</p><h3 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h3><p>看树状数组前，先看一下<code>lowbit</code>操作。</p><p>假如x的末尾有<code>k</code>个零，则<code>lowbit(x)</code>返回的是$2^k$。举个例子：若<code>x = 10010000</code>则<code>lowbit(x)</code>返回的是$2^4$就是<code>10000</code>。</p><a id="more"></a>
 
+
+<p>那么如何写<code>lowbit</code>操作呢？ <code>lowbit(x) = x &amp; -x</code>，下面来简单的验证一下：</p>
+<p>先假设int占四个字节：</p>
+<img src="/posts/20200307a1/lowbit.png" title="This is an image">
+
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>树状数组的作用：快速的求前缀和。<br>有专门的求前缀和的算法，但是那个算法不支持修改操作，也就是说只能算静态的序列，而树状数组可以维护动态的序列。</p>
 <p>树状数组支持的操作：① 给某个位置的数加上常数c ② 求前缀和</p>
 <p><strong><a href="https://www.acwing.com/problem/content/description/1266/" target="_blank" rel="noopener">模板题</a></strong></p>
 <h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">int</span> a[N], tr[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x &amp; -x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = x; i &lt;= n; i += lowbit(i))</span><br><span class="line">        tr[i] += c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = x; i &gt;= <span class="number">1</span>; i -= lowbit(i))</span><br><span class="line">        res += tr[i];</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) add(i, a[i]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> k, x, y;</span><br><span class="line">    <span class="keyword">while</span> (m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;k, &amp;x, &amp;y);</span><br><span class="line">        <span class="keyword">if</span> (!k) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, query(y) - query(x - <span class="number">1</span>));</span><br><span class="line">        <span class="keyword">else</span> add(x, y);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
