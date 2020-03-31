@@ -4,7 +4,7 @@
     <title>波动数列</title>
     <url>/posts/20200330a1.html</url>
     <content><![CDATA[<p><a href="https://www.acwing.com/problem/content/1216/" target="_blank" rel="noopener">题目链接</a></p><h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>同余运算及其基本性质：</p><blockquote>
-<p>1.线性运算：<br>$ \begin {cases} 3x + 5y + z \ 7x - 2y + 4z \ -6x + 3y + 2z \end {cases} $ </p>
+<p>1.线性运算：<br>$_\begin{cases}<br>3x + 5y + z \<br>7x - 2y + 4z \<br>-6x + 3y + 2z<br>_\end {cases} $ </p>
 </blockquote><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>假设第一个数为x，则第二个数为x+d1，第三个数为x+d1+d2，…。这里的d1，d2表示a或者-b，所以这个数列为：</p><a id="more"></a>
 
 
