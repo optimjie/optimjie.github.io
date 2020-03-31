@@ -11,7 +11,7 @@
 
 <p><code>x, x + d1, x + d1 + d2, x + d1 + d2 + d3....</code>又因为数列之和为s，所以转化成：</p>
 <p>$a+b+c$</p>
-<p>$n<em>x+(n-1)</em>d_1+(n-2)<em>d_2+(n-3)</em>d_3+…+d_{n-1}=s$，再在一步转化：</p>
+<p>$n<em>x+(n-1)</em>d_1$$+$$(n-2)<em>d_2+(n-3)</em>d_3+…+d_{n-1}=s$，再在一步转化：</p>
 <p>$\frac{s-[(n-1)<em>d_1+(n-2)</em>d_2+(n-3)*d_3+…+d_{n-1}]}{n}=x$</p>
 ]]></content>
       <categories>
