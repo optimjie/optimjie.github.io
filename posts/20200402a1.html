@@ -56,19 +56,20 @@
 </script>
 
   <meta name="description" content="题目题目链接分析做法：将所有区间按照右端点排序，遍历所有的区间，如果区间的左端点严格大于上一次选的点则答案+1，否则跳过该区间。证明：假设最优解的个数为ans，以这种做法选出点的个数为cnt。(证明两个数a，b相等，可以分别证明：a &amp;gt;= b，a &amp;lt;= b) 1 证明ans &amp;lt;= cnt：ans为最优解，cnt为一种解，所以ans显然是小于等于cnt的。 2 证明ans &amp;gt;">
+<meta name="keywords" content="贪心">
 <meta property="og:type" content="article">
-<meta property="og:title" content="贪心中的区间问题">
-<meta property="og:url" content="http://optimjie.top/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html">
+<meta property="og:title" content="贪心中的区间问题——区间选点">
+<meta property="og:url" content="http://optimjie.top/posts/20200402a1.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
 <meta property="og:description" content="题目题目链接分析做法：将所有区间按照右端点排序，遍历所有的区间，如果区间的左端点严格大于上一次选的点则答案+1，否则跳过该区间。证明：假设最优解的个数为ans，以这种做法选出点的个数为cnt。(证明两个数a，b相等，可以分别证明：a &amp;gt;= b，a &amp;lt;= b) 1 证明ans &amp;lt;= cnt：ans为最优解，cnt为一种解，所以ans显然是小于等于cnt的。 2 证明ans &amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://optimjie.top/posts/20200402ck8iq9jko005bn8vhm5ldpjis/区间选点.png">
-<meta property="og:updated_time" content="2020-04-02T12:20:32.528Z">
+<meta property="og:image" content="http://optimjie.top/posts/20200402a1/区间选点.png">
+<meta property="og:updated_time" content="2020-04-02T12:23:46.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="贪心中的区间问题">
+<meta name="twitter:title" content="贪心中的区间问题——区间选点">
 <meta name="twitter:description" content="题目题目链接分析做法：将所有区间按照右端点排序，遍历所有的区间，如果区间的左端点严格大于上一次选的点则答案+1，否则跳过该区间。证明：假设最优解的个数为ans，以这种做法选出点的个数为cnt。(证明两个数a，b相等，可以分别证明：a &amp;gt;= b，a &amp;lt;= b) 1 证明ans &amp;lt;= cnt：ans为最优解，cnt为一种解，所以ans显然是小于等于cnt的。 2 证明ans &amp;gt;">
-<meta name="twitter:image" content="http://optimjie.top/posts/20200402ck8iq9jko005bn8vhm5ldpjis/区间选点.png">
-  <link rel="canonical" href="http://optimjie.top/posts/20200402ck8iq9jko005bn8vhm5ldpjis">
+<meta name="twitter:image" content="http://optimjie.top/posts/20200402a1/区间选点.png">
+  <link rel="canonical" href="http://optimjie.top/posts/20200402a1">
 
 
 <script id="page-configurations">
@@ -82,7 +83,7 @@
   };
 </script>
 
-  <title>贪心中的区间问题 | optimjie's blog</title>
+  <title>贪心中的区间问题——区间选点 | optimjie's blog</title>
   
 
 
@@ -257,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/posts/20200402a1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
@@ -271,7 +272,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">贪心中的区间问题
+          <h1 class="post-title" itemprop="name headline">贪心中的区间问题——区间选点
 
             
           </h1>
@@ -288,12 +289,25 @@
                 
               
 
-              <time title="创建时间：2020-04-02 20:17:24 / 修改时间：20:20:32" itemprop="dateCreated datePublished" datetime="2020-04-02T20:17:24+08:00">2020-04-02</time>
+              <time title="创建时间：2020-04-02 20:17:24 / 修改时间：20:23:46" itemprop="dateCreated datePublished" datetime="2020-04-02T20:17:24+08:00">2020-04-02</time>
             </span>
           
             
 
             
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing算法基础/" itemprop="url" rel="index"><span itemprop="name">AcWing算法基础</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -316,8 +330,8 @@
       
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html" itemprop="commentCount"></span>
+    <a title="valine" href="/posts/20200402a1.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200402a1.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -362,7 +376,7 @@
 
 
 
-<img src="/posts/20200402ck8iq9jko005bn8vhm5ldpjis/区间选点.png" title="区间选点">
+<img src="/posts/20200402a1/区间选点.png" title="区间选点">
 
 <h3 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Range</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l, r;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt; (<span class="keyword">const</span> Range &amp;obj) <span class="keyword">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> r &lt; obj.r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;range[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;range[i].l, &amp;range[i].r);</span><br><span class="line">    </span><br><span class="line">    sort(range, range + n);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>, maxR = <span class="number">-2e9</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="keyword">if</span> (range[i].l &gt; maxR) </span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">            maxR = range[i].r;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, ans);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -406,7 +420,7 @@
     <strong>本文作者： </strong>optimjie</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://optimjie.top/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html" title="贪心中的区间问题">http://optimjie.top/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html</a>
+    <a href="http://optimjie.top/posts/20200402a1.html" title="贪心中的区间问题——区间选点">http://optimjie.top/posts/20200402a1.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -416,6 +430,15 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/贪心/" rel="tag"># 贪心</a>
+            
+          </div>
+        
 
         
 
