@@ -250,6 +250,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://optimjie.top/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html" class="post-title-link" itemprop="url">贪心中的区间问题</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-02 20:17:24 / 修改时间：20:20:32" itemprop="dateCreated datePublished" datetime="2020-04-02T20:17:24+08:00">2020-04-02</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.1k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><strong><a href="https://www.acwing.com/problem/content/907/" target="_blank" rel="noopener">题目链接</a></strong></p><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>做法：将所有区间按照右端点排序，遍历所有的区间，如果区间的左端点严格大于上一次选的点则答案<code>+1</code>，否则跳过该区间。</p><p>证明：<br>假设最优解的个数为<code>ans</code>，以这种做法选出点的个数为<code>cnt</code>。(证明两个数<code>a</code>，<code>b</code>相等，可以分别证明：<code>a &gt;= b</code>，<code>a &lt;= b</code>)</p><ul>
+<li>1 证明<code>ans &lt;= cnt</code>：<code>ans</code>为最优解，<code>cnt</code>为一种解，所以<code>ans</code>显然是小于等于<code>cnt</code>的。</li>
+<li>2 证明<code>ans &gt;= cnt</code>：在一般问题中我们先看所有排完序后两两不相交的区间，假设总数为<code>cnt</code>，则按照这种算法需要<code>cnt</code>个点，然后再加上剩下的区间假设为n<code>(n &gt;= 0)</code>个与上面区间相交的区间，需要加上<code>num</code>个点，<code>num &gt;= 0</code>，取零是因为任意加上的区间与原本的区间相交(<strong>这里可能会有人有疑问，请看下面的图</strong>)，然后<code>num</code>上限就是无穷大。<code>ans = cnt + num &gt;= cnt</code>。</li>
+<li>由1、2得：<code>ans = cnt</code></li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/20200402ck8iq9jko005bn8vhm5ldpjis.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://optimjie.top/posts/20200330a1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -293,7 +422,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-31 12:49:40" itemprop="dateModified" datetime="2020-03-31T12:49:40+08:00">2020-03-31</time>
+                <time title="修改时间：2020-03-31 23:45:19" itemprop="dateModified" datetime="2020-03-31T23:45:19+08:00">2020-03-31</time>
               </span>
             
           
@@ -1530,152 +1659,6 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://optimjie.top/posts/20200227a1.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/posts/20200227a1.html" class="post-title-link" itemprop="url">空间限制xxMB</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-27 21:09:36" itemprop="dateCreated datePublished" datetime="2020-02-27T21:09:36+08:00">2020-02-27</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-05 23:51:42" itemprop="dateModified" datetime="2020-03-05T23:51:42+08:00">2020-03-05</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/总结/" itemprop="url" rel="index"><span itemprop="name">总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/posts/20200227a1.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200227a1.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>482</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一般题目中不会卡空间，但是还是需要会计算。</p><p>首先看一下，各种数据类型的长度。</p><p>在<strong>K&amp;R</strong>的<strong>The C Programming Language</strong>中写道：char占用一个字节，int通常代表特定机器中整数的自然长度。short类型通常为16位，long类型通常为32位，int类型可以为16位或32位。各编译器可以根据硬件特性自主选择合适的类型长度，但要遵循以下限制：<strong>short与int类型至少为16位，而long类型至少为32位，并且short类型不得长于int类型，int类型不得长于long类型</strong>。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/posts/20200227a1.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
@@ -1716,7 +1699,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">53</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1858,12 +1841,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">111k</span>
+    <span title="站点总字数">112k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:41</span>
+    <span title="站点阅读时长">1:42</span>
 </div>
 
 <!-- 网站运行时间的设置 -->
