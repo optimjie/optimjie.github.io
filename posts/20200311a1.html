@@ -55,6 +55,15 @@
   };
 </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163117058-1');
+</script>
   <meta name="description" content="题目题目链接分析拿到题目之后，首先想想暴力的做法，暴力的做法按照时间枚举，在某个时间点上枚举所有的外卖店若是有订单优先级就加上cnt(订单的数量) * 2，否则就减去1，再按照优先级的数值判断是否在优先缓存中。枚举完所有时间以后，再看T时刻的优先缓存中的外卖店的数量。这种暴力的时间复杂度我写的代码是$O(N * T + M * T)$，显然是会超时的。">
 <meta name="keywords" content="模拟">
 <meta property="og:type" content="article">
@@ -83,6 +92,16 @@
 
   <title>外卖店优先级 | optimjie's blog</title>
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-163117058-1');
+    }
+  </script>
 
 
 

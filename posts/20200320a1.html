@@ -55,6 +55,15 @@
   };
 </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163117058-1');
+</script>
   <meta name="description" content="算法一：动态规划时间复杂度：O($n^2$)状态个数：$\frac{(n+1)n}{2}$状态转移：4分析闫氏Dp分析法:f[i][j]表示所有i~j的回文串的集合的最大值。集合划分： 1.包含i，j两个点。包含i，j两点首先要满足s[i] == s[j]并且i+1~j-1也要是个回文串（否则会出现这种情况abca显然不是回文串）。所以f[i][j] = f[i + 1][j - 1] + 2。2">
 <meta name="keywords" content="LeetCode,DP">
 <meta property="og:type" content="article">
@@ -83,6 +92,16 @@
 
   <title>LeetCode 5.最长回文子串 | optimjie's blog</title>
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-163117058-1');
+    }
+  </script>
 
 
 

@@ -55,6 +55,15 @@
   };
 </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163117058-1');
+</script>
   <meta name="description" content="树状数组与线段树的关系是完全包含关系，就是说只要是树状数组能求解的问题用线段树也能求解，但是树状数组有他的好处：① 代码短 ② 常数很小，即运行效率高。树状数组lowbit操作看树状数组前，先看一下lowbit操作。假如x的末尾有k个零，则lowbit(x)返回的是$2^k$。举个例子：若x = 10010000则lowbit(x)返回的是$2^4$就是10000。">
 <meta name="keywords" content="数据结构,树状数组,线段树">
 <meta property="og:type" content="article">
@@ -86,6 +95,16 @@
 
   <title>树状数组与线段树 | optimjie's blog</title>
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-163117058-1');
+    }
+  </script>
 
 
 

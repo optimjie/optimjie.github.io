@@ -55,6 +55,15 @@
   };
 </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163117058-1');
+</script>
   <meta name="description" content="单例模式所谓类的单例设计模式，就是采取一定的方法保证在整个的系统软件中，对某个类只能存在一个对象实例，并且该类只提供一个取得该对象实例的方法。如果我们要让一个类在一个虚拟机中只能产生一个对象，我们首先必须将累的构造器的访问权限设置为private，这样就不能通过new操作符在类的外部产生类的对象了，但在类的内部仍然可以产生该类的对象。因为在诶的外部开始还无法得到类的对象，只能通过调用该类的某个静态">
 <meta name="keywords" content="设计模式,Java">
 <meta property="og:type" content="article">
@@ -83,6 +92,16 @@
 
   <title>单例模式 | optimjie's blog</title>
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-163117058-1');
+    }
+  </script>
 
 
 

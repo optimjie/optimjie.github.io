@@ -55,6 +55,15 @@
   };
 </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163117058-1');
+</script>
   <meta name="description" content="题目题目链接分析直接暴力$O(N^3)$，显然超时。将三个数组排序，遍历$b$数组，二分找到$a$中小于$b[i]$的个数$A$，找到$c$中大于$b[i]$的个数$C$，$ans$+=$A*C$。时间复杂度，排序$O(N \log N)$，查找$O(N \log N)$，总体$O(N \log N)$。">
 <meta name="keywords" content="二分,蓝桥杯">
 <meta property="og:type" content="article">
@@ -83,6 +92,16 @@
 
   <title>递增三元组 | optimjie's blog</title>
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-163117058-1');
+    }
+  </script>
 
 
 

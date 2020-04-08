@@ -55,6 +55,15 @@
   };
 </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163117058-1');
+</script>
   <meta name="description" content="题目题目链接分析做法：将所有区间按照右端点排序，遍历所有的区间，如果区间的左端点严格大于上一次选的点则答案+1，否则跳过该区间。证明：假设最优解的个数为ans，以这种做法选出点的个数为cnt。(证明两个数a，b相等，可以分别证明：a &amp;gt;= b，a &amp;lt;= b) 1 证明ans &amp;lt;= cnt：ans为最优解，cnt为一种解，所以ans显然是小于等于cnt的。 2 证明ans &amp;gt;">
 <meta name="keywords" content="贪心">
 <meta property="og:type" content="article">
@@ -85,6 +94,16 @@
 
   <title>贪心中的区间问题——区间选点 | optimjie's blog</title>
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-163117058-1');
+    }
+  </script>
 
 
 
