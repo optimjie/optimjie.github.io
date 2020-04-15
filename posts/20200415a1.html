@@ -72,7 +72,7 @@
 <meta property="og:site_name" content="optimjie&#39;s blog">
 <meta property="og:description" content="介绍求斐波那契数列时间复杂度为$O(\log N)$的做法之前，我们先看一下快速幂。快速幂题目链接快速幂是数论中非常基础的算法。当我们要求$a^b mod p, (1 \le a, b, p \le 10^9)$时，如果是朴素做法，时间复杂度为$O(N)$显然会超时，而快速幂能够做到的是将时间复杂度降到$O(\log b)$。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-15T09:27:04.993Z">
+<meta property="og:updated_time" content="2020-04-15T09:33:16.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斐波那契数列的 O(logN) 求法">
 <meta name="twitter:description" content="介绍求斐波那契数列时间复杂度为$O(\log N)$的做法之前，我们先看一下快速幂。快速幂题目链接快速幂是数论中非常基础的算法。当我们要求$a^b mod p, (1 \le a, b, p \le 10^9)$时，如果是朴素做法，时间复杂度为$O(N)$显然会超时，而快速幂能够做到的是将时间复杂度降到$O(\log b)$。">
@@ -306,7 +306,7 @@
                 
               
 
-              <time title="创建时间：2020-04-15 15:08:17 / 修改时间：17:27:04" itemprop="dateCreated datePublished" datetime="2020-04-15T15:08:17+08:00">2020-04-15</time>
+              <time title="创建时间：2020-04-15 15:08:17 / 修改时间：17:33:16" itemprop="dateCreated datePublished" datetime="2020-04-15T15:08:17+08:00">2020-04-15</time>
             </span>
           
             
@@ -391,7 +391,7 @@
 
 <h4 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h4><p>首先预处理出：$a^{2^0}, a^{2^1}, a^{2^2}, a^{2^3}, …, , a^{2^{\log b}}$</p>
 <p>将每一项相乘，可以得到：$a^{2^0+2^1+2^2+2^3+…+2^{\log b}}$</p>
-<p>我们知道：$2^0+2^1+2^2+2^3+…+2^{\log b}$可以转换成二进制表示：1111…111一共有$\log b + 1$个</p>
+<p>我们知道：$2^0+2^1+2^2+2^3+…+2^{\log b}$可以转换成二进制表示：$1111…111$一共有$\log b + 1$个</p>
 <p>利用$2^i, 0 \le i \le \log b$每一项选与不选可以凑出，$0$ ~ $2^{\log b + 1} - 1$的任意整数。其中就包括我们要凑出的：$b$。</p>
 <p>这一步的时间复杂度为$O(\log b)$。</p>
 <h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qmi</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> p)</span> </span>&#123;</span><br><span class="line">    LL res = <span class="number">1</span> % p;</span><br><span class="line">    <span class="keyword">while</span> (b) &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>) res =  res * a % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        a = (LL)a * a % p;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> a, b, p;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">while</span> (n--) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;a, &amp;b, &amp;p);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, qmi(a, b, p));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -402,11 +402,17 @@
 <blockquote>
 <p>$F_1=[f_1, f_2]$<br>$F_2=[f_2, f_3]$</p>
 </blockquote>
-<p>我们看一下如何构造矩阵$A$使得$F_1 * A$得到$F_2$</p>
-<p>这个只要知道矩阵的乘法就不难构造出：<br>$A=\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 1 \\ \end{bmatrix} $</p>
-<p>所以$F_2=F1 *A$，$F_3=F2 * A$，因为矩阵的乘法满足结合律，进而得到：</p>
-<p>$F_n=F_1\underbrace{A\cdot A\cdots A}_{\text{ n-1 times}}$</p>
-
+<p>我们看一下如何构造矩阵$A$使得$F_1 \cdot A$得到$F_2$</p>
+<p>这个只要知道矩阵的乘法就不难构造出：</p>
+<blockquote>
+<p>$A=\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 1 \\ \end{bmatrix} $</p>
+</blockquote>
+<p>所以$F_2=F1 \cdot A$，$F_3=F2 \cdot A$，因为矩阵的乘法满足结合律，进而得到：</p>
+<blockquote>
+<p>$F_n=F_1\underbrace{A\cdot A\cdots A}_{\text{ n-1 times}}$，即$F_n=F_1 \cdot A^{n-1}$</p>
+</blockquote>
+<p>这样我们就可以用快速幂来求了。</p>
+<h4 id="C-代码-1"><a href="#C-代码-1" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -682,7 +688,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速幂"><span class="nav-number">1.</span> <span class="nav-text">快速幂</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#做法"><span class="nav-number">1.1.</span> <span class="nav-text">做法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">1.2.</span> <span class="nav-text">C++代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斐波那契数列-O-log-n-求法"><span class="nav-number">2.</span> <span class="nav-text">斐波那契数列$O(\log n)$求法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速幂"><span class="nav-number">1.</span> <span class="nav-text">快速幂</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#做法"><span class="nav-number">1.1.</span> <span class="nav-text">做法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">1.2.</span> <span class="nav-text">C++代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斐波那契数列-O-log-n-求法"><span class="nav-number">2.</span> <span class="nav-text">斐波那契数列$O(\log n)$求法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码-1"><span class="nav-number">2.1.</span> <span class="nav-text">C++代码</span></a></li></ol></li></ol></div>
             
 
           </div>
