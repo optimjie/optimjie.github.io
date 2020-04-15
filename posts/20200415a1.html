@@ -64,15 +64,19 @@
 
   gtag('config', 'UA-163117058-1');
 </script>
-  <meta property="og:type" content="article">
+  <meta name="description" content="介绍求斐波那契数列时间复杂度为$O(\log N)$的做法之前，我们先看一下快速幂。快速幂题目链接快速幂是数论中非常基础的算法。当我们要求$a^b mod p, (1 \le a, b, p \le 10^9)$时，如果是朴素做法，时间复杂度为$O(N)$显然会超时，而快速幂能够做到的是将时间复杂度降到$O(\log b)$。">
+<meta name="keywords" content="快速幂,斐波那契数列">
+<meta property="og:type" content="article">
 <meta property="og:title" content="斐波那契数列的 O(logN) 求法">
-<meta property="og:url" content="https://optimjie.top/posts/20200415ck90zuaaj003sa4vhkoo7cfcv.html">
+<meta property="og:url" content="https://optimjie.top/posts/20200415a1.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
+<meta property="og:description" content="介绍求斐波那契数列时间复杂度为$O(\log N)$的做法之前，我们先看一下快速幂。快速幂题目链接快速幂是数论中非常基础的算法。当我们要求$a^b mod p, (1 \le a, b, p \le 10^9)$时，如果是朴素做法，时间复杂度为$O(N)$显然会超时，而快速幂能够做到的是将时间复杂度降到$O(\log b)$。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-15T07:08:17.147Z">
+<meta property="og:updated_time" content="2020-04-15T08:38:41.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斐波那契数列的 O(logN) 求法">
-  <link rel="canonical" href="https://optimjie.top/posts/20200415ck90zuaaj003sa4vhkoo7cfcv">
+<meta name="twitter:description" content="介绍求斐波那契数列时间复杂度为$O(\log N)$的做法之前，我们先看一下快速幂。快速幂题目链接快速幂是数论中非常基础的算法。当我们要求$a^b mod p, (1 \le a, b, p \le 10^9)$时，如果是朴素做法，时间复杂度为$O(N)$显然会超时，而快速幂能够做到的是将时间复杂度降到$O(\log b)$。">
+  <link rel="canonical" href="https://optimjie.top/posts/20200415a1">
 
 
 <script id="page-configurations">
@@ -271,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://optimjie.top/posts/20200415ck90zuaaj003sa4vhkoo7cfcv.html">
+    <link itemprop="mainEntityOfPage" href="https://optimjie.top/posts/20200415a1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="optimjie">
@@ -302,7 +306,24 @@
                 
               
 
-              <time title="创建时间：2020-04-15 15:08:17" itemprop="dateCreated datePublished" datetime="2020-04-15T15:08:17+08:00">2020-04-15</time>
+              <time title="创建时间：2020-04-15 15:08:17 / 修改时间：16:38:41" itemprop="dateCreated datePublished" datetime="2020-04-15T15:08:17+08:00">2020-04-15</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing蓝桥杯/" itemprop="url" rel="index"><span itemprop="name">AcWing蓝桥杯</span></a></span>
+
+                
+                
+              
             </span>
           
 
@@ -326,8 +347,8 @@
       
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/posts/20200415ck90zuaaj003sa4vhkoo7cfcv.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200415ck90zuaaj003sa4vhkoo7cfcv.html" itemprop="commentCount"></span>
+    <a title="valine" href="/posts/20200415a1.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200415a1.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -341,7 +362,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>0</span>
+              <span>1.2k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -364,7 +385,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>介绍求斐波那契数列时间复杂度为$O(\log N)$的做法之前，我们先看一下快速幂。</p><h3 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h3><p><strong><a href="https://www.acwing.com/problem/content/877/" target="_blank" rel="noopener">题目链接</a></strong></p><p>快速幂是数论中非常基础的算法。</p><p>当我们要求$a^b mod p, (1 \le a, b, p \le 10^9)$时，如果是朴素做法，时间复杂度为$O(N)$显然会超时，而快速幂能够做到的是将时间复杂度降到$O(\log b)$。</p><a id="more"></a>
+
+
+
+<h4 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h4><p>首先预处理出：$a^{2^0}, a^{2^1}, a^{2^2}, a^{2^3}, …, , a^{2^{\log b}}$</p>
+<p>将每一项相乘，可以得到：$a^{2^0+2^1+2^2+2^3+…+2^{\log b}}$</p>
+<p>我们知道：$2^0+2^1+2^2+2^3+…+2^{\log b}$可以转换成二进制表示：1111…111一共有$\log b + 1$个</p>
+<p>利用$2^i, 0 \le i \le \log b$每一项选与不选可以凑出，$0$ ~ $2^{\log b + 1} - 1$的任意整数。其中就包括我们要凑出的：$b$。</p>
+<p>这一步的时间复杂度为$O(\log b)$。</p>
+<h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qmi</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> p)</span> </span>&#123;</span><br><span class="line">    LL res = <span class="number">1</span> % p;</span><br><span class="line">    <span class="keyword">while</span> (b) &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>) res =  res * a % p;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        a = (LL)a * a % p;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> a, b, p;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">while</span> (n--) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;a, &amp;b, &amp;p);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, qmi(a, b, p));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="斐波那契数列-O-log-n-求法"><a href="#斐波那契数列-O-log-n-求法" class="headerlink" title="斐波那契数列$O(\log n)$求法"></a>斐波那契数列$O(\log n)$求法</h3><p>$$<br>        f(n) =<br>        \begin{cases}<br>        n/2,  &amp; \text{if $n$ is even} \<br>        3n+1, &amp; \text{if $n$ is odd}<br>        \end{cases}<br>$$</p>
+
     </div>
 
     
@@ -403,7 +436,7 @@
     <strong>本文作者： </strong>optimjie</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://optimjie.top/posts/20200415ck90zuaaj003sa4vhkoo7cfcv.html" title="斐波那契数列的 O(logN) 求法">https://optimjie.top/posts/20200415ck90zuaaj003sa4vhkoo7cfcv.html</a>
+    <a href="https://optimjie.top/posts/20200415a1.html" title="斐波那契数列的 O(logN) 求法">https://optimjie.top/posts/20200415a1.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -413,6 +446,17 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/快速幂/" rel="tag"># 快速幂</a>
+            
+              <a href="/tags/斐波那契数列/" rel="tag"># 斐波那契数列</a>
+            
+          </div>
+        
 
         
 
@@ -462,8 +506,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -590,7 +643,11 @@
         
           
         
-        <span class="site-state-item-count">25</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -606,6 +663,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速幂"><span class="nav-number">1.</span> <span class="nav-text">快速幂</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#做法"><span class="nav-number">1.1.</span> <span class="nav-text">做法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-代码"><span class="nav-number">1.2.</span> <span class="nav-text">C++代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斐波那契数列-O-log-n-求法"><span class="nav-number">2.</span> <span class="nav-text">斐波那契数列$O(\log n)$求法</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -626,12 +700,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">127k</span>
+    <span title="站点总字数">128k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:55</span>
+    <span title="站点阅读时长">1:56</span>
 </div>
 
 <!-- 网站运行时间的设置 -->
