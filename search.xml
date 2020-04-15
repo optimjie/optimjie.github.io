@@ -18,11 +18,11 @@
 <p>$$<br>f(n) =<br>\begin{cases}<br>1,  &amp; \text{$n = 1$} \\[2ex]<br>1,  &amp; \text{$n = 2$} \\[2ex]<br>f(n-1)+f(n-2), &amp; \text{$n \ge 2$}<br>\end{cases}<br>$$</p>
 <p>我们设行向量$F_n=[f_n, f_{n+1}]$,则：</p>
 <blockquote>
-<p>$F_1=[f_1, f_2]$ <br><br>$F_2=[f_2, f_3]$</p>
+<p>$F_1=[f_1, f_2]$<br>$F_2=[f_2, f_3]$</p>
 </blockquote>
 <p>我们看一下如何构造矩阵$A$使得$F_1 * A$得到$F_2$</p>
 <p>这个只要知道矩阵的乘法就不难构造出：<br>$A=\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 1 \\ \end{bmatrix} $</p>
-<p>所以$F_2=F1 *A$ &nbsp;&nbsp; $F_3=F2 * A$，因为矩阵的乘法满足结合律，进而得到：</p>
+<p>所以$F_2=F1 *A$，$F_3=F2 * A$，因为矩阵的乘法满足结合律，进而得到：</p>
 <p>$F_n=F_1\underbrace{A\cdot A\cdots A}_{\text{ n-1 times}}$</p>
 ]]></content>
       <categories>
