@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>斐波那契数列的 O(logN) 求法</title>
+    <url>/posts/20200415ck90zuaaj003sa4vhkoo7cfcv.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>n皇后与数独</title>
     <url>/posts/20200414a1.html</url>
     <content><![CDATA[<p>n皇后问题与数独问题可以说是搜索问题中非常经典的两个问题，因此放到一起总结一下。</p>
+<p>$O(\log n)$</p>
 <a id="more"></a>
 
 <h3 id="n皇后"><a href="#n皇后" class="headerlink" title="n皇后"></a>n皇后</h3><p><strong><a href="https://www.acwing.com/problem/content/845/" target="_blank" rel="noopener">题目链接</a></strong></p>
