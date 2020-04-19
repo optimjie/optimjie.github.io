@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>卡特兰数</title>
+    <url>/posts/20200419a1.html</url>
+    <content><![CDATA[<p>首先看一下卡特兰数。若一个数列$h_n$满足: </p><p>$$h_n = \sum_{i=0}^{n-1}h_i \cdot h_{n-1-i}$$</p><p>则称$h_n$为卡特兰数列。</p><p>还有一种形式若：</p><p>$$h_n = \frac{C_{2n}^n}{n+1}$$</p><p>也称$h_n$为卡特兰数列</p><p>那什么样的问题的答案是卡特兰数呢？</p><a id="more"></a>
+
+
+
+
+
+
+<h3 id="满足条件的01序列"><a href="#满足条件的01序列" class="headerlink" title="满足条件的01序列"></a>满足条件的01序列</h3><p><strong><a href="https://www.acwing.com/problem/content/891/" target="_blank" rel="noopener">题目链接</a></strong></p>
+<p>若$n$为$3$时，满足条件的$01$序列为：</p>
+<blockquote>
+<p>000111<br>001011<br>001101<br>010101<br>010011</p>
+</blockquote>
+<p>我们可以将$01$序列转化到一个二维的坐标，如果是$0$则向右走，反之则向上走，因此我们会走到$(n,n)$点，那任意前缀序列中$0$的个数都不少于$1$代表的意思就是，对于途中的每一个点，横坐标要大于等于纵坐标，即路线不能越过$y=x$这条线。</p>
+<p>看一下以$n=6$的例子：</p>
+<img src="/posts/20200419a1/满足条件的01序列.png" title="满足条件的01序列">
+
+<p>图中<strong>橙色</strong>与<strong>紫色</strong>满足条件。<br>那满足条件的路线一共有多少呢？直接求不是很好求，所以我们可以转化一下，用所有的路线减去不满足条件的路线，那不满足条件的路线有什么样的特点呢？<br>这样的路线上必然存在一点的纵坐标是大于横坐标的，即这样的路线一定经过了$y=x+1$这条线，以图中的褐色为例。我们将<strong>褐色</strong>的路线第一次经过$y=x+1$以后的路线关于$y=x+1$做轴对称，用<strong>黑色</strong>的线表示。我们可以发现所有不满足的条件的路线都可以通过这种方式将终点变为$(n-1,n+1)$，在图中即为$(5,7)$。<br>所有的路线为$C_{12}^6$，因为一共有$12$个空，要放$6$个$0$所以为$C_{12}^6$，同理：不满条件的路线为$C_{12}^5$。</p>
+<p>所以在一般问题中即为：</p>
+<p>$$C_{2n}^n-C_{2n}^{n-1}$$</p>
+]]></content>
+      <categories>
+        <category>AcWing算法基础</category>
+        <category>AcWing笔试面试</category>
+      </categories>
+      <tags>
+        <tag>卡特兰数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>斐波那契数列的 O(logN) 求法</title>
     <url>/posts/20200415a1.html</url>
     <content><![CDATA[<p>介绍求斐波那契数列时间复杂度为$O(\log N)$的做法之前，我们先看一下快速幂。</p><h3 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h3><p><strong><a href="https://www.acwing.com/problem/content/877/" target="_blank" rel="noopener">题目链接</a></strong></p><p>快速幂是数论中非常基础的算法。</p><p>当我们要求$a^b mod p, (1 \le a, b, p \le 10^9)$时，如果是朴素做法，时间复杂度为$O(N)$显然会超时，而快速幂能够做到的是将时间复杂度降到$O(\log b)$。</p><a id="more"></a>

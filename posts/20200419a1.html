@@ -64,14 +64,21 @@
 
   gtag('config', 'UA-163117058-1');
 </script>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="optimjie&#39;s blog">
-<meta property="og:url" content="https://optimjie.top/categories/设计模式/index.html">
+  <meta name="description" content="首先看一下卡特兰数。若一个数列$h_n$满足: $$h_n = \sum_{i=0}^{n-1}h_i \cdot h_{n-1-i}$$则称$h_n$为卡特兰数列。还有一种形式若：$$h_n = \frac{C_{2n}^n}{n+1}$$也称$h_n$为卡特兰数列那什么样的问题的答案是卡特兰数呢？">
+<meta name="keywords" content="卡特兰数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="卡特兰数">
+<meta property="og:url" content="https://optimjie.top/posts/20200419a1.html">
 <meta property="og:site_name" content="optimjie&#39;s blog">
+<meta property="og:description" content="首先看一下卡特兰数。若一个数列$h_n$满足: $$h_n = \sum_{i=0}^{n-1}h_i \cdot h_{n-1-i}$$则称$h_n$为卡特兰数列。还有一种形式若：$$h_n = \frac{C_{2n}^n}{n+1}$$也称$h_n$为卡特兰数列那什么样的问题的答案是卡特兰数呢？">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://optimjie.top/posts/20200419a1/满足条件的01序列.png">
+<meta property="og:updated_time" content="2020-04-19T17:07:01.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="optimjie&#39;s blog">
-  <link rel="canonical" href="https://optimjie.top/categories/设计模式/">
+<meta name="twitter:title" content="卡特兰数">
+<meta name="twitter:description" content="首先看一下卡特兰数。若一个数列$h_n$满足: $$h_n = \sum_{i=0}^{n-1}h_i \cdot h_{n-1-i}$$则称$h_n$为卡特兰数列。还有一种形式若：$$h_n = \frac{C_{2n}^n}{n+1}$$也称$h_n$为卡特兰数列那什么样的问题的答案是卡特兰数呢？">
+<meta name="twitter:image" content="https://optimjie.top/posts/20200419a1/满足条件的01序列.png">
+  <link rel="canonical" href="https://optimjie.top/posts/20200419a1">
 
 
 <script id="page-configurations">
@@ -79,13 +86,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>分类: 设计模式 | optimjie's blog</title>
+  <title>卡特兰数 | optimjie's blog</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163117058-1"></script>
   <script>
@@ -259,94 +266,254 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-          <div id="content" class="content ">
+          <div id="content" class="content page-post-detail">
             
 
-  
-  
-  
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>设计模式<small>分类</small>
-        </h1>
-      </div>
-
-      
-
-  
-  
-  
-
-  
+  <div id="posts" class="posts-expand">
     
-    <div class="collection-title">
-      <h1 class="archive-year" id="archive-year-2020">2020</h1>
-    </div>
-  
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://optimjie.top/posts/20200419a1.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/posts/20200318a1.html" itemprop="url">
+          <h1 class="post-title" itemprop="name headline">卡特兰数
+
             
-              <span itemprop="name">单例模式</span>
-            
-          </a>
+          </h1>
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-18T20:45:31+08:00"
-              content="2020-03-18">
-          03-18
-        </time>
-      </div>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-    </header>
-  </article>
+              
+                
+              
+
+              <time title="创建时间：2020-04-19 23:59:34" itemprop="dateCreated datePublished" datetime="2020-04-19T23:59:34+08:00">2020-04-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-20 01:07:01" itemprop="dateModified" datetime="2020-04-20T01:07:01+08:00">2020-04-20</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing算法基础/" itemprop="url" rel="index"><span itemprop="name">AcWing算法基础</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing笔试面试/" itemprop="url" rel="index"><span itemprop="name">AcWing笔试面试</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/20200419a1.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200419a1.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>722</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>首先看一下卡特兰数。若一个数列$h_n$满足: </p><p>$$h_n = \sum_{i=0}^{n-1}h_i \cdot h_{n-1-i}$$</p><p>则称$h_n$为卡特兰数列。</p><p>还有一种形式若：</p><p>$$h_n = \frac{C_{2n}^n}{n+1}$$</p><p>也称$h_n$为卡特兰数列</p><p>那什么样的问题的答案是卡特兰数呢？</p><a id="more"></a>
 
 
+
+
+
+
+<h3 id="满足条件的01序列"><a href="#满足条件的01序列" class="headerlink" title="满足条件的01序列"></a>满足条件的01序列</h3><p><strong><a href="https://www.acwing.com/problem/content/891/" target="_blank" rel="noopener">题目链接</a></strong></p>
+<p>若$n$为$3$时，满足条件的$01$序列为：</p>
+<blockquote>
+<p>000111<br>001011<br>001101<br>010101<br>010011</p>
+</blockquote>
+<p>我们可以将$01$序列转化到一个二维的坐标，如果是$0$则向右走，反之则向上走，因此我们会走到$(n,n)$点，那任意前缀序列中$0$的个数都不少于$1$代表的意思就是，对于途中的每一个点，横坐标要大于等于纵坐标，即路线不能越过$y=x$这条线。</p>
+<p>看一下以$n=6$的例子：</p>
+<img src="/posts/20200419a1/满足条件的01序列.png" title="满足条件的01序列">
+
+<p>图中<strong>橙色</strong>与<strong>紫色</strong>满足条件。<br>那满足条件的路线一共有多少呢？直接求不是很好求，所以我们可以转化一下，用所有的路线减去不满足条件的路线，那不满足条件的路线有什么样的特点呢？<br>这样的路线上必然存在一点的纵坐标是大于横坐标的，即这样的路线一定经过了$y=x+1$这条线，以图中的褐色为例。我们将<strong>褐色</strong>的路线第一次经过$y=x+1$以后的路线关于$y=x+1$做轴对称，用<strong>黑色</strong>的线表示。我们可以发现所有不满足的条件的路线都可以通过这种方式将终点变为$(n-1,n+1)$，在图中即为$(5,7)$。<br>所有的路线为$C_{12}^6$，因为一共有$12$个空，要放$6$个$0$所以为$C_{12}^6$，同理：不满条件的路线为$C_{12}^5$。</p>
+<p>所以在一般问题中即为：</p>
+<p>$$C_{2n}^n-C_{2n}^{n-1}$$</p>
 
     </div>
 
+    
+    
+    
+        
+      
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="optimjie 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="optimjie 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>optimjie</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://optimjie.top/posts/20200419a1.html" title="卡特兰数">https://optimjie.top/posts/20200419a1.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/卡特兰数/" rel="tag"># 卡特兰数</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/posts/20200415a1.html" rel="next" title="斐波那契数列的 O(logN) 求法">
+                  <i class="fa fa-chevron-left"></i> 斐波那契数列的 O(logN) 求法
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
           
+    
+    <div class="comments" id="comments"></div>
+  
 
         </div>
           
@@ -361,8 +528,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -511,6 +687,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#满足条件的01序列"><span class="nav-number">1.</span> <span class="nav-text">满足条件的01序列</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -707,6 +900,10 @@ setInterval("createtime()",250);
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
     
 
 <script>
