@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java回调函数</title>
+    <url>/posts/20200425a1.html</url>
+    <content><![CDATA[<h3 id="回调函数的定义"><a href="#回调函数的定义" class="headerlink" title="回调函数的定义"></a>回调函数的定义</h3><p>回调函数在百度百科中的定义为：回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作为参数传递给另一个函数，当这个指针被用来调用其所指向的函数时，我们就说这是回调函数。回调函数不是由该函数的实现方直接调用，而是在特定的事件或条件发生时由另外的一方调用的，用于对该事件或条件进行响应。</p><a id="more"></a>
+<p>解释：回调函数就是一个通过函数指针调用的函数</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> (*p)(<span class="keyword">int</span>, <span class="keyword">int</span>) = &amp;max;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; p(<span class="number">1</span>, <span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解释：如果你把函数的指针（地址）作为参数传递给另一个函数，当这个指针被用来调用其所指向的函数时，我们就说这是回调函数。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun2</span><span class="params">(<span class="keyword">void</span> (*p)())</span> </span>&#123;</span><br><span class="line">    p();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"函数fun1被调用"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">void</span> (*p)() = &amp;fun1;</span><br><span class="line">    fun2(p);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Java回调函数"><a href="#Java回调函数" class="headerlink" title="Java回调函数"></a>Java回调函数</h3><p>在Java中回调函数的意思就是：类A调用类B中的b方法，执行完b方法之后又反过来调用A中的a方法。</p>
+<p>用一个通俗的例子解释就是：假设你公司的总经理给你布置了一个任务，只有你完成这个任务以后，总经理才能继续做他的工作。</p>
+<p>这里的总经理就是类A，我就是类B，我要完成的任务就是方法b，而总经理的工作就是方法a。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><h5 id="总经理类"><a href="#总经理类" class="headerlink" title="总经理类"></a>总经理类</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>卡特兰数</title>
     <url>/posts/20200419a1.html</url>
     <content><![CDATA[<p>首先看一下卡特兰数。若一个数列$h_n$满足: </p><p>$$h_n = \sum_{i=0}^{n-1}h_i \cdot h_{n-1-i}$$</p><p>则称$h_n$为卡特兰数列。</p><p>还有一种形式若：</p><p>$$h_n = \frac{C_{2n}^n}{n+1}$$</p><p>也称$h_n$为卡特兰数列</p><p>那什么样的问题的答案是卡特兰数呢？</p><a id="more"></a>
@@ -51,9 +72,9 @@
 <p>Java</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">10</span>][n + <span class="number">10</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= n; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= n; j++)</span><br><span class="line">                a[i][j] = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> dfs(<span class="number">1</span>, n, a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span>[][] a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (a[l][r] != -<span class="number">1</span>) <span class="keyword">return</span> a[l][r];</span><br><span class="line">        a[l][r] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = l; i &lt;= r; i++) &#123;</span><br><span class="line">            a[l][r] += dfs(l, i - <span class="number">1</span>, a) * dfs(i + <span class="number">1</span>, r, a);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a[l][r];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="正解-动态规划"><a href="#正解-动态规划" class="headerlink" title="正解 动态规划"></a>正解 动态规划</h4><p>这个问题与有$n$个相同的节点构成的不同形态的二叉树是等价的。</p>
+<h5 id="正解-动态规划"><a href="#正解-动态规划" class="headerlink" title="正解 动态规划"></a>正解 动态规划</h5><p>这个问题与有$n$个相同的节点构成的不同形态的二叉树是等价的。</p>
 <p>因为相同的节点构成的不同形态的二叉树的数量是固定的，而又因为本题是$BST$所以对于每一种形态上放整数$1$~$n$是唯一确定的。</p>
-<p><a href="https://www.bilibili.com/video/BV1X741127ZM" target="_blank" rel="noopener">闫氏DP分析法</a>：</p>
+<p><strong><a href="https://www.bilibili.com/video/BV1X741127ZM" target="_blank" rel="noopener">闫氏DP分析法</a>：</strong></p>
 <ul>
 <li>状态表示：$f[n]$表示有$n$个节点组成的不同$BTS$的数量</li>
 <li>状态计算：根据左儿子节点的数量划分，从$0$ ~ $n-1$，则右儿子节点的数量为$n-1$ ~ $0$。对于每一种情况满足乘法原理，所以$f[n] = \sum_{i=0}^{n-1}f[i] \cdot f[n-1-i]$。</li>
@@ -403,8 +424,8 @@
         <category>设计模式</category>
       </categories>
       <tags>
-        <tag>设计模式</tag>
         <tag>Java</tag>
+        <tag>设计模式</tag>
       </tags>
   </entry>
   <entry>
