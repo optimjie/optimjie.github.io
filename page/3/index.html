@@ -269,6 +269,292 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/posts/20200320a1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/posts/20200320a1.html" class="post-title-link" itemprop="url">LeetCode 5.最长回文子串</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-20 14:17:12 / 修改时间：19:25:09" itemprop="dateCreated datePublished" datetime="2020-03-20T14:17:12+08:00">2020-03-20</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/20200320a1.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200320a1.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.3k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="算法一：动态规划"><a href="#算法一：动态规划" class="headerlink" title="算法一：动态规划"></a>算法一：动态规划</h3><h4 id="时间复杂度：O-n-2"><a href="#时间复杂度：O-n-2" class="headerlink" title="时间复杂度：O($n^2$)"></a>时间复杂度：O($n^2$)</h4><p>状态个数：$\frac{(n+1)n}{2}$<br>状态转移：4</p><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p><a href="https://www.acwing.com/" target="_blank" rel="noopener">闫氏Dp分析法</a>:</p><p>f[i][j]表示所有i~j的回文串的集合的最大值。</p><p>集合划分：</p><blockquote>
+<p>1.包含i，j两个点。包含i，j两点首先要满足<code>s[i] == s[j]</code>并且i+1~j-1也要是个回文串（否则会出现这种情况<code>abca</code>显然不是回文串）。所以<code>f[i][j] = f[i + 1][j - 1] + 2</code>。<br>2.包含i，不包含j。首先要明确<code>f[i][j - 1]</code>与这种情况不完全相等，包含i，不包含j的集合是<code>f[i][j - 1]</code>的子集，但由于要求最大值，所以在集合划分的时候可以有交集。<br>3.不包含i，包含j。同2<code>f[i + 1][j]</code>。<br>4.i，j两点均不包含。<code>f[i + 1][j - 1]</code>。</p>
+</blockquote>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/20200320a1.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/posts/20200318a1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="optimjie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="optimjie's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/posts/20200318a1.html" class="post-title-link" itemprop="url">单例模式</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-18 20:45:31" itemprop="dateCreated datePublished" datetime="2020-03-18T20:45:31+08:00">2020-03-18</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-19 00:36:04" itemprop="dateModified" datetime="2020-03-19T00:36:04+08:00">2020-03-19</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/20200318a1.html#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200318a1.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.2k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>所谓类的单例设计模式，就是采取一定的方法保证在整个的系统软件中，对某个类只能存在一个对象实例，并且该类只提供一个取得该对象实例的方法。如果我们要让一个类在一个虚拟机中只能产生一个对象，我们首先必须将累的构造器的访问权限设置为private，这样就不能通过new操作符在类的外部产生类的对象了，但在类的内部仍然可以产生该类的对象。因为在诶的外部开始还无法得到类的对象，只能通过调用该类的某个静态方法以返回类内部创建的对象，静态方法只能访问静态成员变量，所以指向类内部产生的该类对象的变量也必须定义成静态的。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/posts/20200318a1.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/posts/20200311a1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1427,292 +1713,6 @@
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/posts/20200221a2.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/posts/20200221a2.html" class="post-title-link" itemprop="url">递增三元组</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-21 15:39:51" itemprop="dateCreated datePublished" datetime="2020-02-21T15:39:51+08:00">2020-02-21</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-07 19:51:19" itemprop="dateModified" datetime="2020-03-07T19:51:19+08:00">2020-03-07</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing蓝桥杯/" itemprop="url" rel="index"><span itemprop="name">AcWing蓝桥杯</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/posts/20200221a2.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200221a2.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>1.4k</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><strong><a href="https://www.acwing.com/problem/content/description/1238/" target="_blank" rel="noopener">题目链接</a></strong></p><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>直接暴力$O(N^3)$，显然超时。</p><p>将三个数组排序，遍历$b$数组，二分找到$a$中小于$b[i]$的个数$A$，找到$c$中大于$b[i]$的个数$C$，$ans$+=$A*C$。</p><p>时间复杂度，排序$O(N \log N)$，查找$O(N \log N)$，总体$O(N \log N)$。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/posts/20200221a2.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://optimjie.github.io/posts/20200221a1.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="optimjie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/QQ图片20180108124805.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="optimjie's blog">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/posts/20200221a1.html" class="post-title-link" itemprop="url">四平方和</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-21 15:29:34" itemprop="dateCreated datePublished" datetime="2020-02-21T15:29:34+08:00">2020-02-21</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-07 19:51:28" itemprop="dateModified" datetime="2020-03-07T19:51:28+08:00">2020-03-07</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/AcWing蓝桥杯/" itemprop="url" rel="index"><span itemprop="name">AcWing蓝桥杯</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/posts/20200221a1.html#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/20200221a1.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">本文字数：</span>
-              
-              <span>7</span>
-            </span>
-          
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              
-              <span>1 分钟</span>
-            </span>
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><strong><a href="https://www.acwing.com/problem/content/1223/" target="_blank" rel="noopener">题目链接</a></strong></p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
@@ -1753,7 +1753,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-count">69</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1808,7 +1808,9 @@
         
           
         
-        <span class="site-state-item-count">20</span>
+          
+        
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1883,7 +1885,9 @@
         
           
         
-        <span class="site-state-item-count">30</span>
+          
+        
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1919,12 +1923,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">165k</span>
+    <span title="站点总字数">166k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:30</span>
+    <span title="站点阅读时长">2:31</span>
 </div>
 
 <!-- 网站运行时间的设置 -->
